@@ -7,17 +7,17 @@
 #include <QPushButton>
 #include <QStackedWidget>
 #include "../tests/headers/clickTest.h"
+#include "../tests/headers/leakTest.h"
+#include "../../logic/headers/valveDisplay.h"
 
 class TestTab : public QWidget {
     Q_OBJECT
 
-private:
-    QLabel *test;
-    QGridLayout *g_layout;
-    QGridLayout *button_grid;
+
 public:
 
     explicit TestTab(QWidget *parent = nullptr);
+    ~TestTab() override;
     void switchTests(int index) const;
 
 
@@ -29,11 +29,19 @@ public:
     QStackedWidget *stacked_widget;
 
     ClickTest *clickTest;
-    //LeakTest *leakTest;
+    LeakTest *leakTest;
     //DecayTest *decayTest;
     //IgniterTest *igniterTest;
+    LadderWidget *valveDisplay;
 
-    QPushButton* createButton(const QString &text, int fontSize = 14, const QString &color = "black");
+    QPushButton* createButton(const QString &text, int fontSize = 14, QWidget *parent = nullptr, const QString &color = "black");
+
+    QLabel *test;
+    QGridLayout *g_layout;
+    QGridLayout *button_grid;
+
+
+private:
 };
 
 

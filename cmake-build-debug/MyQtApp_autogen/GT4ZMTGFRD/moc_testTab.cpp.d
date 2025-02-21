@@ -380,7 +380,10 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/cmake-build-debug/MyQtApp_autogen/GT4
   C:/Qt/6.8.2/mingw_64/include/QtGui/qimage.h \
   C:/Qt/6.8.2/mingw_64/include/QtGui/qkeysequence.h \
   C:/Qt/6.8.2/mingw_64/include/QtGui/qpaintdevice.h \
+  C:/Qt/6.8.2/mingw_64/include/QtGui/qpainter.h \
+  C:/Qt/6.8.2/mingw_64/include/QtGui/qpainterpath.h \
   C:/Qt/6.8.2/mingw_64/include/QtGui/qpalette.h \
+  C:/Qt/6.8.2/mingw_64/include/QtGui/qpen.h \
   C:/Qt/6.8.2/mingw_64/include/QtGui/qpicture.h \
   C:/Qt/6.8.2/mingw_64/include/QtGui/qpixelformat.h \
   C:/Qt/6.8.2/mingw_64/include/QtGui/qpixmap.h \
@@ -389,29 +392,41 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/cmake-build-debug/MyQtApp_autogen/GT4
   C:/Qt/6.8.2/mingw_64/include/QtGui/qrgb.h \
   C:/Qt/6.8.2/mingw_64/include/QtGui/qrgba64.h \
   C:/Qt/6.8.2/mingw_64/include/QtGui/qtextdocument.h \
+  C:/Qt/6.8.2/mingw_64/include/QtGui/qtextoption.h \
   C:/Qt/6.8.2/mingw_64/include/QtGui/qtgui-config.h \
   C:/Qt/6.8.2/mingw_64/include/QtGui/qtguiexports.h \
   C:/Qt/6.8.2/mingw_64/include/QtGui/qtguiglobal.h \
   C:/Qt/6.8.2/mingw_64/include/QtGui/qtransform.h \
   C:/Qt/6.8.2/mingw_64/include/QtGui/qwindowdefs.h \
   C:/Qt/6.8.2/mingw_64/include/QtGui/qwindowdefs_win.h \
+  C:/Qt/6.8.2/mingw_64/include/QtWidgets/QGraphicsEllipseItem \
+  C:/Qt/6.8.2/mingw_64/include/QtWidgets/QGraphicsScene \
+  C:/Qt/6.8.2/mingw_64/include/QtWidgets/QGraphicsView \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/QGridLayout \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/QLabel \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/QPushButton \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/QStackedWidget \
+  C:/Qt/6.8.2/mingw_64/include/QtWidgets/QVBoxLayout \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/QWidget \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qabstractbutton.h \
+  C:/Qt/6.8.2/mingw_64/include/QtWidgets/qabstractscrollarea.h \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qboxlayout.h \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qframe.h \
+  C:/Qt/6.8.2/mingw_64/include/QtWidgets/qgraphicsitem.h \
+  C:/Qt/6.8.2/mingw_64/include/QtWidgets/qgraphicsscene.h \
+  C:/Qt/6.8.2/mingw_64/include/QtWidgets/qgraphicsview.h \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qgridlayout.h \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qlabel.h \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qlayout.h \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qlayoutitem.h \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qpushbutton.h \
+  C:/Qt/6.8.2/mingw_64/include/QtWidgets/qscrollarea.h \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qsizepolicy.h \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qstackedwidget.h \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qtwidgets-config.h \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qtwidgetsexports.h \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qwidget.h \
-  C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/tests/headers/clickTest.h
+  C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/tests/headers/clickTest.h \
+  C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/tests/headers/leakTest.h \
+  C:/Users/emcof/CLionProjects/RocketGUI_cpp/logic/headers/valveDisplay.h

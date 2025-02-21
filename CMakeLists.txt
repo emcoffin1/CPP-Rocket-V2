@@ -38,6 +38,12 @@ add_executable(MyQtApp
         GUI/tests/source/clickTest.cpp
         ESP_WIFI/wifi.cpp
         ESP_WIFI/wifi.h
+        GUI/source/setTab.cpp
+        GUI/headers/setTab.h
+        GUI/tests/headers/leakTest.h
+        GUI/tests/source/leakTest.cpp
+        logic/headers/valveDisplay.h
+        logic/source/valveDisplay.cpp
 )
 
 # ✅ Link Qt Libraries

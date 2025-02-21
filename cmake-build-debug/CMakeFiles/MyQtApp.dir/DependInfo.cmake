@@ -14,9 +14,12 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/source/mainTab.cpp" "CMakeFiles/MyQtApp.dir/GUI/source/mainTab.cpp.obj" "gcc" "CMakeFiles/MyQtApp.dir/GUI/source/mainTab.cpp.obj.d"
   "C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/source/mainUI.cpp" "CMakeFiles/MyQtApp.dir/GUI/source/mainUI.cpp.obj" "gcc" "CMakeFiles/MyQtApp.dir/GUI/source/mainUI.cpp.obj.d"
   "C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/source/optTab.cpp" "CMakeFiles/MyQtApp.dir/GUI/source/optTab.cpp.obj" "gcc" "CMakeFiles/MyQtApp.dir/GUI/source/optTab.cpp.obj.d"
+  "C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/source/setTab.cpp" "CMakeFiles/MyQtApp.dir/GUI/source/setTab.cpp.obj" "gcc" "CMakeFiles/MyQtApp.dir/GUI/source/setTab.cpp.obj.d"
   "C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/source/testTab.cpp" "CMakeFiles/MyQtApp.dir/GUI/source/testTab.cpp.obj" "gcc" "CMakeFiles/MyQtApp.dir/GUI/source/testTab.cpp.obj.d"
   "C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/tests/source/clickTest.cpp" "CMakeFiles/MyQtApp.dir/GUI/tests/source/clickTest.cpp.obj" "gcc" "CMakeFiles/MyQtApp.dir/GUI/tests/source/clickTest.cpp.obj.d"
+  "C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/tests/source/leakTest.cpp" "CMakeFiles/MyQtApp.dir/GUI/tests/source/leakTest.cpp.obj" "gcc" "CMakeFiles/MyQtApp.dir/GUI/tests/source/leakTest.cpp.obj.d"
   "C:/Users/emcof/CLionProjects/RocketGUI_cpp/cmake-build-debug/MyQtApp_autogen/mocs_compilation.cpp" "CMakeFiles/MyQtApp.dir/MyQtApp_autogen/mocs_compilation.cpp.obj" "gcc" "CMakeFiles/MyQtApp.dir/MyQtApp_autogen/mocs_compilation.cpp.obj.d"
+  "C:/Users/emcof/CLionProjects/RocketGUI_cpp/logic/source/valveDisplay.cpp" "CMakeFiles/MyQtApp.dir/logic/source/valveDisplay.cpp.obj" "gcc" "CMakeFiles/MyQtApp.dir/logic/source/valveDisplay.cpp.obj.d"
   "C:/Users/emcof/CLionProjects/RocketGUI_cpp/main.cpp" "CMakeFiles/MyQtApp.dir/main.cpp.obj" "gcc" "CMakeFiles/MyQtApp.dir/main.cpp.obj.d"
   )
 

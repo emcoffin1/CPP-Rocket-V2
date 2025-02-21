@@ -246,6 +246,10 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/cmake-build-debug/MyQtApp_autogen/GT4
   C:/Program\ Files/JetBrains/CLion\ 2024.3.3/bin/mingw/x86_64-w64-mingw32/include/vadefs.h \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.3/bin/mingw/x86_64-w64-mingw32/include/wchar.h \
   C:/Program\ Files/JetBrains/CLion\ 2024.3.3/bin/mingw/x86_64-w64-mingw32/include/wctype.h \
+  C:/Qt/6.8.2/mingw_64/include/QtCore/QDebug \
+  C:/Qt/6.8.2/mingw_64/include/QtCore/QJsonDocument \
+  C:/Qt/6.8.2/mingw_64/include/QtCore/QJsonObject \
+  C:/Qt/6.8.2/mingw_64/include/QtCore/QObject \
   C:/Qt/6.8.2/mingw_64/include/QtCore/q20functional.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/q20iterator.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/q20memory.h \
@@ -265,6 +269,9 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/cmake-build-debug/MyQtApp_autogen/GT4
   C:/Qt/6.8.2/mingw_64/include/QtCore/qbytearrayalgorithms.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qbytearraylist.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qbytearrayview.h \
+  C:/Qt/6.8.2/mingw_64/include/QtCore/qcalendar.h \
+  C:/Qt/6.8.2/mingw_64/include/QtCore/qcborcommon.h \
+  C:/Qt/6.8.2/mingw_64/include/QtCore/qcborvalue.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qchar.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qcompare.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qcompare_impl.h \
@@ -278,6 +285,7 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/cmake-build-debug/MyQtApp_autogen/GT4
   C:/Qt/6.8.2/mingw_64/include/QtCore/qcontiguouscache.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qdarwinhelpers.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qdatastream.h \
+  C:/Qt/6.8.2/mingw_64/include/QtCore/qdatetime.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qdebug.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qendian.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qexceptionhandling.h \
@@ -295,9 +303,13 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/cmake-build-debug/MyQtApp_autogen/GT4
   C:/Qt/6.8.2/mingw_64/include/QtCore/qiodevicebase.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qiterable.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qiterator.h \
+  C:/Qt/6.8.2/mingw_64/include/QtCore/qjsondocument.h \
+  C:/Qt/6.8.2/mingw_64/include/QtCore/qjsonobject.h \
+  C:/Qt/6.8.2/mingw_64/include/QtCore/qjsonvalue.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qlatin1stringview.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qline.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qlist.h \
+  C:/Qt/6.8.2/mingw_64/include/QtCore/qlocale.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qlogging.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qmalloc.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qmap.h \
@@ -318,6 +330,7 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/cmake-build-debug/MyQtApp_autogen/GT4
   C:/Qt/6.8.2/mingw_64/include/QtCore/qprocessordetection.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qrect.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qrefcount.h \
+  C:/Qt/6.8.2/mingw_64/include/QtCore/qregularexpression.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qscopedpointer.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qscopeguard.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qset.h \
@@ -363,12 +376,12 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/cmake-build-debug/MyQtApp_autogen/GT4
   C:/Qt/6.8.2/mingw_64/include/QtCore/qtypes.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qurl.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qutf8stringview.h \
+  C:/Qt/6.8.2/mingw_64/include/QtCore/quuid.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qvariant.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qvarlengtharray.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qversiontagging.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qxptype_traits.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qyieldcpu.h \
-  C:/Qt/6.8.2/mingw_64/include/QtGui/QPalette \
   C:/Qt/6.8.2/mingw_64/include/QtGui/qaction.h \
   C:/Qt/6.8.2/mingw_64/include/QtGui/qbitmap.h \
   C:/Qt/6.8.2/mingw_64/include/QtGui/qbrush.h \
@@ -381,7 +394,10 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/cmake-build-debug/MyQtApp_autogen/GT4
   C:/Qt/6.8.2/mingw_64/include/QtGui/qimage.h \
   C:/Qt/6.8.2/mingw_64/include/QtGui/qkeysequence.h \
   C:/Qt/6.8.2/mingw_64/include/QtGui/qpaintdevice.h \
+  C:/Qt/6.8.2/mingw_64/include/QtGui/qpainter.h \
+  C:/Qt/6.8.2/mingw_64/include/QtGui/qpainterpath.h \
   C:/Qt/6.8.2/mingw_64/include/QtGui/qpalette.h \
+  C:/Qt/6.8.2/mingw_64/include/QtGui/qpen.h \
   C:/Qt/6.8.2/mingw_64/include/QtGui/qpicture.h \
   C:/Qt/6.8.2/mingw_64/include/QtGui/qpixelformat.h \
   C:/Qt/6.8.2/mingw_64/include/QtGui/qpixmap.h \
@@ -390,13 +406,24 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/cmake-build-debug/MyQtApp_autogen/GT4
   C:/Qt/6.8.2/mingw_64/include/QtGui/qrgb.h \
   C:/Qt/6.8.2/mingw_64/include/QtGui/qrgba64.h \
   C:/Qt/6.8.2/mingw_64/include/QtGui/qtextdocument.h \
+  C:/Qt/6.8.2/mingw_64/include/QtGui/qtextoption.h \
   C:/Qt/6.8.2/mingw_64/include/QtGui/qtgui-config.h \
   C:/Qt/6.8.2/mingw_64/include/QtGui/qtguiexports.h \
   C:/Qt/6.8.2/mingw_64/include/QtGui/qtguiglobal.h \
   C:/Qt/6.8.2/mingw_64/include/QtGui/qtransform.h \
   C:/Qt/6.8.2/mingw_64/include/QtGui/qwindowdefs.h \
   C:/Qt/6.8.2/mingw_64/include/QtGui/qwindowdefs_win.h \
+  C:/Qt/6.8.2/mingw_64/include/QtNetwork/QTcpSocket \
+  C:/Qt/6.8.2/mingw_64/include/QtNetwork/qabstractsocket.h \
+  C:/Qt/6.8.2/mingw_64/include/QtNetwork/qhostaddress.h \
+  C:/Qt/6.8.2/mingw_64/include/QtNetwork/qtcpsocket.h \
+  C:/Qt/6.8.2/mingw_64/include/QtNetwork/qtnetwork-config.h \
+  C:/Qt/6.8.2/mingw_64/include/QtNetwork/qtnetworkexports.h \
+  C:/Qt/6.8.2/mingw_64/include/QtNetwork/qtnetworkglobal.h \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/QGraphicsDropShadowEffect \
+  C:/Qt/6.8.2/mingw_64/include/QtWidgets/QGraphicsEllipseItem \
+  C:/Qt/6.8.2/mingw_64/include/QtWidgets/QGraphicsScene \
+  C:/Qt/6.8.2/mingw_64/include/QtWidgets/QGraphicsView \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/QGridLayout \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/QLabel \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/QPushButton \
@@ -404,22 +431,31 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/cmake-build-debug/MyQtApp_autogen/GT4
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/QVBoxLayout \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/QWidget \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qabstractbutton.h \
+  C:/Qt/6.8.2/mingw_64/include/QtWidgets/qabstractscrollarea.h \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qboxlayout.h \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qframe.h \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qgraphicseffect.h \
+  C:/Qt/6.8.2/mingw_64/include/QtWidgets/qgraphicsitem.h \
+  C:/Qt/6.8.2/mingw_64/include/QtWidgets/qgraphicsscene.h \
+  C:/Qt/6.8.2/mingw_64/include/QtWidgets/qgraphicsview.h \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qgridlayout.h \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qlabel.h \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qlayout.h \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qlayoutitem.h \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qpushbutton.h \
+  C:/Qt/6.8.2/mingw_64/include/QtWidgets/qscrollarea.h \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qsizepolicy.h \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qstackedwidget.h \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qtwidgets-config.h \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qtwidgetsexports.h \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qwidget.h \
+  C:/Users/emcof/CLionProjects/RocketGUI_cpp/ESP_WIFI/wifi.h \
   C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/headers/mainPanel.h \
   C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/headers/mainTab.h \
   C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/headers/optTab.h \
+  C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/headers/setTab.h \
   C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/headers/testTab.h \
-  C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/tests/headers/clickTest.h
+  C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/tests/headers/clickTest.h \
+  C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/tests/headers/leakTest.h \
+  C:/Users/emcof/CLionProjects/RocketGUI_cpp/logic/headers/valveDisplay.h

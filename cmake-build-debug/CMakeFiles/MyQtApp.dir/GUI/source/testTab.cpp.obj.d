@@ -430,9 +430,20 @@ CMakeFiles/MyQtApp.dir/GUI/source/testTab.cpp.obj: \
  C:/Qt/6.8.2/mingw_64/include/QtWidgets/QStackedWidget \
  C:/Qt/6.8.2/mingw_64/include/QtWidgets/qstackedwidget.h \
  C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/tests/headers/clickTest.h \
- C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/stack \
- C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/deque \
- C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_deque.h \
- C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/deque.tcc \
- C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_stack.h \
- C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/tests/headers/clickTest.h
+ C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/tests/headers/leakTest.h \
+ C:/Users/emcof/CLionProjects/RocketGUI_cpp/logic/headers/valveDisplay.h \
+ C:/Qt/6.8.2/mingw_64/include/QtWidgets/QGraphicsEllipseItem \
+ C:/Qt/6.8.2/mingw_64/include/QtWidgets/qgraphicsitem.h \
+ C:/Qt/6.8.2/mingw_64/include/QtGui/qpainterpath.h \
+ C:/Qt/6.8.2/mingw_64/include/QtWidgets/QGraphicsView \
+ C:/Qt/6.8.2/mingw_64/include/QtWidgets/qgraphicsview.h \
+ C:/Qt/6.8.2/mingw_64/include/QtGui/qpainter.h \
+ C:/Qt/6.8.2/mingw_64/include/QtGui/qtextoption.h \
+ C:/Qt/6.8.2/mingw_64/include/QtGui/qpen.h \
+ C:/Qt/6.8.2/mingw_64/include/QtWidgets/qscrollarea.h \
+ C:/Qt/6.8.2/mingw_64/include/QtWidgets/qabstractscrollarea.h \
+ C:/Qt/6.8.2/mingw_64/include/QtWidgets/qgraphicsscene.h \
+ C:/Qt/6.8.2/mingw_64/include/QtWidgets/QGraphicsScene \
+ C:/Qt/6.8.2/mingw_64/include/QtWidgets/qgraphicsscene.h \
+ C:/Qt/6.8.2/mingw_64/include/QtWidgets/QVBoxLayout \
+ C:/Qt/6.8.2/mingw_64/include/QtWidgets/qboxlayout.h

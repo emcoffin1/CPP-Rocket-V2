@@ -339,6 +339,12 @@
 			null
 		],
 		[
+			"C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/headers/setTab.h",
+			"MU",
+			"GT4ZMTGFRD/moc_setTab.cpp",
+			null
+		],
+		[
 			"C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/headers/testTab.h",
 			"MU",
 			"GT4ZMTGFRD/moc_testTab.cpp",
@@ -348,6 +354,18 @@
 			"C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/tests/headers/clickTest.h",
 			"MU",
 			"DKWTGFM2PV/moc_clickTest.cpp",
+			null
+		],
+		[
+			"C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/tests/headers/leakTest.h",
+			"MU",
+			"DKWTGFM2PV/moc_leakTest.cpp",
+			null
+		],
+		[
+			"C:/Users/emcof/CLionProjects/RocketGUI_cpp/logic/headers/valveDisplay.h",
+			"MU",
+			"22GOGG6FO6/moc_valveDisplay.cpp",
 			null
 		]
 	],
@@ -452,12 +470,27 @@
 			null
 		],
 		[
+			"C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/source/setTab.cpp",
+			"MU",
+			null
+		],
+		[
 			"C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/source/testTab.cpp",
 			"MU",
 			null
 		],
 		[
 			"C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/tests/source/clickTest.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/tests/source/leakTest.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/emcof/CLionProjects/RocketGUI_cpp/logic/source/valveDisplay.cpp",
 			"MU",
 			null
 		],

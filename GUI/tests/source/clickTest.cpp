@@ -11,8 +11,12 @@ ClickTest::ClickTest(QWidget *parent) :QWidget(parent) {
 
 }
 
-QPushButton* ClickTest::createButton(const QString &text, int fontSize, const QString &color) {
-    QPushButton *btn = new QPushButton(text);  // Ensure it has `this` as parent
+QPushButton* ClickTest::createButton(const QString &text, int fontSize, QWidget *parent, const QString &color) {
+    if (!parent) {
+        parent = this;
+    }
+
+    auto *btn = new QPushButton(text, parent);  // Ensure it has `this` as parent
 
     // Set font
     QFont font;
@@ -46,8 +50,7 @@ QPushButton* ClickTest::createButton(const QString &text, int fontSize, const QS
         }
     )").arg(color)
       .arg(fontSize)
-      .arg("#1E1E1E")  // Hover color
-      .arg("#2A2A2A")); // Pressed color
+      .arg("#1E1E1E", "#2A2A2A")); // Pressed color
 
     return btn;
 }

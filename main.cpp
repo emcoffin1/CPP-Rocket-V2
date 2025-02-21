@@ -21,10 +21,12 @@ QJsonObject loadConfig(const QString &filePath) {
 
 
 int main(int argc, char *argv[]) {
-
-
     QApplication app(argc, argv);
-    MainUI window;
+
+    WIFI *wifiInstance = WIFI::getInstance();
+    //wifiInstance->connectToESP32("192.168.4.1", 80);
+
+    MainUI window(wifiInstance);
     window.show();
 
     return app.exec();

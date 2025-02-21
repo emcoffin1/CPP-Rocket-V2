@@ -1,6 +1,8 @@
 #include "../headers/mainUI.h"
 
-MainUI::MainUI (QWidget *parent) : QWidget (parent) {
+#include "../../ESP_WIFI/wifi.h"
+
+MainUI::MainUI (WIFI *wifiInstance, QWidget *parent) : QWidget (parent) {
 
     // Window settings
     setWindowTitle("FARTS");
@@ -12,7 +14,7 @@ MainUI::MainUI (QWidget *parent) : QWidget (parent) {
     g_layout->setContentsMargins(0,0,0,0);
 
     // Init options and main tabs
-    mainPanel = new MainPanel(this);
+    mainPanel = new MainPanel(this, wifiInstance);
     optTab = new OptTab(this, mainPanel);
 
     // Actual panel for the options

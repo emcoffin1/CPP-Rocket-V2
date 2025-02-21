@@ -44,7 +44,7 @@
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 44,
+				"line" : 50,
 				"parent" : 0
 			},
 			{
@@ -259,7 +259,10 @@
 				8,
 				11,
 				13,
-				14
+				14,
+				16,
+				19,
+				21
 			]
 		}
 	],
@@ -374,7 +377,10 @@
 				8,
 				11,
 				13,
-				14
+				14,
+				16,
+				19,
+				21
 			]
 		},
 		{
@@ -387,21 +393,24 @@
 				9,
 				10,
 				12,
-				15
+				15,
+				17,
+				18,
+				20
 			]
 		},
 		{
 			"name" : "",
 			"sourceIndexes" : 
 			[
-				16
+				22
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				17
+				23
 			]
 		}
 	],
@@ -496,6 +505,39 @@
 			"backtrace" : 1,
 			"path" : "ESP_WIFI/wifi.h",
 			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "GUI/source/setTab.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "GUI/headers/setTab.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "GUI/tests/headers/leakTest.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "GUI/tests/source/leakTest.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "logic/headers/valveDisplay.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "logic/source/valveDisplay.cpp",
+			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 0,

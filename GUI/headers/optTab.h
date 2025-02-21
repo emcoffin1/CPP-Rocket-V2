@@ -4,7 +4,6 @@
 #include <QPushButton>
 #include <QVBoxLayout>
 #include <QWidget>
-
 #include "mainPanel.h"
 
 class OptTab : public QWidget {
@@ -12,10 +11,10 @@ class OptTab : public QWidget {
 
 public:
     explicit OptTab(QWidget *parent = nullptr, MainPanel *mainPanel = nullptr);
-    ~OptTab();
+    ~OptTab() override;
 
-    private slots:
-        void showMainPanel() const;
+private slots:
+    void showMainPanel() const;
     void showTestPanel() const;
     void showSetPanel() const;
 

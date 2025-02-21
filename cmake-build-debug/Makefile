@@ -274,6 +274,30 @@ GUI/source/optTab.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\MyQtApp.dir\build.make CMakeFiles/MyQtApp.dir/GUI/source/optTab.cpp.s
 .PHONY : GUI/source/optTab.cpp.s
 
+GUI/source/setTab.obj: GUI/source/setTab.cpp.obj
+.PHONY : GUI/source/setTab.obj
+
+# target to build an object file
+GUI/source/setTab.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\MyQtApp.dir\build.make CMakeFiles/MyQtApp.dir/GUI/source/setTab.cpp.obj
+.PHONY : GUI/source/setTab.cpp.obj
+
+GUI/source/setTab.i: GUI/source/setTab.cpp.i
+.PHONY : GUI/source/setTab.i
+
+# target to preprocess a source file
+GUI/source/setTab.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\MyQtApp.dir\build.make CMakeFiles/MyQtApp.dir/GUI/source/setTab.cpp.i
+.PHONY : GUI/source/setTab.cpp.i
+
+GUI/source/setTab.s: GUI/source/setTab.cpp.s
+.PHONY : GUI/source/setTab.s
+
+# target to generate assembly for a file
+GUI/source/setTab.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\MyQtApp.dir\build.make CMakeFiles/MyQtApp.dir/GUI/source/setTab.cpp.s
+.PHONY : GUI/source/setTab.cpp.s
+
 GUI/source/testTab.obj: GUI/source/testTab.cpp.obj
 .PHONY : GUI/source/testTab.obj
 
@@ -322,6 +346,30 @@ GUI/tests/source/clickTest.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\MyQtApp.dir\build.make CMakeFiles/MyQtApp.dir/GUI/tests/source/clickTest.cpp.s
 .PHONY : GUI/tests/source/clickTest.cpp.s
 
+GUI/tests/source/leakTest.obj: GUI/tests/source/leakTest.cpp.obj
+.PHONY : GUI/tests/source/leakTest.obj
+
+# target to build an object file
+GUI/tests/source/leakTest.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\MyQtApp.dir\build.make CMakeFiles/MyQtApp.dir/GUI/tests/source/leakTest.cpp.obj
+.PHONY : GUI/tests/source/leakTest.cpp.obj
+
+GUI/tests/source/leakTest.i: GUI/tests/source/leakTest.cpp.i
+.PHONY : GUI/tests/source/leakTest.i
+
+# target to preprocess a source file
+GUI/tests/source/leakTest.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\MyQtApp.dir\build.make CMakeFiles/MyQtApp.dir/GUI/tests/source/leakTest.cpp.i
+.PHONY : GUI/tests/source/leakTest.cpp.i
+
+GUI/tests/source/leakTest.s: GUI/tests/source/leakTest.cpp.s
+.PHONY : GUI/tests/source/leakTest.s
+
+# target to generate assembly for a file
+GUI/tests/source/leakTest.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\MyQtApp.dir\build.make CMakeFiles/MyQtApp.dir/GUI/tests/source/leakTest.cpp.s
+.PHONY : GUI/tests/source/leakTest.cpp.s
+
 MyQtApp_autogen/mocs_compilation.obj: MyQtApp_autogen/mocs_compilation.cpp.obj
 .PHONY : MyQtApp_autogen/mocs_compilation.obj
 
@@ -345,6 +393,30 @@ MyQtApp_autogen/mocs_compilation.s: MyQtApp_autogen/mocs_compilation.cpp.s
 MyQtApp_autogen/mocs_compilation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\MyQtApp.dir\build.make CMakeFiles/MyQtApp.dir/MyQtApp_autogen/mocs_compilation.cpp.s
 .PHONY : MyQtApp_autogen/mocs_compilation.cpp.s
+
+logic/source/valveDisplay.obj: logic/source/valveDisplay.cpp.obj
+.PHONY : logic/source/valveDisplay.obj
+
+# target to build an object file
+logic/source/valveDisplay.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\MyQtApp.dir\build.make CMakeFiles/MyQtApp.dir/logic/source/valveDisplay.cpp.obj
+.PHONY : logic/source/valveDisplay.cpp.obj
+
+logic/source/valveDisplay.i: logic/source/valveDisplay.cpp.i
+.PHONY : logic/source/valveDisplay.i
+
+# target to preprocess a source file
+logic/source/valveDisplay.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\MyQtApp.dir\build.make CMakeFiles/MyQtApp.dir/logic/source/valveDisplay.cpp.i
+.PHONY : logic/source/valveDisplay.cpp.i
+
+logic/source/valveDisplay.s: logic/source/valveDisplay.cpp.s
+.PHONY : logic/source/valveDisplay.s
+
+# target to generate assembly for a file
+logic/source/valveDisplay.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\MyQtApp.dir\build.make CMakeFiles/MyQtApp.dir/logic/source/valveDisplay.cpp.s
+.PHONY : logic/source/valveDisplay.cpp.s
 
 main.obj: main.cpp.obj
 .PHONY : main.obj
@@ -396,15 +468,24 @@ help:
 	@echo ... GUI/source/optTab.obj
 	@echo ... GUI/source/optTab.i
 	@echo ... GUI/source/optTab.s
+	@echo ... GUI/source/setTab.obj
+	@echo ... GUI/source/setTab.i
+	@echo ... GUI/source/setTab.s
 	@echo ... GUI/source/testTab.obj
 	@echo ... GUI/source/testTab.i
 	@echo ... GUI/source/testTab.s
 	@echo ... GUI/tests/source/clickTest.obj
 	@echo ... GUI/tests/source/clickTest.i
 	@echo ... GUI/tests/source/clickTest.s
+	@echo ... GUI/tests/source/leakTest.obj
+	@echo ... GUI/tests/source/leakTest.i
+	@echo ... GUI/tests/source/leakTest.s
 	@echo ... MyQtApp_autogen/mocs_compilation.obj
 	@echo ... MyQtApp_autogen/mocs_compilation.i
 	@echo ... MyQtApp_autogen/mocs_compilation.s
+	@echo ... logic/source/valveDisplay.obj
+	@echo ... logic/source/valveDisplay.i
+	@echo ... logic/source/valveDisplay.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

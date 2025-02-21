@@ -7,13 +7,14 @@
 #include "optTab.h"
 #include <QGridLayout>
 #include <QWidget>
+#include "../../ESP_WIFI/wifi.h"
 
 class MainUI : public QWidget {
     Q_OBJECT
 
 public:
-    explicit MainUI(QWidget *parent = nullptr);
-    ~MainUI();
+    explicit MainUI(WIFI *wifiInstance, QWidget *parent = nullptr);
+    ~MainUI() override;
 
     MainPanel* getMainPanel();
 
@@ -26,6 +27,8 @@ public:
     QVBoxLayout *optionLayout;
     QGraphicsDropShadowEffect *shadowEffect;
     QWidget *optionPanel;
+
+    WIFI *wifi;
 
 
 

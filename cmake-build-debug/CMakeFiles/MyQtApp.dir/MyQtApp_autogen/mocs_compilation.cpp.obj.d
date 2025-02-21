@@ -383,6 +383,20 @@ CMakeFiles/MyQtApp.dir/MyQtApp_autogen/mocs_compilation.cpp.obj: \
  C:/Qt/6.8.2/mingw_64/include/QtCore/q23utility.h \
  C:/Qt/6.8.2/mingw_64/include/QtCore/QDebug \
  C:/Qt/6.8.2/mingw_64/include/QtCore/qdebug.h \
+ C:/Qt/6.8.2/mingw_64/include/QtCore/QJsonDocument \
+ C:/Qt/6.8.2/mingw_64/include/QtCore/qjsondocument.h \
+ C:/Qt/6.8.2/mingw_64/include/QtCore/qjsonvalue.h \
+ C:/Qt/6.8.2/mingw_64/include/QtCore/qcborvalue.h \
+ C:/Qt/6.8.2/mingw_64/include/QtCore/qcborcommon.h \
+ C:/Qt/6.8.2/mingw_64/include/QtCore/qdatetime.h \
+ C:/Qt/6.8.2/mingw_64/include/QtCore/qcalendar.h \
+ C:/Qt/6.8.2/mingw_64/include/QtCore/qlocale.h \
+ C:/Qt/6.8.2/mingw_64/include/QtCore/qregularexpression.h \
+ C:/Qt/6.8.2/mingw_64/include/QtCore/qurl.h \
+ C:/Qt/6.8.2/mingw_64/include/QtCore/quuid.h \
+ C:/Qt/6.8.2/mingw_64/include/QtCore/qendian.h \
+ C:/Qt/6.8.2/mingw_64/include/QtCore/QJsonObject \
+ C:/Qt/6.8.2/mingw_64/include/QtCore/qjsonobject.h \
  C:/Qt/6.8.2/mingw_64/include/QtCore/qtmochelpers.h \
  C:\Users\emcof\CLionProjects\RocketGUI_cpp\cmake-build-debug\MyQtApp_autogen\GT4ZMTGFRD/moc_mainPanel.cpp \
  C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/headers/mainPanel.h \
@@ -422,7 +436,6 @@ CMakeFiles/MyQtApp.dir/MyQtApp_autogen/mocs_compilation.cpp.obj: \
  C:/Qt/6.8.2/mingw_64/include/QtGui/qpalette.h \
  C:/Qt/6.8.2/mingw_64/include/QtGui/qbrush.h \
  C:/Qt/6.8.2/mingw_64/include/QtGui/qfont.h \
- C:/Qt/6.8.2/mingw_64/include/QtCore/qendian.h \
  C:/Qt/6.8.2/mingw_64/include/QtGui/qfontmetrics.h \
  C:/Qt/6.8.2/mingw_64/include/QtGui/qfontinfo.h \
  C:/Qt/6.8.2/mingw_64/include/QtWidgets/qsizepolicy.h \
@@ -438,9 +451,6 @@ CMakeFiles/MyQtApp.dir/MyQtApp_autogen/mocs_compilation.cpp.obj: \
  C:/Qt/6.8.2/mingw_64/include/QtWidgets/qlabel.h \
  C:/Qt/6.8.2/mingw_64/include/QtGui/qpicture.h \
  C:/Qt/6.8.2/mingw_64/include/QtGui/qtextdocument.h \
- C:/Qt/6.8.2/mingw_64/include/QtCore/qurl.h \
- C:/Qt/6.8.2/mingw_64/include/QtGui/QPalette \
- C:/Qt/6.8.2/mingw_64/include/QtGui/qpalette.h \
  C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/headers/mainTab.h \
  C:/Qt/6.8.2/mingw_64/include/QtWidgets/QGridLayout \
  C:/Qt/6.8.2/mingw_64/include/QtWidgets/qgridlayout.h \
@@ -451,10 +461,25 @@ CMakeFiles/MyQtApp.dir/MyQtApp_autogen/mocs_compilation.cpp.obj: \
  C:/Qt/6.8.2/mingw_64/include/QtWidgets/qabstractbutton.h \
  C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/headers/testTab.h \
  C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/tests/headers/clickTest.h \
+ C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/tests/headers/leakTest.h \
+ C:/Users/emcof/CLionProjects/RocketGUI_cpp/logic/headers/valveDisplay.h \
+ C:/Qt/6.8.2/mingw_64/include/QtWidgets/QGraphicsEllipseItem \
+ C:/Qt/6.8.2/mingw_64/include/QtWidgets/qgraphicsitem.h \
+ C:/Qt/6.8.2/mingw_64/include/QtGui/qpainterpath.h \
+ C:/Qt/6.8.2/mingw_64/include/QtWidgets/QGraphicsView \
+ C:/Qt/6.8.2/mingw_64/include/QtWidgets/qgraphicsview.h \
+ C:/Qt/6.8.2/mingw_64/include/QtGui/qpainter.h \
+ C:/Qt/6.8.2/mingw_64/include/QtGui/qtextoption.h \
+ C:/Qt/6.8.2/mingw_64/include/QtGui/qpen.h \
+ C:/Qt/6.8.2/mingw_64/include/QtWidgets/qscrollarea.h \
+ C:/Qt/6.8.2/mingw_64/include/QtWidgets/qabstractscrollarea.h \
+ C:/Qt/6.8.2/mingw_64/include/QtWidgets/qgraphicsscene.h \
+ C:/Qt/6.8.2/mingw_64/include/QtWidgets/QGraphicsScene \
+ C:/Qt/6.8.2/mingw_64/include/QtWidgets/qgraphicsscene.h \
+ C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/headers/setTab.h \
+ C:/Users/emcof/CLionProjects/RocketGUI_cpp/ESP_WIFI/wifi.h \
  C:/Qt/6.8.2/mingw_64/include/QtGui/qtextcursor.h \
  C:/Qt/6.8.2/mingw_64/include/QtGui/qtextformat.h \
- C:/Qt/6.8.2/mingw_64/include/QtGui/qpen.h \
- C:/Qt/6.8.2/mingw_64/include/QtGui/qtextoption.h \
  C:\Users\emcof\CLionProjects\RocketGUI_cpp\cmake-build-debug\MyQtApp_autogen\GT4ZMTGFRD/moc_mainTab.cpp \
  C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/headers/mainTab.h \
  C:\Users\emcof\CLionProjects\RocketGUI_cpp\cmake-build-debug\MyQtApp_autogen\GT4ZMTGFRD/moc_mainUI.cpp \
@@ -465,7 +490,13 @@ CMakeFiles/MyQtApp.dir/MyQtApp_autogen/mocs_compilation.cpp.obj: \
  C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/headers/optTab.h \
  C:\Users\emcof\CLionProjects\RocketGUI_cpp\cmake-build-debug\MyQtApp_autogen\GT4ZMTGFRD/moc_optTab.cpp \
  C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/headers/optTab.h \
+ C:\Users\emcof\CLionProjects\RocketGUI_cpp\cmake-build-debug\MyQtApp_autogen\GT4ZMTGFRD/moc_setTab.cpp \
+ C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/headers/setTab.h \
  C:\Users\emcof\CLionProjects\RocketGUI_cpp\cmake-build-debug\MyQtApp_autogen\GT4ZMTGFRD/moc_testTab.cpp \
  C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/headers/testTab.h \
  C:\Users\emcof\CLionProjects\RocketGUI_cpp\cmake-build-debug\MyQtApp_autogen\DKWTGFM2PV/moc_clickTest.cpp \
- C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/tests/headers/clickTest.h
+ C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/tests/headers/clickTest.h \
+ C:\Users\emcof\CLionProjects\RocketGUI_cpp\cmake-build-debug\MyQtApp_autogen\DKWTGFM2PV/moc_leakTest.cpp \
+ C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/tests/headers/leakTest.h \
+ C:\Users\emcof\CLionProjects\RocketGUI_cpp\cmake-build-debug\MyQtApp_autogen\22GOGG6FO6/moc_valveDisplay.cpp \
+ C:/Users/emcof/CLionProjects/RocketGUI_cpp/logic/headers/valveDisplay.h

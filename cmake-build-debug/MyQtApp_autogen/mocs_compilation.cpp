@@ -4,5 +4,8 @@
 #include "GT4ZMTGFRD/moc_mainTab.cpp"
 #include "GT4ZMTGFRD/moc_mainUI.cpp"
 #include "GT4ZMTGFRD/moc_optTab.cpp"
+#include "GT4ZMTGFRD/moc_setTab.cpp"
 #include "GT4ZMTGFRD/moc_testTab.cpp"
 #include "DKWTGFM2PV/moc_clickTest.cpp"
+#include "DKWTGFM2PV/moc_leakTest.cpp"
+#include "22GOGG6FO6/moc_valveDisplay.cpp"
