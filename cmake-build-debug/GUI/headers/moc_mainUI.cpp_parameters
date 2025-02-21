@@ -1,0 +1,4 @@
+-DWIN32
+-o
+C:/Users/emcof/CLionProjects/RocketGUI_cpp/cmake-build-debug/GUI/headers/moc_mainUI.cpp
+C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/headers/mainUI.h

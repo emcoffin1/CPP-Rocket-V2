@@ -1,0 +1,4 @@
+-DWIN32
+-o
+C:/Users/emcof/CLionProjects/RocketGUI_cpp/cmake-build-debug/ESP_WIFI/moc_wifi.cpp
+C:/Users/emcof/CLionProjects/RocketGUI_cpp/ESP_WIFI/wifi.h
