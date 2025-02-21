@@ -1,5 +1,5 @@
 #include <QApplication>
-#include <Qfile>
+#include <QFile>
 #include <QJsonObject>
 #include <QJsonDocument>
 #include "GUI/headers/mainUI.h"

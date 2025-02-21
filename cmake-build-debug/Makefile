@@ -128,29 +128,31 @@ MyQtApp/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\MyQtApp.dir\build.make CMakeFiles/MyQtApp.dir/build
 .PHONY : MyQtApp/fast
 
-ESP_WIFI/moc_wifi.obj: ESP_WIFI/moc_wifi.cpp.obj
-.PHONY : ESP_WIFI/moc_wifi.obj
+#=============================================================================
+# Target rules for targets named MyQtApp_autogen_timestamp_deps
 
-# target to build an object file
-ESP_WIFI/moc_wifi.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MyQtApp.dir\build.make CMakeFiles/MyQtApp.dir/ESP_WIFI/moc_wifi.cpp.obj
-.PHONY : ESP_WIFI/moc_wifi.cpp.obj
+# Build rule for target.
+MyQtApp_autogen_timestamp_deps: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 MyQtApp_autogen_timestamp_deps
+.PHONY : MyQtApp_autogen_timestamp_deps
 
-ESP_WIFI/moc_wifi.i: ESP_WIFI/moc_wifi.cpp.i
-.PHONY : ESP_WIFI/moc_wifi.i
+# fast build rule for target.
+MyQtApp_autogen_timestamp_deps/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\MyQtApp_autogen_timestamp_deps.dir\build.make CMakeFiles/MyQtApp_autogen_timestamp_deps.dir/build
+.PHONY : MyQtApp_autogen_timestamp_deps/fast
 
-# target to preprocess a source file
-ESP_WIFI/moc_wifi.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MyQtApp.dir\build.make CMakeFiles/MyQtApp.dir/ESP_WIFI/moc_wifi.cpp.i
-.PHONY : ESP_WIFI/moc_wifi.cpp.i
+#=============================================================================
+# Target rules for targets named MyQtApp_autogen
 
-ESP_WIFI/moc_wifi.s: ESP_WIFI/moc_wifi.cpp.s
-.PHONY : ESP_WIFI/moc_wifi.s
+# Build rule for target.
+MyQtApp_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 MyQtApp_autogen
+.PHONY : MyQtApp_autogen
 
-# target to generate assembly for a file
-ESP_WIFI/moc_wifi.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MyQtApp.dir\build.make CMakeFiles/MyQtApp.dir/ESP_WIFI/moc_wifi.cpp.s
-.PHONY : ESP_WIFI/moc_wifi.cpp.s
+# fast build rule for target.
+MyQtApp_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\MyQtApp_autogen.dir\build.make CMakeFiles/MyQtApp_autogen.dir/build
+.PHONY : MyQtApp_autogen/fast
 
 ESP_WIFI/wifi.obj: ESP_WIFI/wifi.cpp.obj
 .PHONY : ESP_WIFI/wifi.obj
@@ -175,126 +177,6 @@ ESP_WIFI/wifi.s: ESP_WIFI/wifi.cpp.s
 ESP_WIFI/wifi.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\MyQtApp.dir\build.make CMakeFiles/MyQtApp.dir/ESP_WIFI/wifi.cpp.s
 .PHONY : ESP_WIFI/wifi.cpp.s
-
-GUI/headers/moc_mainPanel.obj: GUI/headers/moc_mainPanel.cpp.obj
-.PHONY : GUI/headers/moc_mainPanel.obj
-
-# target to build an object file
-GUI/headers/moc_mainPanel.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MyQtApp.dir\build.make CMakeFiles/MyQtApp.dir/GUI/headers/moc_mainPanel.cpp.obj
-.PHONY : GUI/headers/moc_mainPanel.cpp.obj
-
-GUI/headers/moc_mainPanel.i: GUI/headers/moc_mainPanel.cpp.i
-.PHONY : GUI/headers/moc_mainPanel.i
-
-# target to preprocess a source file
-GUI/headers/moc_mainPanel.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MyQtApp.dir\build.make CMakeFiles/MyQtApp.dir/GUI/headers/moc_mainPanel.cpp.i
-.PHONY : GUI/headers/moc_mainPanel.cpp.i
-
-GUI/headers/moc_mainPanel.s: GUI/headers/moc_mainPanel.cpp.s
-.PHONY : GUI/headers/moc_mainPanel.s
-
-# target to generate assembly for a file
-GUI/headers/moc_mainPanel.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MyQtApp.dir\build.make CMakeFiles/MyQtApp.dir/GUI/headers/moc_mainPanel.cpp.s
-.PHONY : GUI/headers/moc_mainPanel.cpp.s
-
-GUI/headers/moc_mainTab.obj: GUI/headers/moc_mainTab.cpp.obj
-.PHONY : GUI/headers/moc_mainTab.obj
-
-# target to build an object file
-GUI/headers/moc_mainTab.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MyQtApp.dir\build.make CMakeFiles/MyQtApp.dir/GUI/headers/moc_mainTab.cpp.obj
-.PHONY : GUI/headers/moc_mainTab.cpp.obj
-
-GUI/headers/moc_mainTab.i: GUI/headers/moc_mainTab.cpp.i
-.PHONY : GUI/headers/moc_mainTab.i
-
-# target to preprocess a source file
-GUI/headers/moc_mainTab.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MyQtApp.dir\build.make CMakeFiles/MyQtApp.dir/GUI/headers/moc_mainTab.cpp.i
-.PHONY : GUI/headers/moc_mainTab.cpp.i
-
-GUI/headers/moc_mainTab.s: GUI/headers/moc_mainTab.cpp.s
-.PHONY : GUI/headers/moc_mainTab.s
-
-# target to generate assembly for a file
-GUI/headers/moc_mainTab.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MyQtApp.dir\build.make CMakeFiles/MyQtApp.dir/GUI/headers/moc_mainTab.cpp.s
-.PHONY : GUI/headers/moc_mainTab.cpp.s
-
-GUI/headers/moc_mainUI.obj: GUI/headers/moc_mainUI.cpp.obj
-.PHONY : GUI/headers/moc_mainUI.obj
-
-# target to build an object file
-GUI/headers/moc_mainUI.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MyQtApp.dir\build.make CMakeFiles/MyQtApp.dir/GUI/headers/moc_mainUI.cpp.obj
-.PHONY : GUI/headers/moc_mainUI.cpp.obj
-
-GUI/headers/moc_mainUI.i: GUI/headers/moc_mainUI.cpp.i
-.PHONY : GUI/headers/moc_mainUI.i
-
-# target to preprocess a source file
-GUI/headers/moc_mainUI.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MyQtApp.dir\build.make CMakeFiles/MyQtApp.dir/GUI/headers/moc_mainUI.cpp.i
-.PHONY : GUI/headers/moc_mainUI.cpp.i
-
-GUI/headers/moc_mainUI.s: GUI/headers/moc_mainUI.cpp.s
-.PHONY : GUI/headers/moc_mainUI.s
-
-# target to generate assembly for a file
-GUI/headers/moc_mainUI.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MyQtApp.dir\build.make CMakeFiles/MyQtApp.dir/GUI/headers/moc_mainUI.cpp.s
-.PHONY : GUI/headers/moc_mainUI.cpp.s
-
-GUI/headers/moc_optTab.obj: GUI/headers/moc_optTab.cpp.obj
-.PHONY : GUI/headers/moc_optTab.obj
-
-# target to build an object file
-GUI/headers/moc_optTab.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MyQtApp.dir\build.make CMakeFiles/MyQtApp.dir/GUI/headers/moc_optTab.cpp.obj
-.PHONY : GUI/headers/moc_optTab.cpp.obj
-
-GUI/headers/moc_optTab.i: GUI/headers/moc_optTab.cpp.i
-.PHONY : GUI/headers/moc_optTab.i
-
-# target to preprocess a source file
-GUI/headers/moc_optTab.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MyQtApp.dir\build.make CMakeFiles/MyQtApp.dir/GUI/headers/moc_optTab.cpp.i
-.PHONY : GUI/headers/moc_optTab.cpp.i
-
-GUI/headers/moc_optTab.s: GUI/headers/moc_optTab.cpp.s
-.PHONY : GUI/headers/moc_optTab.s
-
-# target to generate assembly for a file
-GUI/headers/moc_optTab.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MyQtApp.dir\build.make CMakeFiles/MyQtApp.dir/GUI/headers/moc_optTab.cpp.s
-.PHONY : GUI/headers/moc_optTab.cpp.s
-
-GUI/headers/moc_testTab.obj: GUI/headers/moc_testTab.cpp.obj
-.PHONY : GUI/headers/moc_testTab.obj
-
-# target to build an object file
-GUI/headers/moc_testTab.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MyQtApp.dir\build.make CMakeFiles/MyQtApp.dir/GUI/headers/moc_testTab.cpp.obj
-.PHONY : GUI/headers/moc_testTab.cpp.obj
-
-GUI/headers/moc_testTab.i: GUI/headers/moc_testTab.cpp.i
-.PHONY : GUI/headers/moc_testTab.i
-
-# target to preprocess a source file
-GUI/headers/moc_testTab.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MyQtApp.dir\build.make CMakeFiles/MyQtApp.dir/GUI/headers/moc_testTab.cpp.i
-.PHONY : GUI/headers/moc_testTab.cpp.i
-
-GUI/headers/moc_testTab.s: GUI/headers/moc_testTab.cpp.s
-.PHONY : GUI/headers/moc_testTab.s
-
-# target to generate assembly for a file
-GUI/headers/moc_testTab.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MyQtApp.dir\build.make CMakeFiles/MyQtApp.dir/GUI/headers/moc_testTab.cpp.s
-.PHONY : GUI/headers/moc_testTab.cpp.s
 
 GUI/source/mainPanel.obj: GUI/source/mainPanel.cpp.obj
 .PHONY : GUI/source/mainPanel.obj
@@ -416,30 +298,6 @@ GUI/source/testTab.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\MyQtApp.dir\build.make CMakeFiles/MyQtApp.dir/GUI/source/testTab.cpp.s
 .PHONY : GUI/source/testTab.cpp.s
 
-GUI/tests/headers/moc_clickTest.obj: GUI/tests/headers/moc_clickTest.cpp.obj
-.PHONY : GUI/tests/headers/moc_clickTest.obj
-
-# target to build an object file
-GUI/tests/headers/moc_clickTest.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MyQtApp.dir\build.make CMakeFiles/MyQtApp.dir/GUI/tests/headers/moc_clickTest.cpp.obj
-.PHONY : GUI/tests/headers/moc_clickTest.cpp.obj
-
-GUI/tests/headers/moc_clickTest.i: GUI/tests/headers/moc_clickTest.cpp.i
-.PHONY : GUI/tests/headers/moc_clickTest.i
-
-# target to preprocess a source file
-GUI/tests/headers/moc_clickTest.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MyQtApp.dir\build.make CMakeFiles/MyQtApp.dir/GUI/tests/headers/moc_clickTest.cpp.i
-.PHONY : GUI/tests/headers/moc_clickTest.cpp.i
-
-GUI/tests/headers/moc_clickTest.s: GUI/tests/headers/moc_clickTest.cpp.s
-.PHONY : GUI/tests/headers/moc_clickTest.s
-
-# target to generate assembly for a file
-GUI/tests/headers/moc_clickTest.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\MyQtApp.dir\build.make CMakeFiles/MyQtApp.dir/GUI/tests/headers/moc_clickTest.cpp.s
-.PHONY : GUI/tests/headers/moc_clickTest.cpp.s
-
 GUI/tests/source/clickTest.obj: GUI/tests/source/clickTest.cpp.obj
 .PHONY : GUI/tests/source/clickTest.obj
 
@@ -463,6 +321,30 @@ GUI/tests/source/clickTest.s: GUI/tests/source/clickTest.cpp.s
 GUI/tests/source/clickTest.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\MyQtApp.dir\build.make CMakeFiles/MyQtApp.dir/GUI/tests/source/clickTest.cpp.s
 .PHONY : GUI/tests/source/clickTest.cpp.s
+
+MyQtApp_autogen/mocs_compilation.obj: MyQtApp_autogen/mocs_compilation.cpp.obj
+.PHONY : MyQtApp_autogen/mocs_compilation.obj
+
+# target to build an object file
+MyQtApp_autogen/mocs_compilation.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\MyQtApp.dir\build.make CMakeFiles/MyQtApp.dir/MyQtApp_autogen/mocs_compilation.cpp.obj
+.PHONY : MyQtApp_autogen/mocs_compilation.cpp.obj
+
+MyQtApp_autogen/mocs_compilation.i: MyQtApp_autogen/mocs_compilation.cpp.i
+.PHONY : MyQtApp_autogen/mocs_compilation.i
+
+# target to preprocess a source file
+MyQtApp_autogen/mocs_compilation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\MyQtApp.dir\build.make CMakeFiles/MyQtApp.dir/MyQtApp_autogen/mocs_compilation.cpp.i
+.PHONY : MyQtApp_autogen/mocs_compilation.cpp.i
+
+MyQtApp_autogen/mocs_compilation.s: MyQtApp_autogen/mocs_compilation.cpp.s
+.PHONY : MyQtApp_autogen/mocs_compilation.s
+
+# target to generate assembly for a file
+MyQtApp_autogen/mocs_compilation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\MyQtApp.dir\build.make CMakeFiles/MyQtApp.dir/MyQtApp_autogen/mocs_compilation.cpp.s
+.PHONY : MyQtApp_autogen/mocs_compilation.cpp.s
 
 main.obj: main.cpp.obj
 .PHONY : main.obj
@@ -496,28 +378,12 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... MyQtApp_autogen
+	@echo ... MyQtApp_autogen_timestamp_deps
 	@echo ... MyQtApp
-	@echo ... ESP_WIFI/moc_wifi.obj
-	@echo ... ESP_WIFI/moc_wifi.i
-	@echo ... ESP_WIFI/moc_wifi.s
 	@echo ... ESP_WIFI/wifi.obj
 	@echo ... ESP_WIFI/wifi.i
 	@echo ... ESP_WIFI/wifi.s
-	@echo ... GUI/headers/moc_mainPanel.obj
-	@echo ... GUI/headers/moc_mainPanel.i
-	@echo ... GUI/headers/moc_mainPanel.s
-	@echo ... GUI/headers/moc_mainTab.obj
-	@echo ... GUI/headers/moc_mainTab.i
-	@echo ... GUI/headers/moc_mainTab.s
-	@echo ... GUI/headers/moc_mainUI.obj
-	@echo ... GUI/headers/moc_mainUI.i
-	@echo ... GUI/headers/moc_mainUI.s
-	@echo ... GUI/headers/moc_optTab.obj
-	@echo ... GUI/headers/moc_optTab.i
-	@echo ... GUI/headers/moc_optTab.s
-	@echo ... GUI/headers/moc_testTab.obj
-	@echo ... GUI/headers/moc_testTab.i
-	@echo ... GUI/headers/moc_testTab.s
 	@echo ... GUI/source/mainPanel.obj
 	@echo ... GUI/source/mainPanel.i
 	@echo ... GUI/source/mainPanel.s
@@ -533,12 +399,12 @@ help:
 	@echo ... GUI/source/testTab.obj
 	@echo ... GUI/source/testTab.i
 	@echo ... GUI/source/testTab.s
-	@echo ... GUI/tests/headers/moc_clickTest.obj
-	@echo ... GUI/tests/headers/moc_clickTest.i
-	@echo ... GUI/tests/headers/moc_clickTest.s
 	@echo ... GUI/tests/source/clickTest.obj
 	@echo ... GUI/tests/source/clickTest.i
 	@echo ... GUI/tests/source/clickTest.s
+	@echo ... MyQtApp_autogen/mocs_compilation.obj
+	@echo ... MyQtApp_autogen/mocs_compilation.i
+	@echo ... MyQtApp_autogen/mocs_compilation.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

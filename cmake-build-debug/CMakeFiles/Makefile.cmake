@@ -188,6 +188,14 @@ set(CMAKE_MAKEFILE_DEPENDS
   "C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6Network/Qt6QTlsBackendOpenSSLPluginConfig.cmake"
   "C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6Network/Qt6QTlsBackendOpenSSLPluginTargets-relwithdebinfo.cmake"
   "C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6Network/Qt6QTlsBackendOpenSSLPluginTargets.cmake"
+  "C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6SerialPort/Qt6SerialPortAdditionalTargetInfo.cmake"
+  "C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6SerialPort/Qt6SerialPortConfig.cmake"
+  "C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6SerialPort/Qt6SerialPortConfigVersion.cmake"
+  "C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6SerialPort/Qt6SerialPortConfigVersionImpl.cmake"
+  "C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6SerialPort/Qt6SerialPortDependencies.cmake"
+  "C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6SerialPort/Qt6SerialPortTargets-relwithdebinfo.cmake"
+  "C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6SerialPort/Qt6SerialPortTargets.cmake"
+  "C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6SerialPort/Qt6SerialPortVersionlessAliasTargets.cmake"
   "C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6Widgets/Qt6QModernWindowsStylePluginAdditionalTargetInfo.cmake"
   "C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6Widgets/Qt6QModernWindowsStylePluginConfig.cmake"
   "C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6Widgets/Qt6QModernWindowsStylePluginTargets-relwithdebinfo.cmake"
@@ -231,6 +239,7 @@ set(CMAKE_MAKEFILE_OUTPUTS
 
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
+  "CMakeFiles/MyQtApp_autogen.dir/AutogenInfo.json"
   ".qt/QtDeploySupport.cmake"
   ".qt/QtDeployTargets.cmake"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
@@ -239,4 +248,6 @@ set(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/MyQtApp.dir/DependInfo.cmake"
+  "CMakeFiles/MyQtApp_autogen_timestamp_deps.dir/DependInfo.cmake"
+  "CMakeFiles/MyQtApp_autogen.dir/DependInfo.cmake"
   )

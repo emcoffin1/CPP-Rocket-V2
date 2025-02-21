@@ -1,8 +1,3 @@
 # Hashes of file build rules.
-9dee13b3c43ea99b7bcbed4c405bba15 ESP_WIFI/moc_wifi.cpp
-eb2cc9b586402e720d18397c4f1c8123 GUI/headers/moc_mainPanel.cpp
-cce0bdc89125321cd36e64f2fe05a8b3 GUI/headers/moc_mainTab.cpp
-a632c58ca102ba35203d4557bcad42e7 GUI/headers/moc_mainUI.cpp
-a4cd61410dbc0b2f81333ac8448b3a8d GUI/headers/moc_optTab.cpp
-af2396dd82d0049220d19126b1ae0b47 GUI/headers/moc_testTab.cpp
-7c1c20aa2b46526bab5c7ab543676349 GUI/tests/headers/moc_clickTest.cpp
+a3cf20ac5cd673b19a5a6f31582cc802 CMakeFiles/MyQtApp_autogen
+cb493b8e96f59e6145c9557b4f7f63a5 MyQtApp_autogen/timestamp

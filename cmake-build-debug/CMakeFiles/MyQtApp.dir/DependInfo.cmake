@@ -8,20 +8,15 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "C:/Users/emcof/CLionProjects/RocketGUI_cpp/cmake-build-debug/ESP_WIFI/moc_wifi.cpp" "CMakeFiles/MyQtApp.dir/ESP_WIFI/moc_wifi.cpp.obj" "gcc" "CMakeFiles/MyQtApp.dir/ESP_WIFI/moc_wifi.cpp.obj.d"
+  "" "MyQtApp_autogen/timestamp" "custom" "MyQtApp_autogen/deps"
   "C:/Users/emcof/CLionProjects/RocketGUI_cpp/ESP_WIFI/wifi.cpp" "CMakeFiles/MyQtApp.dir/ESP_WIFI/wifi.cpp.obj" "gcc" "CMakeFiles/MyQtApp.dir/ESP_WIFI/wifi.cpp.obj.d"
-  "C:/Users/emcof/CLionProjects/RocketGUI_cpp/cmake-build-debug/GUI/headers/moc_mainPanel.cpp" "CMakeFiles/MyQtApp.dir/GUI/headers/moc_mainPanel.cpp.obj" "gcc" "CMakeFiles/MyQtApp.dir/GUI/headers/moc_mainPanel.cpp.obj.d"
-  "C:/Users/emcof/CLionProjects/RocketGUI_cpp/cmake-build-debug/GUI/headers/moc_mainTab.cpp" "CMakeFiles/MyQtApp.dir/GUI/headers/moc_mainTab.cpp.obj" "gcc" "CMakeFiles/MyQtApp.dir/GUI/headers/moc_mainTab.cpp.obj.d"
-  "C:/Users/emcof/CLionProjects/RocketGUI_cpp/cmake-build-debug/GUI/headers/moc_mainUI.cpp" "CMakeFiles/MyQtApp.dir/GUI/headers/moc_mainUI.cpp.obj" "gcc" "CMakeFiles/MyQtApp.dir/GUI/headers/moc_mainUI.cpp.obj.d"
-  "C:/Users/emcof/CLionProjects/RocketGUI_cpp/cmake-build-debug/GUI/headers/moc_optTab.cpp" "CMakeFiles/MyQtApp.dir/GUI/headers/moc_optTab.cpp.obj" "gcc" "CMakeFiles/MyQtApp.dir/GUI/headers/moc_optTab.cpp.obj.d"
-  "C:/Users/emcof/CLionProjects/RocketGUI_cpp/cmake-build-debug/GUI/headers/moc_testTab.cpp" "CMakeFiles/MyQtApp.dir/GUI/headers/moc_testTab.cpp.obj" "gcc" "CMakeFiles/MyQtApp.dir/GUI/headers/moc_testTab.cpp.obj.d"
   "C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/source/mainPanel.cpp" "CMakeFiles/MyQtApp.dir/GUI/source/mainPanel.cpp.obj" "gcc" "CMakeFiles/MyQtApp.dir/GUI/source/mainPanel.cpp.obj.d"
   "C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/source/mainTab.cpp" "CMakeFiles/MyQtApp.dir/GUI/source/mainTab.cpp.obj" "gcc" "CMakeFiles/MyQtApp.dir/GUI/source/mainTab.cpp.obj.d"
   "C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/source/mainUI.cpp" "CMakeFiles/MyQtApp.dir/GUI/source/mainUI.cpp.obj" "gcc" "CMakeFiles/MyQtApp.dir/GUI/source/mainUI.cpp.obj.d"
   "C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/source/optTab.cpp" "CMakeFiles/MyQtApp.dir/GUI/source/optTab.cpp.obj" "gcc" "CMakeFiles/MyQtApp.dir/GUI/source/optTab.cpp.obj.d"
   "C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/source/testTab.cpp" "CMakeFiles/MyQtApp.dir/GUI/source/testTab.cpp.obj" "gcc" "CMakeFiles/MyQtApp.dir/GUI/source/testTab.cpp.obj.d"
-  "C:/Users/emcof/CLionProjects/RocketGUI_cpp/cmake-build-debug/GUI/tests/headers/moc_clickTest.cpp" "CMakeFiles/MyQtApp.dir/GUI/tests/headers/moc_clickTest.cpp.obj" "gcc" "CMakeFiles/MyQtApp.dir/GUI/tests/headers/moc_clickTest.cpp.obj.d"
   "C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/tests/source/clickTest.cpp" "CMakeFiles/MyQtApp.dir/GUI/tests/source/clickTest.cpp.obj" "gcc" "CMakeFiles/MyQtApp.dir/GUI/tests/source/clickTest.cpp.obj.d"
+  "C:/Users/emcof/CLionProjects/RocketGUI_cpp/cmake-build-debug/MyQtApp_autogen/mocs_compilation.cpp" "CMakeFiles/MyQtApp.dir/MyQtApp_autogen/mocs_compilation.cpp.obj" "gcc" "CMakeFiles/MyQtApp.dir/MyQtApp_autogen/mocs_compilation.cpp.obj.d"
   "C:/Users/emcof/CLionProjects/RocketGUI_cpp/main.cpp" "CMakeFiles/MyQtApp.dir/main.cpp.obj" "gcc" "CMakeFiles/MyQtApp.dir/main.cpp.obj.d"
   )
 

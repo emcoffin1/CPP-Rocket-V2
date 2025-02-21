@@ -68,39 +68,33 @@ include CMakeFiles/MyQtApp.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/MyQtApp.dir/flags.make
 
-GUI/headers/moc_mainPanel.cpp: C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/headers/mainPanel.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=C:\Users\emcof\CLionProjects\RocketGUI_cpp\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating GUI/headers/moc_mainPanel.cpp"
-	cd /d C:\Users\emcof\CLionProjects\RocketGUI_cpp\cmake-build-debug\GUI\headers && C:\Qt\6.8.2\mingw_64\bin\moc.exe @C:/Users/emcof/CLionProjects/RocketGUI_cpp/cmake-build-debug/GUI/headers/moc_mainPanel.cpp_parameters
+MyQtApp_autogen/timestamp: C:/Qt/6.8.2/mingw_64/bin/moc.exe
+MyQtApp_autogen/timestamp: C:/Qt/6.8.2/mingw_64/bin/uic.exe
+MyQtApp_autogen/timestamp: CMakeFiles/MyQtApp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=C:\Users\emcof\CLionProjects\RocketGUI_cpp\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target MyQtApp"
+	"C:\Program Files\JetBrains\CLion 2024.3.3\bin\cmake\win\x64\bin\cmake.exe" -E cmake_autogen C:/Users/emcof/CLionProjects/RocketGUI_cpp/cmake-build-debug/CMakeFiles/MyQtApp_autogen.dir/AutogenInfo.json Debug
+	"C:\Program Files\JetBrains\CLion 2024.3.3\bin\cmake\win\x64\bin\cmake.exe" -E touch C:/Users/emcof/CLionProjects/RocketGUI_cpp/cmake-build-debug/MyQtApp_autogen/timestamp
 
-GUI/headers/moc_mainTab.cpp: C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/headers/mainTab.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=C:\Users\emcof\CLionProjects\RocketGUI_cpp\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating GUI/headers/moc_mainTab.cpp"
-	cd /d C:\Users\emcof\CLionProjects\RocketGUI_cpp\cmake-build-debug\GUI\headers && C:\Qt\6.8.2\mingw_64\bin\moc.exe @C:/Users/emcof/CLionProjects/RocketGUI_cpp/cmake-build-debug/GUI/headers/moc_mainTab.cpp_parameters
+CMakeFiles/MyQtApp.dir/MyQtApp_autogen/mocs_compilation.cpp.obj: CMakeFiles/MyQtApp.dir/flags.make
+CMakeFiles/MyQtApp.dir/MyQtApp_autogen/mocs_compilation.cpp.obj: CMakeFiles/MyQtApp.dir/includes_CXX.rsp
+CMakeFiles/MyQtApp.dir/MyQtApp_autogen/mocs_compilation.cpp.obj: MyQtApp_autogen/mocs_compilation.cpp
+CMakeFiles/MyQtApp.dir/MyQtApp_autogen/mocs_compilation.cpp.obj: CMakeFiles/MyQtApp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\emcof\CLionProjects\RocketGUI_cpp\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/MyQtApp.dir/MyQtApp_autogen/mocs_compilation.cpp.obj"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MyQtApp.dir/MyQtApp_autogen/mocs_compilation.cpp.obj -MF CMakeFiles\MyQtApp.dir\MyQtApp_autogen\mocs_compilation.cpp.obj.d -o CMakeFiles\MyQtApp.dir\MyQtApp_autogen\mocs_compilation.cpp.obj -c C:\Users\emcof\CLionProjects\RocketGUI_cpp\cmake-build-debug\MyQtApp_autogen\mocs_compilation.cpp
 
-GUI/headers/moc_mainUI.cpp: C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/headers/mainUI.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=C:\Users\emcof\CLionProjects\RocketGUI_cpp\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating GUI/headers/moc_mainUI.cpp"
-	cd /d C:\Users\emcof\CLionProjects\RocketGUI_cpp\cmake-build-debug\GUI\headers && C:\Qt\6.8.2\mingw_64\bin\moc.exe @C:/Users/emcof/CLionProjects/RocketGUI_cpp/cmake-build-debug/GUI/headers/moc_mainUI.cpp_parameters
+CMakeFiles/MyQtApp.dir/MyQtApp_autogen/mocs_compilation.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MyQtApp.dir/MyQtApp_autogen/mocs_compilation.cpp.i"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\emcof\CLionProjects\RocketGUI_cpp\cmake-build-debug\MyQtApp_autogen\mocs_compilation.cpp > CMakeFiles\MyQtApp.dir\MyQtApp_autogen\mocs_compilation.cpp.i
 
-GUI/headers/moc_optTab.cpp: C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/headers/optTab.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=C:\Users\emcof\CLionProjects\RocketGUI_cpp\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating GUI/headers/moc_optTab.cpp"
-	cd /d C:\Users\emcof\CLionProjects\RocketGUI_cpp\cmake-build-debug\GUI\headers && C:\Qt\6.8.2\mingw_64\bin\moc.exe @C:/Users/emcof/CLionProjects/RocketGUI_cpp/cmake-build-debug/GUI/headers/moc_optTab.cpp_parameters
-
-GUI/headers/moc_testTab.cpp: C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/headers/testTab.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=C:\Users\emcof\CLionProjects\RocketGUI_cpp\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating GUI/headers/moc_testTab.cpp"
-	cd /d C:\Users\emcof\CLionProjects\RocketGUI_cpp\cmake-build-debug\GUI\headers && C:\Qt\6.8.2\mingw_64\bin\moc.exe @C:/Users/emcof/CLionProjects/RocketGUI_cpp/cmake-build-debug/GUI/headers/moc_testTab.cpp_parameters
-
-GUI/tests/headers/moc_clickTest.cpp: C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/tests/headers/clickTest.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=C:\Users\emcof\CLionProjects\RocketGUI_cpp\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating GUI/tests/headers/moc_clickTest.cpp"
-	cd /d C:\Users\emcof\CLionProjects\RocketGUI_cpp\cmake-build-debug\GUI\tests\headers && C:\Qt\6.8.2\mingw_64\bin\moc.exe @C:/Users/emcof/CLionProjects/RocketGUI_cpp/cmake-build-debug/GUI/tests/headers/moc_clickTest.cpp_parameters
-
-ESP_WIFI/moc_wifi.cpp: C:/Users/emcof/CLionProjects/RocketGUI_cpp/ESP_WIFI/wifi.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=C:\Users\emcof\CLionProjects\RocketGUI_cpp\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Generating ESP_WIFI/moc_wifi.cpp"
-	cd /d C:\Users\emcof\CLionProjects\RocketGUI_cpp\cmake-build-debug\ESP_WIFI && C:\Qt\6.8.2\mingw_64\bin\moc.exe @C:/Users/emcof/CLionProjects/RocketGUI_cpp/cmake-build-debug/ESP_WIFI/moc_wifi.cpp_parameters
+CMakeFiles/MyQtApp.dir/MyQtApp_autogen/mocs_compilation.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MyQtApp.dir/MyQtApp_autogen/mocs_compilation.cpp.s"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\emcof\CLionProjects\RocketGUI_cpp\cmake-build-debug\MyQtApp_autogen\mocs_compilation.cpp -o CMakeFiles\MyQtApp.dir\MyQtApp_autogen\mocs_compilation.cpp.s
 
 CMakeFiles/MyQtApp.dir/main.cpp.obj: CMakeFiles/MyQtApp.dir/flags.make
 CMakeFiles/MyQtApp.dir/main.cpp.obj: CMakeFiles/MyQtApp.dir/includes_CXX.rsp
 CMakeFiles/MyQtApp.dir/main.cpp.obj: C:/Users/emcof/CLionProjects/RocketGUI_cpp/main.cpp
 CMakeFiles/MyQtApp.dir/main.cpp.obj: CMakeFiles/MyQtApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\emcof\CLionProjects\RocketGUI_cpp\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/MyQtApp.dir/main.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\emcof\CLionProjects\RocketGUI_cpp\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/MyQtApp.dir/main.cpp.obj"
 	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MyQtApp.dir/main.cpp.obj -MF CMakeFiles\MyQtApp.dir\main.cpp.obj.d -o CMakeFiles\MyQtApp.dir\main.cpp.obj -c C:\Users\emcof\CLionProjects\RocketGUI_cpp\main.cpp
 
 CMakeFiles/MyQtApp.dir/main.cpp.i: cmake_force
@@ -111,41 +105,11 @@ CMakeFiles/MyQtApp.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MyQtApp.dir/main.cpp.s"
 	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\emcof\CLionProjects\RocketGUI_cpp\main.cpp -o CMakeFiles\MyQtApp.dir\main.cpp.s
 
-CMakeFiles/MyQtApp.dir/GUI/source/mainPanel.cpp.obj: CMakeFiles/MyQtApp.dir/flags.make
-CMakeFiles/MyQtApp.dir/GUI/source/mainPanel.cpp.obj: CMakeFiles/MyQtApp.dir/includes_CXX.rsp
-CMakeFiles/MyQtApp.dir/GUI/source/mainPanel.cpp.obj: C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/source/mainPanel.cpp
-CMakeFiles/MyQtApp.dir/GUI/source/mainPanel.cpp.obj: CMakeFiles/MyQtApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\emcof\CLionProjects\RocketGUI_cpp\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/MyQtApp.dir/GUI/source/mainPanel.cpp.obj"
-	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MyQtApp.dir/GUI/source/mainPanel.cpp.obj -MF CMakeFiles\MyQtApp.dir\GUI\source\mainPanel.cpp.obj.d -o CMakeFiles\MyQtApp.dir\GUI\source\mainPanel.cpp.obj -c C:\Users\emcof\CLionProjects\RocketGUI_cpp\GUI\source\mainPanel.cpp
-
-CMakeFiles/MyQtApp.dir/GUI/source/mainPanel.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MyQtApp.dir/GUI/source/mainPanel.cpp.i"
-	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\emcof\CLionProjects\RocketGUI_cpp\GUI\source\mainPanel.cpp > CMakeFiles\MyQtApp.dir\GUI\source\mainPanel.cpp.i
-
-CMakeFiles/MyQtApp.dir/GUI/source/mainPanel.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MyQtApp.dir/GUI/source/mainPanel.cpp.s"
-	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\emcof\CLionProjects\RocketGUI_cpp\GUI\source\mainPanel.cpp -o CMakeFiles\MyQtApp.dir\GUI\source\mainPanel.cpp.s
-
-CMakeFiles/MyQtApp.dir/GUI/source/mainTab.cpp.obj: CMakeFiles/MyQtApp.dir/flags.make
-CMakeFiles/MyQtApp.dir/GUI/source/mainTab.cpp.obj: CMakeFiles/MyQtApp.dir/includes_CXX.rsp
-CMakeFiles/MyQtApp.dir/GUI/source/mainTab.cpp.obj: C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/source/mainTab.cpp
-CMakeFiles/MyQtApp.dir/GUI/source/mainTab.cpp.obj: CMakeFiles/MyQtApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\emcof\CLionProjects\RocketGUI_cpp\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/MyQtApp.dir/GUI/source/mainTab.cpp.obj"
-	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MyQtApp.dir/GUI/source/mainTab.cpp.obj -MF CMakeFiles\MyQtApp.dir\GUI\source\mainTab.cpp.obj.d -o CMakeFiles\MyQtApp.dir\GUI\source\mainTab.cpp.obj -c C:\Users\emcof\CLionProjects\RocketGUI_cpp\GUI\source\mainTab.cpp
-
-CMakeFiles/MyQtApp.dir/GUI/source/mainTab.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MyQtApp.dir/GUI/source/mainTab.cpp.i"
-	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\emcof\CLionProjects\RocketGUI_cpp\GUI\source\mainTab.cpp > CMakeFiles\MyQtApp.dir\GUI\source\mainTab.cpp.i
-
-CMakeFiles/MyQtApp.dir/GUI/source/mainTab.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MyQtApp.dir/GUI/source/mainTab.cpp.s"
-	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\emcof\CLionProjects\RocketGUI_cpp\GUI\source\mainTab.cpp -o CMakeFiles\MyQtApp.dir\GUI\source\mainTab.cpp.s
-
 CMakeFiles/MyQtApp.dir/GUI/source/mainUI.cpp.obj: CMakeFiles/MyQtApp.dir/flags.make
 CMakeFiles/MyQtApp.dir/GUI/source/mainUI.cpp.obj: CMakeFiles/MyQtApp.dir/includes_CXX.rsp
 CMakeFiles/MyQtApp.dir/GUI/source/mainUI.cpp.obj: C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/source/mainUI.cpp
 CMakeFiles/MyQtApp.dir/GUI/source/mainUI.cpp.obj: CMakeFiles/MyQtApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\emcof\CLionProjects\RocketGUI_cpp\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/MyQtApp.dir/GUI/source/mainUI.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\emcof\CLionProjects\RocketGUI_cpp\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/MyQtApp.dir/GUI/source/mainUI.cpp.obj"
 	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MyQtApp.dir/GUI/source/mainUI.cpp.obj -MF CMakeFiles\MyQtApp.dir\GUI\source\mainUI.cpp.obj.d -o CMakeFiles\MyQtApp.dir\GUI\source\mainUI.cpp.obj -c C:\Users\emcof\CLionProjects\RocketGUI_cpp\GUI\source\mainUI.cpp
 
 CMakeFiles/MyQtApp.dir/GUI/source/mainUI.cpp.i: cmake_force
@@ -160,7 +124,7 @@ CMakeFiles/MyQtApp.dir/GUI/source/optTab.cpp.obj: CMakeFiles/MyQtApp.dir/flags.m
 CMakeFiles/MyQtApp.dir/GUI/source/optTab.cpp.obj: CMakeFiles/MyQtApp.dir/includes_CXX.rsp
 CMakeFiles/MyQtApp.dir/GUI/source/optTab.cpp.obj: C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/source/optTab.cpp
 CMakeFiles/MyQtApp.dir/GUI/source/optTab.cpp.obj: CMakeFiles/MyQtApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\emcof\CLionProjects\RocketGUI_cpp\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/MyQtApp.dir/GUI/source/optTab.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\emcof\CLionProjects\RocketGUI_cpp\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/MyQtApp.dir/GUI/source/optTab.cpp.obj"
 	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MyQtApp.dir/GUI/source/optTab.cpp.obj -MF CMakeFiles\MyQtApp.dir\GUI\source\optTab.cpp.obj.d -o CMakeFiles\MyQtApp.dir\GUI\source\optTab.cpp.obj -c C:\Users\emcof\CLionProjects\RocketGUI_cpp\GUI\source\optTab.cpp
 
 CMakeFiles/MyQtApp.dir/GUI/source/optTab.cpp.i: cmake_force
@@ -171,11 +135,41 @@ CMakeFiles/MyQtApp.dir/GUI/source/optTab.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MyQtApp.dir/GUI/source/optTab.cpp.s"
 	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\emcof\CLionProjects\RocketGUI_cpp\GUI\source\optTab.cpp -o CMakeFiles\MyQtApp.dir\GUI\source\optTab.cpp.s
 
+CMakeFiles/MyQtApp.dir/GUI/source/mainPanel.cpp.obj: CMakeFiles/MyQtApp.dir/flags.make
+CMakeFiles/MyQtApp.dir/GUI/source/mainPanel.cpp.obj: CMakeFiles/MyQtApp.dir/includes_CXX.rsp
+CMakeFiles/MyQtApp.dir/GUI/source/mainPanel.cpp.obj: C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/source/mainPanel.cpp
+CMakeFiles/MyQtApp.dir/GUI/source/mainPanel.cpp.obj: CMakeFiles/MyQtApp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\emcof\CLionProjects\RocketGUI_cpp\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/MyQtApp.dir/GUI/source/mainPanel.cpp.obj"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MyQtApp.dir/GUI/source/mainPanel.cpp.obj -MF CMakeFiles\MyQtApp.dir\GUI\source\mainPanel.cpp.obj.d -o CMakeFiles\MyQtApp.dir\GUI\source\mainPanel.cpp.obj -c C:\Users\emcof\CLionProjects\RocketGUI_cpp\GUI\source\mainPanel.cpp
+
+CMakeFiles/MyQtApp.dir/GUI/source/mainPanel.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MyQtApp.dir/GUI/source/mainPanel.cpp.i"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\emcof\CLionProjects\RocketGUI_cpp\GUI\source\mainPanel.cpp > CMakeFiles\MyQtApp.dir\GUI\source\mainPanel.cpp.i
+
+CMakeFiles/MyQtApp.dir/GUI/source/mainPanel.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MyQtApp.dir/GUI/source/mainPanel.cpp.s"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\emcof\CLionProjects\RocketGUI_cpp\GUI\source\mainPanel.cpp -o CMakeFiles\MyQtApp.dir\GUI\source\mainPanel.cpp.s
+
+CMakeFiles/MyQtApp.dir/GUI/source/mainTab.cpp.obj: CMakeFiles/MyQtApp.dir/flags.make
+CMakeFiles/MyQtApp.dir/GUI/source/mainTab.cpp.obj: CMakeFiles/MyQtApp.dir/includes_CXX.rsp
+CMakeFiles/MyQtApp.dir/GUI/source/mainTab.cpp.obj: C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/source/mainTab.cpp
+CMakeFiles/MyQtApp.dir/GUI/source/mainTab.cpp.obj: CMakeFiles/MyQtApp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\emcof\CLionProjects\RocketGUI_cpp\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/MyQtApp.dir/GUI/source/mainTab.cpp.obj"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MyQtApp.dir/GUI/source/mainTab.cpp.obj -MF CMakeFiles\MyQtApp.dir\GUI\source\mainTab.cpp.obj.d -o CMakeFiles\MyQtApp.dir\GUI\source\mainTab.cpp.obj -c C:\Users\emcof\CLionProjects\RocketGUI_cpp\GUI\source\mainTab.cpp
+
+CMakeFiles/MyQtApp.dir/GUI/source/mainTab.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MyQtApp.dir/GUI/source/mainTab.cpp.i"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\emcof\CLionProjects\RocketGUI_cpp\GUI\source\mainTab.cpp > CMakeFiles\MyQtApp.dir\GUI\source\mainTab.cpp.i
+
+CMakeFiles/MyQtApp.dir/GUI/source/mainTab.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MyQtApp.dir/GUI/source/mainTab.cpp.s"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\emcof\CLionProjects\RocketGUI_cpp\GUI\source\mainTab.cpp -o CMakeFiles\MyQtApp.dir\GUI\source\mainTab.cpp.s
+
 CMakeFiles/MyQtApp.dir/GUI/source/testTab.cpp.obj: CMakeFiles/MyQtApp.dir/flags.make
 CMakeFiles/MyQtApp.dir/GUI/source/testTab.cpp.obj: CMakeFiles/MyQtApp.dir/includes_CXX.rsp
 CMakeFiles/MyQtApp.dir/GUI/source/testTab.cpp.obj: C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/source/testTab.cpp
 CMakeFiles/MyQtApp.dir/GUI/source/testTab.cpp.obj: CMakeFiles/MyQtApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\emcof\CLionProjects\RocketGUI_cpp\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/MyQtApp.dir/GUI/source/testTab.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\emcof\CLionProjects\RocketGUI_cpp\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/MyQtApp.dir/GUI/source/testTab.cpp.obj"
 	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MyQtApp.dir/GUI/source/testTab.cpp.obj -MF CMakeFiles\MyQtApp.dir\GUI\source\testTab.cpp.obj.d -o CMakeFiles\MyQtApp.dir\GUI\source\testTab.cpp.obj -c C:\Users\emcof\CLionProjects\RocketGUI_cpp\GUI\source\testTab.cpp
 
 CMakeFiles/MyQtApp.dir/GUI/source/testTab.cpp.i: cmake_force
@@ -186,26 +180,11 @@ CMakeFiles/MyQtApp.dir/GUI/source/testTab.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MyQtApp.dir/GUI/source/testTab.cpp.s"
 	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\emcof\CLionProjects\RocketGUI_cpp\GUI\source\testTab.cpp -o CMakeFiles\MyQtApp.dir\GUI\source\testTab.cpp.s
 
-CMakeFiles/MyQtApp.dir/ESP_WIFI/wifi.cpp.obj: CMakeFiles/MyQtApp.dir/flags.make
-CMakeFiles/MyQtApp.dir/ESP_WIFI/wifi.cpp.obj: CMakeFiles/MyQtApp.dir/includes_CXX.rsp
-CMakeFiles/MyQtApp.dir/ESP_WIFI/wifi.cpp.obj: C:/Users/emcof/CLionProjects/RocketGUI_cpp/ESP_WIFI/wifi.cpp
-CMakeFiles/MyQtApp.dir/ESP_WIFI/wifi.cpp.obj: CMakeFiles/MyQtApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\emcof\CLionProjects\RocketGUI_cpp\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/MyQtApp.dir/ESP_WIFI/wifi.cpp.obj"
-	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MyQtApp.dir/ESP_WIFI/wifi.cpp.obj -MF CMakeFiles\MyQtApp.dir\ESP_WIFI\wifi.cpp.obj.d -o CMakeFiles\MyQtApp.dir\ESP_WIFI\wifi.cpp.obj -c C:\Users\emcof\CLionProjects\RocketGUI_cpp\ESP_WIFI\wifi.cpp
-
-CMakeFiles/MyQtApp.dir/ESP_WIFI/wifi.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MyQtApp.dir/ESP_WIFI/wifi.cpp.i"
-	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\emcof\CLionProjects\RocketGUI_cpp\ESP_WIFI\wifi.cpp > CMakeFiles\MyQtApp.dir\ESP_WIFI\wifi.cpp.i
-
-CMakeFiles/MyQtApp.dir/ESP_WIFI/wifi.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MyQtApp.dir/ESP_WIFI/wifi.cpp.s"
-	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\emcof\CLionProjects\RocketGUI_cpp\ESP_WIFI\wifi.cpp -o CMakeFiles\MyQtApp.dir\ESP_WIFI\wifi.cpp.s
-
 CMakeFiles/MyQtApp.dir/GUI/tests/source/clickTest.cpp.obj: CMakeFiles/MyQtApp.dir/flags.make
 CMakeFiles/MyQtApp.dir/GUI/tests/source/clickTest.cpp.obj: CMakeFiles/MyQtApp.dir/includes_CXX.rsp
 CMakeFiles/MyQtApp.dir/GUI/tests/source/clickTest.cpp.obj: C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/tests/source/clickTest.cpp
 CMakeFiles/MyQtApp.dir/GUI/tests/source/clickTest.cpp.obj: CMakeFiles/MyQtApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\emcof\CLionProjects\RocketGUI_cpp\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/MyQtApp.dir/GUI/tests/source/clickTest.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\emcof\CLionProjects\RocketGUI_cpp\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/MyQtApp.dir/GUI/tests/source/clickTest.cpp.obj"
 	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MyQtApp.dir/GUI/tests/source/clickTest.cpp.obj -MF CMakeFiles\MyQtApp.dir\GUI\tests\source\clickTest.cpp.obj.d -o CMakeFiles\MyQtApp.dir\GUI\tests\source\clickTest.cpp.obj -c C:\Users\emcof\CLionProjects\RocketGUI_cpp\GUI\tests\source\clickTest.cpp
 
 CMakeFiles/MyQtApp.dir/GUI/tests/source/clickTest.cpp.i: cmake_force
@@ -216,157 +195,58 @@ CMakeFiles/MyQtApp.dir/GUI/tests/source/clickTest.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MyQtApp.dir/GUI/tests/source/clickTest.cpp.s"
 	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\emcof\CLionProjects\RocketGUI_cpp\GUI\tests\source\clickTest.cpp -o CMakeFiles\MyQtApp.dir\GUI\tests\source\clickTest.cpp.s
 
-CMakeFiles/MyQtApp.dir/GUI/headers/moc_mainPanel.cpp.obj: CMakeFiles/MyQtApp.dir/flags.make
-CMakeFiles/MyQtApp.dir/GUI/headers/moc_mainPanel.cpp.obj: CMakeFiles/MyQtApp.dir/includes_CXX.rsp
-CMakeFiles/MyQtApp.dir/GUI/headers/moc_mainPanel.cpp.obj: GUI/headers/moc_mainPanel.cpp
-CMakeFiles/MyQtApp.dir/GUI/headers/moc_mainPanel.cpp.obj: CMakeFiles/MyQtApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\emcof\CLionProjects\RocketGUI_cpp\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/MyQtApp.dir/GUI/headers/moc_mainPanel.cpp.obj"
-	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MyQtApp.dir/GUI/headers/moc_mainPanel.cpp.obj -MF CMakeFiles\MyQtApp.dir\GUI\headers\moc_mainPanel.cpp.obj.d -o CMakeFiles\MyQtApp.dir\GUI\headers\moc_mainPanel.cpp.obj -c C:\Users\emcof\CLionProjects\RocketGUI_cpp\cmake-build-debug\GUI\headers\moc_mainPanel.cpp
+CMakeFiles/MyQtApp.dir/ESP_WIFI/wifi.cpp.obj: CMakeFiles/MyQtApp.dir/flags.make
+CMakeFiles/MyQtApp.dir/ESP_WIFI/wifi.cpp.obj: CMakeFiles/MyQtApp.dir/includes_CXX.rsp
+CMakeFiles/MyQtApp.dir/ESP_WIFI/wifi.cpp.obj: C:/Users/emcof/CLionProjects/RocketGUI_cpp/ESP_WIFI/wifi.cpp
+CMakeFiles/MyQtApp.dir/ESP_WIFI/wifi.cpp.obj: CMakeFiles/MyQtApp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\emcof\CLionProjects\RocketGUI_cpp\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/MyQtApp.dir/ESP_WIFI/wifi.cpp.obj"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MyQtApp.dir/ESP_WIFI/wifi.cpp.obj -MF CMakeFiles\MyQtApp.dir\ESP_WIFI\wifi.cpp.obj.d -o CMakeFiles\MyQtApp.dir\ESP_WIFI\wifi.cpp.obj -c C:\Users\emcof\CLionProjects\RocketGUI_cpp\ESP_WIFI\wifi.cpp
 
-CMakeFiles/MyQtApp.dir/GUI/headers/moc_mainPanel.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MyQtApp.dir/GUI/headers/moc_mainPanel.cpp.i"
-	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\emcof\CLionProjects\RocketGUI_cpp\cmake-build-debug\GUI\headers\moc_mainPanel.cpp > CMakeFiles\MyQtApp.dir\GUI\headers\moc_mainPanel.cpp.i
+CMakeFiles/MyQtApp.dir/ESP_WIFI/wifi.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MyQtApp.dir/ESP_WIFI/wifi.cpp.i"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\emcof\CLionProjects\RocketGUI_cpp\ESP_WIFI\wifi.cpp > CMakeFiles\MyQtApp.dir\ESP_WIFI\wifi.cpp.i
 
-CMakeFiles/MyQtApp.dir/GUI/headers/moc_mainPanel.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MyQtApp.dir/GUI/headers/moc_mainPanel.cpp.s"
-	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\emcof\CLionProjects\RocketGUI_cpp\cmake-build-debug\GUI\headers\moc_mainPanel.cpp -o CMakeFiles\MyQtApp.dir\GUI\headers\moc_mainPanel.cpp.s
-
-CMakeFiles/MyQtApp.dir/GUI/headers/moc_mainTab.cpp.obj: CMakeFiles/MyQtApp.dir/flags.make
-CMakeFiles/MyQtApp.dir/GUI/headers/moc_mainTab.cpp.obj: CMakeFiles/MyQtApp.dir/includes_CXX.rsp
-CMakeFiles/MyQtApp.dir/GUI/headers/moc_mainTab.cpp.obj: GUI/headers/moc_mainTab.cpp
-CMakeFiles/MyQtApp.dir/GUI/headers/moc_mainTab.cpp.obj: CMakeFiles/MyQtApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\emcof\CLionProjects\RocketGUI_cpp\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/MyQtApp.dir/GUI/headers/moc_mainTab.cpp.obj"
-	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MyQtApp.dir/GUI/headers/moc_mainTab.cpp.obj -MF CMakeFiles\MyQtApp.dir\GUI\headers\moc_mainTab.cpp.obj.d -o CMakeFiles\MyQtApp.dir\GUI\headers\moc_mainTab.cpp.obj -c C:\Users\emcof\CLionProjects\RocketGUI_cpp\cmake-build-debug\GUI\headers\moc_mainTab.cpp
-
-CMakeFiles/MyQtApp.dir/GUI/headers/moc_mainTab.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MyQtApp.dir/GUI/headers/moc_mainTab.cpp.i"
-	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\emcof\CLionProjects\RocketGUI_cpp\cmake-build-debug\GUI\headers\moc_mainTab.cpp > CMakeFiles\MyQtApp.dir\GUI\headers\moc_mainTab.cpp.i
-
-CMakeFiles/MyQtApp.dir/GUI/headers/moc_mainTab.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MyQtApp.dir/GUI/headers/moc_mainTab.cpp.s"
-	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\emcof\CLionProjects\RocketGUI_cpp\cmake-build-debug\GUI\headers\moc_mainTab.cpp -o CMakeFiles\MyQtApp.dir\GUI\headers\moc_mainTab.cpp.s
-
-CMakeFiles/MyQtApp.dir/GUI/headers/moc_mainUI.cpp.obj: CMakeFiles/MyQtApp.dir/flags.make
-CMakeFiles/MyQtApp.dir/GUI/headers/moc_mainUI.cpp.obj: CMakeFiles/MyQtApp.dir/includes_CXX.rsp
-CMakeFiles/MyQtApp.dir/GUI/headers/moc_mainUI.cpp.obj: GUI/headers/moc_mainUI.cpp
-CMakeFiles/MyQtApp.dir/GUI/headers/moc_mainUI.cpp.obj: CMakeFiles/MyQtApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\emcof\CLionProjects\RocketGUI_cpp\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/MyQtApp.dir/GUI/headers/moc_mainUI.cpp.obj"
-	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MyQtApp.dir/GUI/headers/moc_mainUI.cpp.obj -MF CMakeFiles\MyQtApp.dir\GUI\headers\moc_mainUI.cpp.obj.d -o CMakeFiles\MyQtApp.dir\GUI\headers\moc_mainUI.cpp.obj -c C:\Users\emcof\CLionProjects\RocketGUI_cpp\cmake-build-debug\GUI\headers\moc_mainUI.cpp
-
-CMakeFiles/MyQtApp.dir/GUI/headers/moc_mainUI.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MyQtApp.dir/GUI/headers/moc_mainUI.cpp.i"
-	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\emcof\CLionProjects\RocketGUI_cpp\cmake-build-debug\GUI\headers\moc_mainUI.cpp > CMakeFiles\MyQtApp.dir\GUI\headers\moc_mainUI.cpp.i
-
-CMakeFiles/MyQtApp.dir/GUI/headers/moc_mainUI.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MyQtApp.dir/GUI/headers/moc_mainUI.cpp.s"
-	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\emcof\CLionProjects\RocketGUI_cpp\cmake-build-debug\GUI\headers\moc_mainUI.cpp -o CMakeFiles\MyQtApp.dir\GUI\headers\moc_mainUI.cpp.s
-
-CMakeFiles/MyQtApp.dir/GUI/headers/moc_optTab.cpp.obj: CMakeFiles/MyQtApp.dir/flags.make
-CMakeFiles/MyQtApp.dir/GUI/headers/moc_optTab.cpp.obj: CMakeFiles/MyQtApp.dir/includes_CXX.rsp
-CMakeFiles/MyQtApp.dir/GUI/headers/moc_optTab.cpp.obj: GUI/headers/moc_optTab.cpp
-CMakeFiles/MyQtApp.dir/GUI/headers/moc_optTab.cpp.obj: CMakeFiles/MyQtApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\emcof\CLionProjects\RocketGUI_cpp\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/MyQtApp.dir/GUI/headers/moc_optTab.cpp.obj"
-	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MyQtApp.dir/GUI/headers/moc_optTab.cpp.obj -MF CMakeFiles\MyQtApp.dir\GUI\headers\moc_optTab.cpp.obj.d -o CMakeFiles\MyQtApp.dir\GUI\headers\moc_optTab.cpp.obj -c C:\Users\emcof\CLionProjects\RocketGUI_cpp\cmake-build-debug\GUI\headers\moc_optTab.cpp
-
-CMakeFiles/MyQtApp.dir/GUI/headers/moc_optTab.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MyQtApp.dir/GUI/headers/moc_optTab.cpp.i"
-	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\emcof\CLionProjects\RocketGUI_cpp\cmake-build-debug\GUI\headers\moc_optTab.cpp > CMakeFiles\MyQtApp.dir\GUI\headers\moc_optTab.cpp.i
-
-CMakeFiles/MyQtApp.dir/GUI/headers/moc_optTab.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MyQtApp.dir/GUI/headers/moc_optTab.cpp.s"
-	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\emcof\CLionProjects\RocketGUI_cpp\cmake-build-debug\GUI\headers\moc_optTab.cpp -o CMakeFiles\MyQtApp.dir\GUI\headers\moc_optTab.cpp.s
-
-CMakeFiles/MyQtApp.dir/GUI/headers/moc_testTab.cpp.obj: CMakeFiles/MyQtApp.dir/flags.make
-CMakeFiles/MyQtApp.dir/GUI/headers/moc_testTab.cpp.obj: CMakeFiles/MyQtApp.dir/includes_CXX.rsp
-CMakeFiles/MyQtApp.dir/GUI/headers/moc_testTab.cpp.obj: GUI/headers/moc_testTab.cpp
-CMakeFiles/MyQtApp.dir/GUI/headers/moc_testTab.cpp.obj: CMakeFiles/MyQtApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\emcof\CLionProjects\RocketGUI_cpp\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/MyQtApp.dir/GUI/headers/moc_testTab.cpp.obj"
-	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MyQtApp.dir/GUI/headers/moc_testTab.cpp.obj -MF CMakeFiles\MyQtApp.dir\GUI\headers\moc_testTab.cpp.obj.d -o CMakeFiles\MyQtApp.dir\GUI\headers\moc_testTab.cpp.obj -c C:\Users\emcof\CLionProjects\RocketGUI_cpp\cmake-build-debug\GUI\headers\moc_testTab.cpp
-
-CMakeFiles/MyQtApp.dir/GUI/headers/moc_testTab.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MyQtApp.dir/GUI/headers/moc_testTab.cpp.i"
-	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\emcof\CLionProjects\RocketGUI_cpp\cmake-build-debug\GUI\headers\moc_testTab.cpp > CMakeFiles\MyQtApp.dir\GUI\headers\moc_testTab.cpp.i
-
-CMakeFiles/MyQtApp.dir/GUI/headers/moc_testTab.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MyQtApp.dir/GUI/headers/moc_testTab.cpp.s"
-	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\emcof\CLionProjects\RocketGUI_cpp\cmake-build-debug\GUI\headers\moc_testTab.cpp -o CMakeFiles\MyQtApp.dir\GUI\headers\moc_testTab.cpp.s
-
-CMakeFiles/MyQtApp.dir/GUI/tests/headers/moc_clickTest.cpp.obj: CMakeFiles/MyQtApp.dir/flags.make
-CMakeFiles/MyQtApp.dir/GUI/tests/headers/moc_clickTest.cpp.obj: CMakeFiles/MyQtApp.dir/includes_CXX.rsp
-CMakeFiles/MyQtApp.dir/GUI/tests/headers/moc_clickTest.cpp.obj: GUI/tests/headers/moc_clickTest.cpp
-CMakeFiles/MyQtApp.dir/GUI/tests/headers/moc_clickTest.cpp.obj: CMakeFiles/MyQtApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\emcof\CLionProjects\RocketGUI_cpp\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/MyQtApp.dir/GUI/tests/headers/moc_clickTest.cpp.obj"
-	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MyQtApp.dir/GUI/tests/headers/moc_clickTest.cpp.obj -MF CMakeFiles\MyQtApp.dir\GUI\tests\headers\moc_clickTest.cpp.obj.d -o CMakeFiles\MyQtApp.dir\GUI\tests\headers\moc_clickTest.cpp.obj -c C:\Users\emcof\CLionProjects\RocketGUI_cpp\cmake-build-debug\GUI\tests\headers\moc_clickTest.cpp
-
-CMakeFiles/MyQtApp.dir/GUI/tests/headers/moc_clickTest.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MyQtApp.dir/GUI/tests/headers/moc_clickTest.cpp.i"
-	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\emcof\CLionProjects\RocketGUI_cpp\cmake-build-debug\GUI\tests\headers\moc_clickTest.cpp > CMakeFiles\MyQtApp.dir\GUI\tests\headers\moc_clickTest.cpp.i
-
-CMakeFiles/MyQtApp.dir/GUI/tests/headers/moc_clickTest.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MyQtApp.dir/GUI/tests/headers/moc_clickTest.cpp.s"
-	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\emcof\CLionProjects\RocketGUI_cpp\cmake-build-debug\GUI\tests\headers\moc_clickTest.cpp -o CMakeFiles\MyQtApp.dir\GUI\tests\headers\moc_clickTest.cpp.s
-
-CMakeFiles/MyQtApp.dir/ESP_WIFI/moc_wifi.cpp.obj: CMakeFiles/MyQtApp.dir/flags.make
-CMakeFiles/MyQtApp.dir/ESP_WIFI/moc_wifi.cpp.obj: CMakeFiles/MyQtApp.dir/includes_CXX.rsp
-CMakeFiles/MyQtApp.dir/ESP_WIFI/moc_wifi.cpp.obj: ESP_WIFI/moc_wifi.cpp
-CMakeFiles/MyQtApp.dir/ESP_WIFI/moc_wifi.cpp.obj: CMakeFiles/MyQtApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\emcof\CLionProjects\RocketGUI_cpp\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/MyQtApp.dir/ESP_WIFI/moc_wifi.cpp.obj"
-	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MyQtApp.dir/ESP_WIFI/moc_wifi.cpp.obj -MF CMakeFiles\MyQtApp.dir\ESP_WIFI\moc_wifi.cpp.obj.d -o CMakeFiles\MyQtApp.dir\ESP_WIFI\moc_wifi.cpp.obj -c C:\Users\emcof\CLionProjects\RocketGUI_cpp\cmake-build-debug\ESP_WIFI\moc_wifi.cpp
-
-CMakeFiles/MyQtApp.dir/ESP_WIFI/moc_wifi.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MyQtApp.dir/ESP_WIFI/moc_wifi.cpp.i"
-	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\emcof\CLionProjects\RocketGUI_cpp\cmake-build-debug\ESP_WIFI\moc_wifi.cpp > CMakeFiles\MyQtApp.dir\ESP_WIFI\moc_wifi.cpp.i
-
-CMakeFiles/MyQtApp.dir/ESP_WIFI/moc_wifi.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MyQtApp.dir/ESP_WIFI/moc_wifi.cpp.s"
-	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\emcof\CLionProjects\RocketGUI_cpp\cmake-build-debug\ESP_WIFI\moc_wifi.cpp -o CMakeFiles\MyQtApp.dir\ESP_WIFI\moc_wifi.cpp.s
+CMakeFiles/MyQtApp.dir/ESP_WIFI/wifi.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MyQtApp.dir/ESP_WIFI/wifi.cpp.s"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\emcof\CLionProjects\RocketGUI_cpp\ESP_WIFI\wifi.cpp -o CMakeFiles\MyQtApp.dir\ESP_WIFI\wifi.cpp.s
 
 # Object files for target MyQtApp
 MyQtApp_OBJECTS = \
+"CMakeFiles/MyQtApp.dir/MyQtApp_autogen/mocs_compilation.cpp.obj" \
 "CMakeFiles/MyQtApp.dir/main.cpp.obj" \
-"CMakeFiles/MyQtApp.dir/GUI/source/mainPanel.cpp.obj" \
-"CMakeFiles/MyQtApp.dir/GUI/source/mainTab.cpp.obj" \
 "CMakeFiles/MyQtApp.dir/GUI/source/mainUI.cpp.obj" \
 "CMakeFiles/MyQtApp.dir/GUI/source/optTab.cpp.obj" \
+"CMakeFiles/MyQtApp.dir/GUI/source/mainPanel.cpp.obj" \
+"CMakeFiles/MyQtApp.dir/GUI/source/mainTab.cpp.obj" \
 "CMakeFiles/MyQtApp.dir/GUI/source/testTab.cpp.obj" \
-"CMakeFiles/MyQtApp.dir/ESP_WIFI/wifi.cpp.obj" \
 "CMakeFiles/MyQtApp.dir/GUI/tests/source/clickTest.cpp.obj" \
-"CMakeFiles/MyQtApp.dir/GUI/headers/moc_mainPanel.cpp.obj" \
-"CMakeFiles/MyQtApp.dir/GUI/headers/moc_mainTab.cpp.obj" \
-"CMakeFiles/MyQtApp.dir/GUI/headers/moc_mainUI.cpp.obj" \
-"CMakeFiles/MyQtApp.dir/GUI/headers/moc_optTab.cpp.obj" \
-"CMakeFiles/MyQtApp.dir/GUI/headers/moc_testTab.cpp.obj" \
-"CMakeFiles/MyQtApp.dir/GUI/tests/headers/moc_clickTest.cpp.obj" \
-"CMakeFiles/MyQtApp.dir/ESP_WIFI/moc_wifi.cpp.obj"
+"CMakeFiles/MyQtApp.dir/ESP_WIFI/wifi.cpp.obj"
 
 # External object files for target MyQtApp
 MyQtApp_EXTERNAL_OBJECTS =
 
+MyQtApp.exe: CMakeFiles/MyQtApp.dir/MyQtApp_autogen/mocs_compilation.cpp.obj
 MyQtApp.exe: CMakeFiles/MyQtApp.dir/main.cpp.obj
-MyQtApp.exe: CMakeFiles/MyQtApp.dir/GUI/source/mainPanel.cpp.obj
-MyQtApp.exe: CMakeFiles/MyQtApp.dir/GUI/source/mainTab.cpp.obj
 MyQtApp.exe: CMakeFiles/MyQtApp.dir/GUI/source/mainUI.cpp.obj
 MyQtApp.exe: CMakeFiles/MyQtApp.dir/GUI/source/optTab.cpp.obj
+MyQtApp.exe: CMakeFiles/MyQtApp.dir/GUI/source/mainPanel.cpp.obj
+MyQtApp.exe: CMakeFiles/MyQtApp.dir/GUI/source/mainTab.cpp.obj
 MyQtApp.exe: CMakeFiles/MyQtApp.dir/GUI/source/testTab.cpp.obj
-MyQtApp.exe: CMakeFiles/MyQtApp.dir/ESP_WIFI/wifi.cpp.obj
 MyQtApp.exe: CMakeFiles/MyQtApp.dir/GUI/tests/source/clickTest.cpp.obj
-MyQtApp.exe: CMakeFiles/MyQtApp.dir/GUI/headers/moc_mainPanel.cpp.obj
-MyQtApp.exe: CMakeFiles/MyQtApp.dir/GUI/headers/moc_mainTab.cpp.obj
-MyQtApp.exe: CMakeFiles/MyQtApp.dir/GUI/headers/moc_mainUI.cpp.obj
-MyQtApp.exe: CMakeFiles/MyQtApp.dir/GUI/headers/moc_optTab.cpp.obj
-MyQtApp.exe: CMakeFiles/MyQtApp.dir/GUI/headers/moc_testTab.cpp.obj
-MyQtApp.exe: CMakeFiles/MyQtApp.dir/GUI/tests/headers/moc_clickTest.cpp.obj
-MyQtApp.exe: CMakeFiles/MyQtApp.dir/ESP_WIFI/moc_wifi.cpp.obj
+MyQtApp.exe: CMakeFiles/MyQtApp.dir/ESP_WIFI/wifi.cpp.obj
 MyQtApp.exe: CMakeFiles/MyQtApp.dir/build.make
 MyQtApp.exe: C:/Qt/6.8.2/mingw_64/lib/libQt6Widgets.a
-MyQtApp.exe: C:/Qt/6.8.2/mingw_64/lib/libQt6Gui.a
 MyQtApp.exe: C:/Qt/6.8.2/mingw_64/lib/libQt6Network.a
+MyQtApp.exe: C:/Qt/6.8.2/mingw_64/lib/libQt6SerialPort.a
+MyQtApp.exe: C:/Qt/6.8.2/mingw_64/lib/libQt6Gui.a
 MyQtApp.exe: C:/Qt/6.8.2/mingw_64/lib/libQt6Core.a
 MyQtApp.exe: CMakeFiles/MyQtApp.dir/linkLibs.rsp
 MyQtApp.exe: CMakeFiles/MyQtApp.dir/objects1.rsp
 MyQtApp.exe: CMakeFiles/MyQtApp.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\emcof\CLionProjects\RocketGUI_cpp\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Linking CXX executable MyQtApp.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\emcof\CLionProjects\RocketGUI_cpp\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable MyQtApp.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\MyQtApp.dir\link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Deploying Qt dependencies with windeployqt..."
+	C:\Qt\6.8.2\mingw_64\bin\windeployqt.exe --release C:/Users/emcof/CLionProjects/RocketGUI_cpp/cmake-build-debug/MyQtApp.exe
 
 # Rule to build all files generated by this target.
 CMakeFiles/MyQtApp.dir/build: MyQtApp.exe
@@ -376,13 +256,7 @@ CMakeFiles/MyQtApp.dir/clean:
 	$(CMAKE_COMMAND) -P CMakeFiles\MyQtApp.dir\cmake_clean.cmake
 .PHONY : CMakeFiles/MyQtApp.dir/clean
 
-CMakeFiles/MyQtApp.dir/depend: ESP_WIFI/moc_wifi.cpp
-CMakeFiles/MyQtApp.dir/depend: GUI/headers/moc_mainPanel.cpp
-CMakeFiles/MyQtApp.dir/depend: GUI/headers/moc_mainTab.cpp
-CMakeFiles/MyQtApp.dir/depend: GUI/headers/moc_mainUI.cpp
-CMakeFiles/MyQtApp.dir/depend: GUI/headers/moc_optTab.cpp
-CMakeFiles/MyQtApp.dir/depend: GUI/headers/moc_testTab.cpp
-CMakeFiles/MyQtApp.dir/depend: GUI/tests/headers/moc_clickTest.cpp
+CMakeFiles/MyQtApp.dir/depend: MyQtApp_autogen/timestamp
 	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\emcof\CLionProjects\RocketGUI_cpp C:\Users\emcof\CLionProjects\RocketGUI_cpp C:\Users\emcof\CLionProjects\RocketGUI_cpp\cmake-build-debug C:\Users\emcof\CLionProjects\RocketGUI_cpp\cmake-build-debug C:\Users\emcof\CLionProjects\RocketGUI_cpp\cmake-build-debug\CMakeFiles\MyQtApp.dir\DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/MyQtApp.dir/depend
 

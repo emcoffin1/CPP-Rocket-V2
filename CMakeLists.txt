@@ -1,42 +1,58 @@
 cmake_minimum_required(VERSION 3.16)
 project(MyQtApp)
 
-set(CMAKE_CXX_STANDARD 17)
+# ✅ Set C++ Standard
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-# Set Qt installation path (Adjust to match your actual Qt MinGW installation)
+# ✅ Correct Qt Path (No Spaces & Points to Qt)
 set(CMAKE_PREFIX_PATH "C:/Qt/6.8.2/mingw_64")
 
-# Find Qt components
-find_package(Qt6 REQUIRED COMPONENTS Widgets Core Gui Network)
+# ✅ Ensure MinGW is Used (Adjust if needed)
+set(CMAKE_C_COMPILER "C:/Qt/Tools/mingw1310_64/bin/gcc.exe")
+set(CMAKE_CXX_COMPILER "C:/Qt/Tools/mingw1310_64/bin/g++.exe")
+set(CMAKE_MAKE_PROGRAM "C:/Qt/Tools/mingw1310_64/bin/mingw32-make.exe")
 
-# Run Qt's MOC (Meta-Object Compiler) for headers containing Q_OBJECT
-qt6_wrap_cpp(MOC_SOURCES
-        GUI/headers/mainPanel.h
-        GUI/headers/mainTab.h
+# ✅ Enable Qt Features
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTORCC ON)
+set(CMAKE_AUTOUIC ON)
+
+# ✅ Find Required Qt Components
+find_package(Qt6 REQUIRED COMPONENTS Core Gui Widgets Network SerialPort)
+
+# ✅ Add Executable
+add_executable(MyQtApp
+        main.cpp
+        GUI/source/mainUI.cpp
         GUI/headers/mainUI.h
+        GUI/source/optTab.cpp
         GUI/headers/optTab.h
+        GUI/source/mainPanel.cpp
+        GUI/headers/mainPanel.h
+        GUI/source/mainTab.cpp
+        GUI/headers/mainTab.h
         GUI/headers/testTab.h
+        GUI/source/testTab.cpp
         GUI/tests/headers/clickTest.h
+        GUI/tests/source/clickTest.cpp
+        ESP_WIFI/wifi.cpp
         ESP_WIFI/wifi.h
 )
 
-# Create the Qt application using `add_executable()`
-add_executable(MyQtApp
-        main.cpp
-        GUI/source/mainPanel.cpp
-        GUI/source/mainTab.cpp
-        GUI/source/mainUI.cpp
-        GUI/source/optTab.cpp
-        GUI/source/testTab.cpp
-        ESP_WIFI/wifi.cpp
-        GUI/tests/source/clickTest.cpp
-        ${MOC_SOURCES}  # Ensure MOC-generated files are included
+# ✅ Link Qt Libraries
+target_link_libraries(MyQtApp
+        Qt6::Core
+        Qt6::Gui
+        Qt6::Widgets
+        Qt6::Network
+        Qt6::SerialPort
 )
 
-# Link Qt libraries using the correct signature
-target_link_libraries(MyQtApp
-        PRIVATE Qt6::Widgets
-        PRIVATE Qt6::Gui
-        PRIVATE Qt6::Core
-        PRIVATE Qt6::Network
-)
+# ✅ Automatically Deploy Qt DLLs on Windows
+if (WIN32)
+    add_custom_command(TARGET MyQtApp POST_BUILD
+            COMMAND "${CMAKE_PREFIX_PATH}/bin/windeployqt.exe" --release "$<TARGET_FILE:MyQtApp>"
+            COMMENT "Deploying Qt dependencies with windeployqt..."
+    )
+endif()
