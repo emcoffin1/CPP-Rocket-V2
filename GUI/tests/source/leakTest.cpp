@@ -1,23 +1,26 @@
 #include "../headers/leakTest.h"
-
 #include <QLabel>
 
-
-LeakTest::LeakTest(QWidget *parent) : QWidget(parent) {
+LeakTest::LeakTest(QWidget *parent, WIFI *wifiInstance) : QWidget(parent) {
     g_layout = new QGridLayout(this);
     setStyleSheet("background-color: white;");
 
-    QLabel *label = new QLabel("filler", this);
-    qDebug() << "Label parent:" << label->parent();
 
+    // WIFI Init
+    wifi = wifiInstance;
 
-    label->setAlignment(Qt::AlignCenter);
-    g_layout->addWidget(label, 0, 0, 1, 4);
+    // Data connect
+    connect(wifi, &WIFI::sensorUpdated, this, &LeakTest::updateListener);
+
 
 }
 
-LeakTest::~LeakTest() {
-    // Destroys window
-    qDebug() << "LeakTest destoryed";
-    std::default_delete<LeakTest>(leakTest);
+
+void LeakTest::startTest() {
+
+}
+
+void LeakTest::updateListener(QString data) {
+
+    qDebug() << "LeakTest data recieved:" << data;
 }

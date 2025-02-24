@@ -9,12 +9,15 @@ MainUI::MainUI (WIFI *wifiInstance, QWidget *parent) : QWidget (parent) {
     resize(1980,800);
     setStyleSheet("background-color: black");
 
+    // WIFI Inst
+    wifi = wifiInstance;
+
     // Main window layout
     g_layout = new QGridLayout();
     g_layout->setContentsMargins(0,0,0,0);
 
     // Init options and main tabs
-    mainPanel = new MainPanel(this, wifiInstance);
+    mainPanel = new MainPanel(this, wifi);
     optTab = new OptTab(this, mainPanel);
 
     // Actual panel for the options
@@ -22,9 +25,9 @@ MainUI::MainUI (WIFI *wifiInstance, QWidget *parent) : QWidget (parent) {
     optionPanel->setStyleSheet("background-color: #1E1E1E;");
 
     // Apply a drop shadow effect
-    QGraphicsDropShadowEffect *shadowEffect = new QGraphicsDropShadowEffect(optionPanel);
+    auto *shadowEffect = new QGraphicsDropShadowEffect(optionPanel);
     shadowEffect->setBlurRadius(100); // Adjust blur intensity
-    shadowEffect->setOffset(-10, 0);  // Shift shadow to appear on top, left, and bottom
+    shadowEffect->setOffset(10, 0);  // Shift shadow to appear on top, left, and bottom
     shadowEffect->setColor(QColor(18, 222, 224, 50)); // Semi-transparent black shadow
 
     optionPanel->setGraphicsEffect(shadowEffect);

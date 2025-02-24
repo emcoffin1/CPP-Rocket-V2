@@ -9,6 +9,9 @@ MainPanel::MainPanel(QWidget *parent, WIFI *wifiInstance) : QWidget(parent) {
     mainLayout->setContentsMargins(0, 0, 0, 0);
     mainLayout->setSpacing(0);
 
+    // WIFI Init
+    wifi = wifiInstance;
+
     // Create the time stuff.
     test = new QLabel("yahoo");
     test->setStyleSheet("color:white;");
@@ -23,8 +26,8 @@ MainPanel::MainPanel(QWidget *parent, WIFI *wifiInstance) : QWidget(parent) {
 
     // Sample widgets.
     mainTab = new MainTab(this);
-    testTab = new TestTab(this);
-    setTab = new SetTab(wifiInstance);
+    testTab = new TestTab(this, wifi);
+    setTab = new SetTab(wifi);
 
     stackedWidget->addWidget(mainTab);
     stackedWidget->addWidget(testTab);

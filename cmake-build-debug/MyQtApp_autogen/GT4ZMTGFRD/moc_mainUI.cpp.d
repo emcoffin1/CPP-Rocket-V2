@@ -382,6 +382,7 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/cmake-build-debug/MyQtApp_autogen/GT4
   C:/Qt/6.8.2/mingw_64/include/QtCore/qversiontagging.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qxptype_traits.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qyieldcpu.h \
+  C:/Qt/6.8.2/mingw_64/include/QtGui/QFont \
   C:/Qt/6.8.2/mingw_64/include/QtGui/qaction.h \
   C:/Qt/6.8.2/mingw_64/include/QtGui/qbitmap.h \
   C:/Qt/6.8.2/mingw_64/include/QtGui/qbrush.h \
@@ -420,6 +421,7 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/cmake-build-debug/MyQtApp_autogen/GT4
   C:/Qt/6.8.2/mingw_64/include/QtNetwork/qtnetwork-config.h \
   C:/Qt/6.8.2/mingw_64/include/QtNetwork/qtnetworkexports.h \
   C:/Qt/6.8.2/mingw_64/include/QtNetwork/qtnetworkglobal.h \
+  C:/Qt/6.8.2/mingw_64/include/QtWidgets/QCheckBox \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/QGraphicsDropShadowEffect \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/QGraphicsEllipseItem \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/QGraphicsScene \
@@ -433,6 +435,7 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/cmake-build-debug/MyQtApp_autogen/GT4
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qabstractbutton.h \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qabstractscrollarea.h \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qboxlayout.h \
+  C:/Qt/6.8.2/mingw_64/include/QtWidgets/qcheckbox.h \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qframe.h \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qgraphicseffect.h \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qgraphicsitem.h \

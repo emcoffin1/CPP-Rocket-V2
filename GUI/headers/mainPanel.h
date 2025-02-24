@@ -20,9 +20,9 @@ public:
     MainTab *mainTab;
     TestTab *testTab;
     SetTab *setTab;
-    WIFI *wifiInstance;
+    WIFI *wifi;
 
-    QVBoxLayout *v_layout;
+    //QVBoxLayout *v_layout;
     QStackedWidget *stackedWidget;
     QLabel *test;
 

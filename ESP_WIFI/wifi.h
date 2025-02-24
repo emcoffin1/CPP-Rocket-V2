@@ -12,10 +12,20 @@ class DataProcessor : public QObject {
 public:
     explicit DataProcessor(QObject *parent = nullptr); // constructor
     void processJSON(const QJsonObject &jsonData); // process recieved json
+    void emitData(const QJsonObject &jsonObj);
 
-    signals:
-        void dataUpdated(QString displayText);
+signals:
+    void jsonDataReceived(QJsonDocument json);
+    void valveUpdated(QString displayText);
+    void sensorUpdated(QString displayText);
+    void positionUpdated(QString displayText);
+    void warningUpdated(QString displayText);
+
 private:
+
+
+
+
 
 };
 
@@ -38,13 +48,19 @@ public:
 
     // send + receive
     void sendMessage(const QString &message) const;
-    QString receiveMessage() const;
+    [[nodiscard]] QString receiveMessage() const;
 
     // check connection
     bool isConnected() const;
 
+
+
 signals:
     void jsonDataReceived(QJsonDocument json);
+    void valveUpdated(QString displayText);
+    void sensorUpdated(QString displayText);
+    void positionUpdated(QString displayText);
+    void warningUpdated(QString displayText);
 
 private slots:
     void onDataReceived();

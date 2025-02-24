@@ -9,14 +9,23 @@
 #include "../tests/headers/clickTest.h"
 #include "../tests/headers/leakTest.h"
 #include "../../logic/headers/valveDisplay.h"
+#include "../../ESP_WIFI/wifi.h"
+
 
 class TestTab : public QWidget {
     Q_OBJECT
+private:
+    WIFI *wifi;
+
+    ClickTest *clickTest;
+    LeakTest *leakTest;
+    //DecayTest *decayTest;
+    //IgniterTest *igniterTest;
 
 
 public:
 
-    explicit TestTab(QWidget *parent = nullptr);
+    explicit TestTab(QWidget *parent = nullptr, WIFI *wifiInstance = nullptr);
     ~TestTab() override;
     void switchTests(int index) const;
 
@@ -28,11 +37,9 @@ public:
 
     QStackedWidget *stacked_widget;
 
-    ClickTest *clickTest;
-    LeakTest *leakTest;
-    //DecayTest *decayTest;
-    //IgniterTest *igniterTest;
+
     LadderWidget *valveDisplay;
+
 
     QPushButton* createButton(const QString &text, int fontSize = 14, QWidget *parent = nullptr, const QString &color = "black");
 

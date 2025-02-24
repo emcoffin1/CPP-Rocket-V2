@@ -21,12 +21,20 @@ WIFI::WIFI(QObject *parent) : QObject(parent) {
     dataProcessor = new DataProcessor(this);
 
     connect(socket, &QTcpSocket::readyRead, this, &WIFI::onDataReceived);
+
+    // Forward update signals
+    connect(dataProcessor, &DataProcessor::sensorUpdated, this, &WIFI::sensorUpdated);
+    connect(dataProcessor, &DataProcessor::positionUpdated, this, &WIFI::positionUpdated);
+    connect(dataProcessor, &DataProcessor::warningUpdated, this, &WIFI::warningUpdated);
+    connect(dataProcessor, &DataProcessor::valveUpdated, this, &WIFI::valveUpdated);
+
 }
 
 // Destructor
 WIFI::~WIFI() {
     socket->close();
     delete socket;
+    delete dataProcessor;
 }
 
 
@@ -72,6 +80,8 @@ void WIFI::sendMessage(const QString &message) const {
     }
 }
 
+
+
 QString WIFI::receiveMessage() const {
     if (socket->waitForReadyRead(3000)) {  // Wait up to 3 seconds
         return socket->readAll();
@@ -85,7 +95,6 @@ void WIFI::onDataReceived() {
     QJsonDocument jsonDoc = QJsonDocument::fromJson(data);
     if (!jsonDoc.isNull() && jsonDoc.isObject()) {
         QJsonObject jsonObj = jsonDoc.object();
-        emit jsonDataReceived(jsonDoc);
         dataProcessor->processJSON(jsonObj);
     } else {
         qDebug() << "JSON object is null";
@@ -101,7 +110,28 @@ DataProcessor::DataProcessor(QObject *parent) : QObject(parent) {}
 
 void DataProcessor::processJSON(const QJsonObject &jsonData) {
     QJsonDocument doc(jsonData); // converts to readable string
-    QString displayText = doc.toJson(QJsonDocument::Indented);
+    emitData(jsonData);
+    //emit dataUpdated(displayText); // emit signal with processed text
+}
 
-    emit dataUpdated(displayText); // emit signal with processed text
+void DataProcessor::emitData(const QJsonObject &jsonObj) {
+    if (jsonObj.contains("Valves")) {
+        QString valve_status = jsonObj.value("Valves").toString();
+        emit valveUpdated(valve_status);
+    }
+
+    if (jsonObj.contains("Sensors")) {
+        QString sensor_status = jsonObj.value("Sensors").toString();
+        emit sensorUpdated(sensor_status);
+    }
+
+    if (jsonObj.contains("Positions")) {
+        QString position_status = jsonObj.value("Positions").toString();
+        emit positionUpdated(position_status);
+    }
+
+    if (jsonObj.contains("Warnings")) {
+        QString warnings = jsonObj.value("Warnings").toString();
+        emit warningUpdated(warnings);
+    }
 }

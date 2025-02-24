@@ -1,12 +1,14 @@
 #include "../headers/testTab.h"
 
 
-TestTab::TestTab(QWidget *parent) : QWidget(parent) {
+TestTab::TestTab(QWidget *parent, WIFI *wifiInstance) : QWidget(parent) {
     // Create main grid layout
     g_layout = new QGridLayout(this);
     g_layout->setContentsMargins(0, 0, 0, 0);
     g_layout->setSpacing(0);
 
+    // WIFI Init
+    wifi = wifiInstance;
 
     // Create secondary layout for buttons
     button_grid = new QGridLayout();
@@ -39,10 +41,10 @@ TestTab::TestTab(QWidget *parent) : QWidget(parent) {
     button_grid->addWidget(decay_btn, 0, 2);
     button_grid->addWidget(igniter_btn, 0, 3);
 
-    // Create stackedwidgets
+    // Create stacked widgets
     stacked_widget = new QStackedWidget(this);
-    clickTest = new ClickTest(this);
-    leakTest = new LeakTest(this);
+    clickTest = new ClickTest(this, wifiInstance);
+    leakTest = new LeakTest(this, wifiInstance);
     stacked_widget->addWidget(clickTest);
     stacked_widget->addWidget(leakTest);
     stacked_widget->setContentsMargins(0,0,0,0);
