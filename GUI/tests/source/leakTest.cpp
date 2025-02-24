@@ -20,7 +20,7 @@ void LeakTest::startTest() {
 
 }
 
-void LeakTest::updateListener(QString data) {
+void LeakTest::updateListener(QJsonObject data) {
 
     qDebug() << "LeakTest data recieved:" << data;
 }

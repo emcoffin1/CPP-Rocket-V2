@@ -18,9 +18,15 @@ WIFI* WIFI::getInstance() {
 // Private constructor
 WIFI::WIFI(QObject *parent) : QObject(parent) {
     socket = new QTcpSocket(this);
+    btSocket = new QBluetoothSocket(QBluetoothServiceInfo::RfcommProtocol, this);
+    discoveryAgent = new QBluetoothDeviceDiscoveryAgent(this);
     dataProcessor = new DataProcessor(this);
 
+    // Connect wifi
     connect(socket, &QTcpSocket::readyRead, this, &WIFI::onDataReceived);
+
+    // Connect bt
+    connect(btSocket, &QBluetoothSocket::readyRead, this, &WIFI::onBluetoothDataReceived);
 
     // Forward update signals
     connect(dataProcessor, &DataProcessor::sensorUpdated, this, &WIFI::sensorUpdated);
@@ -35,6 +41,7 @@ WIFI::~WIFI() {
     socket->close();
     delete socket;
     delete dataProcessor;
+    delete discoveryAgent;
 }
 
 
@@ -61,6 +68,7 @@ void WIFI::connectToESP32(const QString &host, quint16 port) const {
     }
 }
 
+
 void WIFI::disconnectFromESP32() const {
     if (socket->state() == QTcpSocket::ConnectedState) {
         socket->disconnectFromHost();
@@ -69,6 +77,9 @@ void WIFI::disconnectFromESP32() const {
         }
     }
 }
+
+
+
 
 void WIFI::sendMessage(const QString &message) const {
     if (socket->state() == QTcpSocket::ConnectedState) {
@@ -101,8 +112,11 @@ void WIFI::onDataReceived() {
     }
 }
 
+
+
 bool WIFI::isConnected() const {
-    return socket->state() == QTcpSocket::ConnectedState;
+    return socket->state() == QTcpSocket::ConnectedState ||
+           (btSocket && btSocket->state() == QBluetoothSocket::SocketState::ConnectedState);
 }
 
 
@@ -115,23 +129,24 @@ void DataProcessor::processJSON(const QJsonObject &jsonData) {
 }
 
 void DataProcessor::emitData(const QJsonObject &jsonObj) {
+    QJsonObject valveData, sensorData, positionData, warningData;
     if (jsonObj.contains("Valves")) {
-        QString valve_status = jsonObj.value("Valves").toString();
-        emit valveUpdated(valve_status);
+        valveData["VALVES"] = jsonObj.value("VALVES");
+        emit valveUpdated(valveData);
     }
 
     if (jsonObj.contains("Sensors")) {
-        QString sensor_status = jsonObj.value("Sensors").toString();
-        emit sensorUpdated(sensor_status);
+        sensorData["SENSORS"] = jsonObj.value("SENSORS");
+        emit sensorUpdated(sensorData);
     }
 
     if (jsonObj.contains("Positions")) {
-        QString position_status = jsonObj.value("Positions").toString();
-        emit positionUpdated(position_status);
+        positionData["POSITION"] = jsonObj.value("POSITION").toString();
+        emit positionUpdated(positionData);
     }
 
     if (jsonObj.contains("Warnings")) {
-        QString warnings = jsonObj.value("Warnings").toString();
-        emit warningUpdated(warnings);
+        warningData["WARNING"] = jsonObj.value("WARNING").toString();
+        emit warningUpdated(warningData);
     }
 }

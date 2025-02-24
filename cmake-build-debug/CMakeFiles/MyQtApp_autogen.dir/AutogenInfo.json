@@ -11,7 +11,6 @@
 		"C:/Program Files/JetBrains/CLion 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeDetermineSystem.cmake",
 		"C:/Program Files/JetBrains/CLion 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeSystem.cmake.in",
 		"C:/Users/emcof/CLionProjects/RocketGUI_cpp/cmake-build-debug/CMakeFiles/3.30.5/CMakeSystem.cmake",
-		"C:/Program Files/JetBrains/CLion 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeNinjaFindMake.cmake",
 		"C:/Program Files/JetBrains/CLion 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeSystemSpecificInitialize.cmake",
 		"C:/Program Files/JetBrains/CLion 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-Initialize.cmake",
 		"C:/Program Files/JetBrains/CLion 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeDetermineCCompiler.cmake",
@@ -434,7 +433,16 @@
 		"C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6SerialPort/Qt6SerialPortTargets.cmake",
 		"C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6SerialPort/Qt6SerialPortTargets-relwithdebinfo.cmake",
 		"C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6SerialPort/Qt6SerialPortAdditionalTargetInfo.cmake",
-		"C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6SerialPort/Qt6SerialPortVersionlessAliasTargets.cmake"
+		"C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6SerialPort/Qt6SerialPortVersionlessAliasTargets.cmake",
+		"C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6Bluetooth/Qt6BluetoothConfigVersion.cmake",
+		"C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6Bluetooth/Qt6BluetoothConfigVersionImpl.cmake",
+		"C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6Bluetooth/Qt6BluetoothConfig.cmake",
+		"C:/Program Files/JetBrains/CLion 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeFindDependencyMacro.cmake",
+		"C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6Bluetooth/Qt6BluetoothDependencies.cmake",
+		"C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6Bluetooth/Qt6BluetoothTargets.cmake",
+		"C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6Bluetooth/Qt6BluetoothTargets-relwithdebinfo.cmake",
+		"C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6Bluetooth/Qt6BluetoothAdditionalTargetInfo.cmake",
+		"C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6Bluetooth/Qt6BluetoothVersionlessAliasTargets.cmake"
 	],
 	"CMAKE_SOURCE_DIR" : "C:/Users/emcof/CLionProjects/RocketGUI_cpp",
 	"CROSS_CONFIG" : false,
@@ -509,10 +517,10 @@
 	"MOC_DEFINITIONS" : 
 	[
 		"MINGW_HAS_SECURE_API=1",
+		"QT_BLUETOOTH_LIB",
 		"QT_CORE_LIB",
 		"QT_GUI_LIB",
 		"QT_NETWORK_LIB",
-		"QT_NO_DEBUG",
 		"QT_SERIALPORT_LIB",
 		"QT_WIDGETS_LIB",
 		"UNICODE",
@@ -538,13 +546,13 @@
 		"C:/Qt/6.8.2/mingw_64/include/QtWidgets",
 		"C:/Qt/6.8.2/mingw_64/include/QtNetwork",
 		"C:/Qt/6.8.2/mingw_64/include/QtSerialPort",
-		"C:/Program Files/JetBrains/CLion 2024.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++",
-		"C:/Program Files/JetBrains/CLion 2024.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32",
-		"C:/Program Files/JetBrains/CLion 2024.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward",
-		"C:/Program Files/JetBrains/CLion 2024.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include",
-		"C:/Program Files/JetBrains/CLion 2024.3.3/bin/mingw/include",
-		"C:/Program Files/JetBrains/CLion 2024.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed",
-		"C:/Program Files/JetBrains/CLion 2024.3.3/bin/mingw/x86_64-w64-mingw32/include"
+		"C:/Qt/6.8.2/mingw_64/include/QtBluetooth",
+		"C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++",
+		"C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32",
+		"C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward",
+		"C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include",
+		"C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed",
+		"C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include"
 	],
 	"MOC_MACRO_NAMES" : 
 	[
@@ -559,7 +567,7 @@
 	"MOC_PATH_PREFIX" : false,
 	"MOC_PREDEFS_CMD" : 
 	[
-		"C:/Program Files/JetBrains/CLion 2024.3.3/bin/mingw/bin/g++.exe",
+		"C:/Qt/Tools/mingw1310_64/bin/g++.exe",
 		"-std=gnu++20",
 		"-dM",
 		"-E",

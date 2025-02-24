@@ -19,7 +19,7 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
 
 # ✅ Find Required Qt Components
-find_package(Qt6 REQUIRED COMPONENTS Core Gui Widgets Network SerialPort)
+find_package(Qt6 REQUIRED COMPONENTS Core Gui Widgets Network SerialPort Bluetooth)
 
 # ✅ Add Executable
 add_executable(MyQtApp
@@ -53,7 +53,10 @@ target_link_libraries(MyQtApp
         Qt6::Widgets
         Qt6::Network
         Qt6::SerialPort
+        Qt6::Bluetooth
 )
+
+
 
 # ✅ Automatically Deploy Qt DLLs on Windows
 if (WIN32)

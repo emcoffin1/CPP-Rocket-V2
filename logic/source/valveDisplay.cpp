@@ -53,9 +53,13 @@ LadderWidget::LadderWidget(QWidget *parent) : QWidget(parent) {
 }*/
 
 // Slot function to change color
-void LadderWidget::changeCircleColor() {
-    if (!leftCircles.isEmpty()) {
-        leftCircles[0]->changeColor(Qt::red);  // Change first left circle to red
+void LadderWidget::changeCircleColor(int valveNumber, QString status) {
+    QString colorString = QString("Qt::%1").arg(status);
+    if (!leftCircles.isEmpty() && valveNumber <= 5) {
+        leftCircles[0]->changeColor(colorString);  // Change first left circle to red
+    }
+    if (!rightCircles.isEmpty() && valveNumber > 5) {
+        rightCircles[valveNumber-5]->changeColor(colorString);
     }
 }
 

@@ -60,7 +60,8 @@ TestTab::TestTab(QWidget *parent, WIFI *wifiInstance) : QWidget(parent) {
     g_layout->addWidget(valveDisplay,2,3, 6, 1, Qt::AlignCenter);
 
 
-    // Set main layout
+    // Connect listener for ladder updates
+    connect(wifi, &WIFI::valveUpdated, this, updateValves);
 }
 
 
@@ -116,9 +117,7 @@ void TestTab::switchTests(int index) const {
     }
 }
 
-TestTab::~TestTab() {
-    delete leakTest;
-    delete clickTest;
-    //delete decayTest;
-    //delete igniterTestl
+void TestTab::updateValves(QJsonObject valveData) {
+    qDebug() << "TestTab::updateValves"<<valveData;
+    valveDisplay->changeCircleColor(1, "red");
 }

@@ -16,10 +16,10 @@ public:
 
 signals:
     void jsonDataReceived(QJsonDocument json);
-    void valveUpdated(QString displayText);
-    void sensorUpdated(QString displayText);
-    void positionUpdated(QString displayText);
-    void warningUpdated(QString displayText);
+    void valveUpdated(QJsonObject jsonData);
+    void sensorUpdated(QJsonObject jsonData);
+    void positionUpdated(QJsonObject jsonData);
+    void warningUpdated(QJsonObject jsonData);
 
 private:
 
@@ -48,7 +48,7 @@ public:
 
     // send + receive
     void sendMessage(const QString &message) const;
-    [[nodiscard]] QString receiveMessage() const;
+    QString receiveMessage() const;
 
     // check connection
     bool isConnected() const;
@@ -57,10 +57,11 @@ public:
 
 signals:
     void jsonDataReceived(QJsonDocument json);
-    void valveUpdated(QString displayText);
-    void sensorUpdated(QString displayText);
-    void positionUpdated(QString displayText);
-    void warningUpdated(QString displayText);
+    void valveUpdated(QJsonObject jsonData);
+    void sensorUpdated(QJsonObject jsonData);
+    void positionUpdated(QJsonObject jsonData);
+    void warningUpdated(QJsonObject jsonData);
+    void connectionTypeChanged(QJsonObject jsonData);
 
 private slots:
     void onDataReceived();
@@ -71,6 +72,7 @@ private:
 
     static WIFI* instance;
     QTcpSocket *socket;
+
     DataProcessor *dataProcessor;
 };
 

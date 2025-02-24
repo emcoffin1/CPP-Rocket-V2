@@ -22,8 +22,8 @@ public:
     explicit LadderWidget(QWidget *parent = nullptr);
     ~LadderWidget();
 
-    private slots:
-        void changeCircleColor(); // Example slot to change a circle's color
+public slots:
+    void changeCircleColor(int valveNumber, QString color); // Example slot to change a circle's color
 
 private:
     QGraphicsView *view;

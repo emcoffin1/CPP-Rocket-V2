@@ -42,7 +42,7 @@ static constexpr auto qt_meta_stringdata_ZN13DataProcessorE = QtMocHelpers::stri
     "",
     "json",
     "valveUpdated",
-    "displayText",
+    "jsonData",
     "sensorUpdated",
     "positionUpdated",
     "warningUpdated"
@@ -73,10 +73,10 @@ Q_CONSTINIT static const uint qt_meta_data_ZN13DataProcessorE[] = {
 
  // signals: parameters
     QMetaType::Void, QMetaType::QJsonDocument,    3,
-    QMetaType::Void, QMetaType::QString,    5,
-    QMetaType::Void, QMetaType::QString,    5,
-    QMetaType::Void, QMetaType::QString,    5,
-    QMetaType::Void, QMetaType::QString,    5,
+    QMetaType::Void, QMetaType::QJsonObject,    5,
+    QMetaType::Void, QMetaType::QJsonObject,    5,
+    QMetaType::Void, QMetaType::QJsonObject,    5,
+    QMetaType::Void, QMetaType::QJsonObject,    5,
 
        0        // eod
 };
@@ -95,16 +95,16 @@ Q_CONSTINIT const QMetaObject DataProcessor::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<QJsonDocument, std::false_type>,
         // method 'valveUpdated'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<QString, std::false_type>,
+        QtPrivate::TypeAndForceComplete<QJsonObject, std::false_type>,
         // method 'sensorUpdated'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<QString, std::false_type>,
+        QtPrivate::TypeAndForceComplete<QJsonObject, std::false_type>,
         // method 'positionUpdated'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<QString, std::false_type>,
+        QtPrivate::TypeAndForceComplete<QJsonObject, std::false_type>,
         // method 'warningUpdated'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<QString, std::false_type>
+        QtPrivate::TypeAndForceComplete<QJsonObject, std::false_type>
     >,
     nullptr
 } };
@@ -115,10 +115,10 @@ void DataProcessor::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _i
     if (_c == QMetaObject::InvokeMetaMethod) {
         switch (_id) {
         case 0: _t->jsonDataReceived((*reinterpret_cast< std::add_pointer_t<QJsonDocument>>(_a[1]))); break;
-        case 1: _t->valveUpdated((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
-        case 2: _t->sensorUpdated((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
-        case 3: _t->positionUpdated((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
-        case 4: _t->warningUpdated((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
+        case 1: _t->valveUpdated((*reinterpret_cast< std::add_pointer_t<QJsonObject>>(_a[1]))); break;
+        case 2: _t->sensorUpdated((*reinterpret_cast< std::add_pointer_t<QJsonObject>>(_a[1]))); break;
+        case 3: _t->positionUpdated((*reinterpret_cast< std::add_pointer_t<QJsonObject>>(_a[1]))); break;
+        case 4: _t->warningUpdated((*reinterpret_cast< std::add_pointer_t<QJsonObject>>(_a[1]))); break;
         default: ;
         }
     }
@@ -132,28 +132,28 @@ void DataProcessor::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _i
             }
         }
         {
-            using _q_method_type = void (DataProcessor::*)(QString );
+            using _q_method_type = void (DataProcessor::*)(QJsonObject );
             if (_q_method_type _q_method = &DataProcessor::valveUpdated; *reinterpret_cast<_q_method_type *>(_a[1]) == _q_method) {
                 *result = 1;
                 return;
             }
         }
         {
-            using _q_method_type = void (DataProcessor::*)(QString );
+            using _q_method_type = void (DataProcessor::*)(QJsonObject );
             if (_q_method_type _q_method = &DataProcessor::sensorUpdated; *reinterpret_cast<_q_method_type *>(_a[1]) == _q_method) {
                 *result = 2;
                 return;
             }
         }
         {
-            using _q_method_type = void (DataProcessor::*)(QString );
+            using _q_method_type = void (DataProcessor::*)(QJsonObject );
             if (_q_method_type _q_method = &DataProcessor::positionUpdated; *reinterpret_cast<_q_method_type *>(_a[1]) == _q_method) {
                 *result = 3;
                 return;
             }
         }
         {
-            using _q_method_type = void (DataProcessor::*)(QString );
+            using _q_method_type = void (DataProcessor::*)(QJsonObject );
             if (_q_method_type _q_method = &DataProcessor::warningUpdated; *reinterpret_cast<_q_method_type *>(_a[1]) == _q_method) {
                 *result = 4;
                 return;
@@ -201,28 +201,28 @@ void DataProcessor::jsonDataReceived(QJsonDocument _t1)
 }
 
 // SIGNAL 1
-void DataProcessor::valveUpdated(QString _t1)
+void DataProcessor::valveUpdated(QJsonObject _t1)
 {
     void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))) };
     QMetaObject::activate(this, &staticMetaObject, 1, _a);
 }
 
 // SIGNAL 2
-void DataProcessor::sensorUpdated(QString _t1)
+void DataProcessor::sensorUpdated(QJsonObject _t1)
 {
     void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))) };
     QMetaObject::activate(this, &staticMetaObject, 2, _a);
 }
 
 // SIGNAL 3
-void DataProcessor::positionUpdated(QString _t1)
+void DataProcessor::positionUpdated(QJsonObject _t1)
 {
     void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))) };
     QMetaObject::activate(this, &staticMetaObject, 3, _a);
 }
 
 // SIGNAL 4
-void DataProcessor::warningUpdated(QString _t1)
+void DataProcessor::warningUpdated(QJsonObject _t1)
 {
     void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))) };
     QMetaObject::activate(this, &staticMetaObject, 4, _a);
@@ -239,11 +239,13 @@ static constexpr auto qt_meta_stringdata_ZN4WIFIE = QtMocHelpers::stringData(
     "",
     "json",
     "valveUpdated",
-    "displayText",
+    "jsonData",
     "sensorUpdated",
     "positionUpdated",
     "warningUpdated",
-    "onDataReceived"
+    "connectionTypeChanged",
+    "onDataReceived",
+    "onBluetoothDataReceived"
 );
 #else  // !QT_MOC_HAS_STRINGDATA
 #error "qtmochelpers.h not found or too old."
@@ -255,31 +257,35 @@ Q_CONSTINIT static const uint qt_meta_data_ZN4WIFIE[] = {
       12,       // revision
        0,       // classname
        0,    0, // classinfo
-       6,   14, // methods
+       8,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
-       5,       // signalCount
+       6,       // signalCount
 
  // signals: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    1,   50,    2, 0x06,    1 /* Public */,
-       4,    1,   53,    2, 0x06,    3 /* Public */,
-       6,    1,   56,    2, 0x06,    5 /* Public */,
-       7,    1,   59,    2, 0x06,    7 /* Public */,
-       8,    1,   62,    2, 0x06,    9 /* Public */,
+       1,    1,   62,    2, 0x06,    1 /* Public */,
+       4,    1,   65,    2, 0x06,    3 /* Public */,
+       6,    1,   68,    2, 0x06,    5 /* Public */,
+       7,    1,   71,    2, 0x06,    7 /* Public */,
+       8,    1,   74,    2, 0x06,    9 /* Public */,
+       9,    1,   77,    2, 0x06,   11 /* Public */,
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       9,    0,   65,    2, 0x08,   11 /* Private */,
+      10,    0,   80,    2, 0x08,   13 /* Private */,
+      11,    0,   81,    2, 0x08,   14 /* Private */,
 
  // signals: parameters
     QMetaType::Void, QMetaType::QJsonDocument,    3,
-    QMetaType::Void, QMetaType::QString,    5,
-    QMetaType::Void, QMetaType::QString,    5,
-    QMetaType::Void, QMetaType::QString,    5,
-    QMetaType::Void, QMetaType::QString,    5,
+    QMetaType::Void, QMetaType::QJsonObject,    5,
+    QMetaType::Void, QMetaType::QJsonObject,    5,
+    QMetaType::Void, QMetaType::QJsonObject,    5,
+    QMetaType::Void, QMetaType::QJsonObject,    5,
+    QMetaType::Void, QMetaType::QJsonObject,    5,
 
  // slots: parameters
+    QMetaType::Void,
     QMetaType::Void,
 
        0        // eod
@@ -299,17 +305,22 @@ Q_CONSTINIT const QMetaObject WIFI::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<QJsonDocument, std::false_type>,
         // method 'valveUpdated'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<QString, std::false_type>,
+        QtPrivate::TypeAndForceComplete<QJsonObject, std::false_type>,
         // method 'sensorUpdated'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<QString, std::false_type>,
+        QtPrivate::TypeAndForceComplete<QJsonObject, std::false_type>,
         // method 'positionUpdated'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<QString, std::false_type>,
+        QtPrivate::TypeAndForceComplete<QJsonObject, std::false_type>,
         // method 'warningUpdated'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<QString, std::false_type>,
+        QtPrivate::TypeAndForceComplete<QJsonObject, std::false_type>,
+        // method 'connectionTypeChanged'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<QJsonObject, std::false_type>,
         // method 'onDataReceived'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'onBluetoothDataReceived'
         QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
@@ -321,11 +332,13 @@ void WIFI::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void *
     if (_c == QMetaObject::InvokeMetaMethod) {
         switch (_id) {
         case 0: _t->jsonDataReceived((*reinterpret_cast< std::add_pointer_t<QJsonDocument>>(_a[1]))); break;
-        case 1: _t->valveUpdated((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
-        case 2: _t->sensorUpdated((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
-        case 3: _t->positionUpdated((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
-        case 4: _t->warningUpdated((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
-        case 5: _t->onDataReceived(); break;
+        case 1: _t->valveUpdated((*reinterpret_cast< std::add_pointer_t<QJsonObject>>(_a[1]))); break;
+        case 2: _t->sensorUpdated((*reinterpret_cast< std::add_pointer_t<QJsonObject>>(_a[1]))); break;
+        case 3: _t->positionUpdated((*reinterpret_cast< std::add_pointer_t<QJsonObject>>(_a[1]))); break;
+        case 4: _t->warningUpdated((*reinterpret_cast< std::add_pointer_t<QJsonObject>>(_a[1]))); break;
+        case 5: _t->connectionTypeChanged((*reinterpret_cast< std::add_pointer_t<QJsonObject>>(_a[1]))); break;
+        case 6: _t->onDataReceived(); break;
+        case 7: _t->onBluetoothDataReceived(); break;
         default: ;
         }
     }
@@ -339,30 +352,37 @@ void WIFI::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void *
             }
         }
         {
-            using _q_method_type = void (WIFI::*)(QString );
+            using _q_method_type = void (WIFI::*)(QJsonObject );
             if (_q_method_type _q_method = &WIFI::valveUpdated; *reinterpret_cast<_q_method_type *>(_a[1]) == _q_method) {
                 *result = 1;
                 return;
             }
         }
         {
-            using _q_method_type = void (WIFI::*)(QString );
+            using _q_method_type = void (WIFI::*)(QJsonObject );
             if (_q_method_type _q_method = &WIFI::sensorUpdated; *reinterpret_cast<_q_method_type *>(_a[1]) == _q_method) {
                 *result = 2;
                 return;
             }
         }
         {
-            using _q_method_type = void (WIFI::*)(QString );
+            using _q_method_type = void (WIFI::*)(QJsonObject );
             if (_q_method_type _q_method = &WIFI::positionUpdated; *reinterpret_cast<_q_method_type *>(_a[1]) == _q_method) {
                 *result = 3;
                 return;
             }
         }
         {
-            using _q_method_type = void (WIFI::*)(QString );
+            using _q_method_type = void (WIFI::*)(QJsonObject );
             if (_q_method_type _q_method = &WIFI::warningUpdated; *reinterpret_cast<_q_method_type *>(_a[1]) == _q_method) {
                 *result = 4;
+                return;
+            }
+        }
+        {
+            using _q_method_type = void (WIFI::*)(QJsonObject );
+            if (_q_method_type _q_method = &WIFI::connectionTypeChanged; *reinterpret_cast<_q_method_type *>(_a[1]) == _q_method) {
+                *result = 5;
                 return;
             }
         }
@@ -388,14 +408,14 @@ int WIFI::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 6)
+        if (_id < 8)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 6;
+        _id -= 8;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 6)
+        if (_id < 8)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 6;
+        _id -= 8;
     }
     return _id;
 }
@@ -408,30 +428,37 @@ void WIFI::jsonDataReceived(QJsonDocument _t1)
 }
 
 // SIGNAL 1
-void WIFI::valveUpdated(QString _t1)
+void WIFI::valveUpdated(QJsonObject _t1)
 {
     void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))) };
     QMetaObject::activate(this, &staticMetaObject, 1, _a);
 }
 
 // SIGNAL 2
-void WIFI::sensorUpdated(QString _t1)
+void WIFI::sensorUpdated(QJsonObject _t1)
 {
     void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))) };
     QMetaObject::activate(this, &staticMetaObject, 2, _a);
 }
 
 // SIGNAL 3
-void WIFI::positionUpdated(QString _t1)
+void WIFI::positionUpdated(QJsonObject _t1)
 {
     void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))) };
     QMetaObject::activate(this, &staticMetaObject, 3, _a);
 }
 
 // SIGNAL 4
-void WIFI::warningUpdated(QString _t1)
+void WIFI::warningUpdated(QJsonObject _t1)
 {
     void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))) };
     QMetaObject::activate(this, &staticMetaObject, 4, _a);
+}
+
+// SIGNAL 5
+void WIFI::connectionTypeChanged(QJsonObject _t1)
+{
+    void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))) };
+    QMetaObject::activate(this, &staticMetaObject, 5, _a);
 }
 QT_WARNING_POP

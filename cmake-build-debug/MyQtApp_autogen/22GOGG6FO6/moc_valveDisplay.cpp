@@ -39,7 +39,9 @@ struct qt_meta_tag_ZN12LadderWidgetE_t {};
 static constexpr auto qt_meta_stringdata_ZN12LadderWidgetE = QtMocHelpers::stringData(
     "LadderWidget",
     "changeCircleColor",
-    ""
+    "",
+    "valveNumber",
+    "color"
 );
 #else  // !QT_MOC_HAS_STRINGDATA
 #error "qtmochelpers.h not found or too old."
@@ -59,10 +61,10 @@ Q_CONSTINIT static const uint qt_meta_data_ZN12LadderWidgetE[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,   20,    2, 0x08,    1 /* Private */,
+       1,    2,   20,    2, 0x0a,    1 /* Public */,
 
  // slots: parameters
-    QMetaType::Void,
+    QMetaType::Void, QMetaType::Int, QMetaType::QString,    3,    4,
 
        0        // eod
 };
@@ -77,7 +79,9 @@ Q_CONSTINIT const QMetaObject LadderWidget::staticMetaObject = { {
         // Q_OBJECT / Q_GADGET
         QtPrivate::TypeAndForceComplete<LadderWidget, std::true_type>,
         // method 'changeCircleColor'
-        QtPrivate::TypeAndForceComplete<void, std::false_type>
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<int, std::false_type>,
+        QtPrivate::TypeAndForceComplete<QString, std::false_type>
     >,
     nullptr
 } };
@@ -87,11 +91,10 @@ void LadderWidget::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id
     auto *_t = static_cast<LadderWidget *>(_o);
     if (_c == QMetaObject::InvokeMetaMethod) {
         switch (_id) {
-        case 0: _t->changeCircleColor(); break;
+        case 0: _t->changeCircleColor((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2]))); break;
         default: ;
         }
     }
-    (void)_a;
 }
 
 const QMetaObject *LadderWidget::metaObject() const

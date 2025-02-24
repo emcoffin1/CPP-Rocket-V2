@@ -9,11 +9,14 @@ class LeakTest : public QWidget {
 private:
     WIFI *wifi;
 
+public slots:
+    static void updateListener(QJsonObject data);
+
+
 public:
     explicit LeakTest(QWidget *parent = nullptr, WIFI *wifiInstance = nullptr);
 
     static void startTest();
-    void updateListener(QString data);
 
     // Things
     QGridLayout *g_layout;

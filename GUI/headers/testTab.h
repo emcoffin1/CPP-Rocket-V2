@@ -26,8 +26,8 @@ private:
 public:
 
     explicit TestTab(QWidget *parent = nullptr, WIFI *wifiInstance = nullptr);
-    ~TestTab() override;
     void switchTests(int index) const;
+
 
 
     QPushButton *click_btn;
@@ -46,6 +46,10 @@ public:
     QLabel *test;
     QGridLayout *g_layout;
     QGridLayout *button_grid;
+
+public slots:
+    void updateValves(QJsonObject valveData);
+
 
 
 private:
