@@ -1,30 +1,9 @@
 C:/Users/emcof/CLionProjects/RocketGUI_cpp/cmake-build-debug/MyQtApp_autogen/GT4ZMTGFRD/moc_optTab.cpp: C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/headers/optTab.h \
   C:/Users/emcof/CLionProjects/RocketGUI_cpp/cmake-build-debug/MyQtApp_autogen/moc_predefs.h \
-  C:/Qt/6.8.2/mingw_64/include/QtBluetooth/QBluetoothAddress \
-  C:/Qt/6.8.2/mingw_64/include/QtBluetooth/QBluetoothDeviceInfo \
-  C:/Qt/6.8.2/mingw_64/include/QtBluetooth/QBluetoothUuid \
-  C:/Qt/6.8.2/mingw_64/include/QtBluetooth/qbluetooth.h \
-  C:/Qt/6.8.2/mingw_64/include/QtBluetooth/qbluetoothaddress.h \
-  C:/Qt/6.8.2/mingw_64/include/QtBluetooth/qbluetoothdevicediscoveryagent.h \
-  C:/Qt/6.8.2/mingw_64/include/QtBluetooth/qbluetoothdeviceinfo.h \
-  C:/Qt/6.8.2/mingw_64/include/QtBluetooth/qbluetoothserviceinfo.h \
-  C:/Qt/6.8.2/mingw_64/include/QtBluetooth/qbluetoothsocket.h \
-  C:/Qt/6.8.2/mingw_64/include/QtBluetooth/qbluetoothuuid.h \
-  C:/Qt/6.8.2/mingw_64/include/QtBluetooth/qtbluetooth-config.h \
-  C:/Qt/6.8.2/mingw_64/include/QtBluetooth/qtbluetoothexports.h \
-  C:/Qt/6.8.2/mingw_64/include/QtBluetooth/qtbluetoothglobal.h \
-  C:/Qt/6.8.2/mingw_64/include/QtCore/QByteArray \
   C:/Qt/6.8.2/mingw_64/include/QtCore/QDebug \
   C:/Qt/6.8.2/mingw_64/include/QtCore/QJsonDocument \
   C:/Qt/6.8.2/mingw_64/include/QtCore/QJsonObject \
-  C:/Qt/6.8.2/mingw_64/include/QtCore/QList \
-  C:/Qt/6.8.2/mingw_64/include/QtCore/QMetaType \
   C:/Qt/6.8.2/mingw_64/include/QtCore/QObject \
-  C:/Qt/6.8.2/mingw_64/include/QtCore/QSharedPointer \
-  C:/Qt/6.8.2/mingw_64/include/QtCore/QString \
-  C:/Qt/6.8.2/mingw_64/include/QtCore/QUuid \
-  C:/Qt/6.8.2/mingw_64/include/QtCore/QVariant \
-  C:/Qt/6.8.2/mingw_64/include/QtCore/QtGlobal \
   C:/Qt/6.8.2/mingw_64/include/QtCore/q20functional.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/q20iterator.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/q20memory.h \

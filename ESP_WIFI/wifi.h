@@ -20,6 +20,7 @@ signals:
     void sensorUpdated(QJsonObject jsonData);
     void positionUpdated(QJsonObject jsonData);
     void warningUpdated(QJsonObject jsonData);
+    void rssiUpdated(QJsonObject jsonData);
 
 private:
 
@@ -61,7 +62,8 @@ signals:
     void sensorUpdated(QJsonObject jsonData);
     void positionUpdated(QJsonObject jsonData);
     void warningUpdated(QJsonObject jsonData);
-    void connectionTypeChanged(QJsonObject jsonData);
+    void rssiUpdated(QJsonObject jsonData);
+    //void connectionTypeChanged(QJsonObject jsonData);
 
 private slots:
     void onDataReceived();

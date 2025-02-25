@@ -18,15 +18,12 @@ WIFI* WIFI::getInstance() {
 // Private constructor
 WIFI::WIFI(QObject *parent) : QObject(parent) {
     socket = new QTcpSocket(this);
-    btSocket = new QBluetoothSocket(QBluetoothServiceInfo::RfcommProtocol, this);
-    discoveryAgent = new QBluetoothDeviceDiscoveryAgent(this);
     dataProcessor = new DataProcessor(this);
 
     // Connect wifi
     connect(socket, &QTcpSocket::readyRead, this, &WIFI::onDataReceived);
 
     // Connect bt
-    connect(btSocket, &QBluetoothSocket::readyRead, this, &WIFI::onBluetoothDataReceived);
 
     // Forward update signals
     connect(dataProcessor, &DataProcessor::sensorUpdated, this, &WIFI::sensorUpdated);
@@ -41,7 +38,6 @@ WIFI::~WIFI() {
     socket->close();
     delete socket;
     delete dataProcessor;
-    delete discoveryAgent;
 }
 
 
@@ -49,22 +45,13 @@ void WIFI::connectToESP32(const QString &host, quint16 port) const {
     qDebug() << "Checking if ESP32 is reachable at " << host << ":" << port;
 
     // Create a temporary socket for checking the connection
-    QTcpSocket testSocket;
-    testSocket.connectToHost(host, port);
-
-    if (!testSocket.waitForConnected(2000)) {  // Wait up to 2 sec
-        qDebug() << "ESP32 is NOT reachable! Error:" << testSocket.errorString();
-        return;  // Stop connection attempt
-    }
-
-    qDebug() << "ESP32 is reachable, proceeding with connection...";
-
-    // ✅ If ESP32 is reachable, proceed with actual connection
+    socket->abort();
     socket->connectToHost(host, port);
-    if (socket->waitForConnected(3000)) {
-        qDebug() << "Connected to ESP32 at" << host << ":" << port;
+    if (socket->waitForConnected(3000)) {  // Wait up to 2 sec
+        qDebug() << "Connected to ESP";
+        sendMessage("CPP: Connected");
     } else {
-        qDebug() << "Failed to connect to ESP32:" << socket->errorString();
+        qDebug() << "Failed to connect to ESP" << socket->errorString();
     }
 }
 
@@ -115,8 +102,7 @@ void WIFI::onDataReceived() {
 
 
 bool WIFI::isConnected() const {
-    return socket->state() == QTcpSocket::ConnectedState ||
-           (btSocket && btSocket->state() == QBluetoothSocket::SocketState::ConnectedState);
+    return socket->state() == QTcpSocket::ConnectedState;
 }
 
 
@@ -129,23 +115,28 @@ void DataProcessor::processJSON(const QJsonObject &jsonData) {
 }
 
 void DataProcessor::emitData(const QJsonObject &jsonObj) {
-    QJsonObject valveData, sensorData, positionData, warningData;
-    if (jsonObj.contains("Valves")) {
+    QJsonObject valveData, sensorData, positionData, warningData, rssiData;
+    if (jsonObj.contains("RSSI")) {
+        rssiData["RSSI"] = jsonObj.value("RSSI");
+        emit rssiUpdated(rssiData);
+    }
+
+    if (jsonObj.contains("VALVES")) {
         valveData["VALVES"] = jsonObj.value("VALVES");
         emit valveUpdated(valveData);
     }
 
-    if (jsonObj.contains("Sensors")) {
+    if (jsonObj.contains("SENSORS")) {
         sensorData["SENSORS"] = jsonObj.value("SENSORS");
         emit sensorUpdated(sensorData);
     }
 
-    if (jsonObj.contains("Positions")) {
+    if (jsonObj.contains("POSITIONS")) {
         positionData["POSITION"] = jsonObj.value("POSITION").toString();
         emit positionUpdated(positionData);
     }
 
-    if (jsonObj.contains("Warnings")) {
+    if (jsonObj.contains("WARNINGS")) {
         warningData["WARNING"] = jsonObj.value("WARNING").toString();
         emit warningUpdated(warningData);
     }
