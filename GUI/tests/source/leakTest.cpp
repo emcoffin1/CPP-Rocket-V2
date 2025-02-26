@@ -22,5 +22,5 @@ void LeakTest::startTest() {
 
 void LeakTest::updateListener(QJsonObject data) {
 
-    qDebug() << "LeakTest data recieved:" << data;
+    //qDebug() << "LeakTest data recieved:" << data;
 }

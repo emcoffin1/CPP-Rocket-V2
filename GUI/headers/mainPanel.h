@@ -8,6 +8,7 @@
 #include "../headers/setTab.h"
 #include "../../ESP_WIFI/wifi.h"
 
+
 class MainPanel : public QWidget {
     Q_OBJECT
 
@@ -24,8 +25,13 @@ public:
 
     //QVBoxLayout *v_layout;
     QStackedWidget *stackedWidget;
-    QLabel *test;
+    QHBoxLayout *con_Layout;
+    QLabel *status;
+    QPushButton *statusInd;
+    QCheckBox *statusCheck;
 
+private slots:
+    void changeConnectionStatus(QJsonObject value);
 
 };
 

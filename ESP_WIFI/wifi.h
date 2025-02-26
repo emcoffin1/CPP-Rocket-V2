@@ -5,6 +5,9 @@
 #include <QDebug>
 #include <QJsonDocument>
 #include <QJsonObject>
+#include <QRandomGenerator>
+#include <QTimer>
+#include <QMessageBox>
 
 class DataProcessor : public QObject {
     Q_OBJECT
@@ -24,10 +27,6 @@ signals:
 
 private:
 
-
-
-
-
 };
 
 class WIFI : public QObject {
@@ -36,6 +35,8 @@ class WIFI : public QObject {
 public:
     // get single instance
     static WIFI* getInstance();
+    QTimer *dataTimer;
+    bool dataRandom = false;
 
     // delete copies
     WIFI(const WIFI&) = delete;
@@ -43,6 +44,9 @@ public:
 
     // connect to esp
     void connectToESP32(const QString &host, quint16 port) const;
+
+    // send random
+    void sendRandomValues();
 
     // disconnect
     void disconnectFromESP32() const;
@@ -53,7 +57,7 @@ public:
 
     // check connection
     bool isConnected() const;
-
+    int rssinum = -100;
 
 
 signals:
@@ -65,7 +69,7 @@ signals:
     void rssiUpdated(QJsonObject jsonData);
     //void connectionTypeChanged(QJsonObject jsonData);
 
-private slots:
+public slots:
     void onDataReceived();
 
 private:

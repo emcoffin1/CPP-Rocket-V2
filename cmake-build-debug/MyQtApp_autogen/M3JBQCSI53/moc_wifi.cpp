@@ -293,7 +293,7 @@ Q_CONSTINIT static const uint qt_meta_data_ZN4WIFIE[] = {
        9,    1,   71,    2, 0x06,   11 /* Public */,
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-      10,    0,   74,    2, 0x08,   13 /* Private */,
+      10,    0,   74,    2, 0x0a,   13 /* Public */,
 
  // signals: parameters
     QMetaType::Void, QMetaType::QJsonDocument,    3,

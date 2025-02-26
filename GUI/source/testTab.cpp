@@ -49,15 +49,22 @@ TestTab::TestTab(QWidget *parent, WIFI *wifiInstance) : QWidget(parent) {
     stacked_widget->addWidget(leakTest);
     stacked_widget->setContentsMargins(0,0,0,0);
 
+    // Create v layout for random data
+    v_layout = new QVBoxLayout();
+    //v_layout->setContentsMargins(0, 0, 0, 0);
+
+
     // Create valve display
-    valveDisplay = new LadderWidget(this);
+    valveDisplay = new ValveTree(this, wifiInstance);
+    v_layout->addWidget(valveDisplay);
+    v_layout->addStretch(1);
 
 
     // Add button layout to the main layout
     g_layout->addWidget(test, 0, 0, 1, 4);
     g_layout->addLayout(button_grid, 1, 0, 1, 4);
     g_layout->addWidget(stacked_widget,2,0, 1, 3);
-    g_layout->addWidget(valveDisplay,2,3, 6, 1, Qt::AlignCenter);
+    g_layout->addLayout(v_layout,2,3, 6, 1, Qt::AlignCenter);
 
 
     // Connect listener for ladder updates
@@ -118,6 +125,5 @@ void TestTab::switchTests(int index) const {
 }
 
 void TestTab::updateValves(QJsonObject valveData) {
-    qDebug() << "TestTab::updateValves"<<valveData;
-    valveDisplay->changeCircleColor(1, "red");
+    //valveDisplay->changeCircleColor(1, "red");
 }

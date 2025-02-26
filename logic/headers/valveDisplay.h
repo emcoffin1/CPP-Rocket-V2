@@ -1,37 +1,27 @@
-#ifndef LADDER_H
-#define LADDER_H
+#ifndef VALVEDISPLAY_H
+#define VALVEDISPLAY_H
 
+#include <QCheckBox>
 #include <QWidget>
-#include <QGraphicsEllipseItem>
-#include <QGraphicsView>
-#include <QGraphicsScene>
-#include <QVBoxLayout>
-#include <QPushButton>
+#include <QGridLayout>
+#include <QMap>
+#include "../../ESP_WIFI/wifi.h"
 
-class CircleItem : public QGraphicsEllipseItem {
-public:
-    CircleItem(qreal x, qreal y, qreal size, QGraphicsItem* parent = nullptr);
-
-    void changeColor(const QColor& color);
-};
-
-class LadderWidget : public QWidget {
+class ValveTree : public QWidget {
     Q_OBJECT
-
 public:
-    explicit LadderWidget(QWidget *parent = nullptr);
-    ~LadderWidget();
+    explicit ValveTree(QWidget *parent = nullptr, WIFI *wifiInstance = nullptr);
 
+    QGridLayout *g_layout;
+    QMap<QString, QCheckBox*> valveCheckBoxMap;
+    QList<QString> valveNames;
+    WIFI *wifi;
 public slots:
-    void changeCircleColor(int valveNumber, QString color); // Example slot to change a circle's color
+    void changeValveColor(QJsonObject jsonObj);
 
-private:
-    QGraphicsView *view;
-    QGraphicsScene *scene;
-    QList<CircleItem*> leftCircles;
-    QList<CircleItem*> rightCircles;
+
+
 };
-
 
 
 #endif //VALVEDISPLAY_H

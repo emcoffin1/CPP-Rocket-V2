@@ -1,69 +1,88 @@
 #include "../headers/valveDisplay.h"
-#include <QBrush>
-#include <QDebug>
-
-// CircleItem constructor
-CircleItem::CircleItem(qreal x, qreal y, qreal size, QGraphicsItem* parent)
-    : QGraphicsEllipseItem(x, y, size, size, parent) {
-    setBrush(QBrush(Qt::gray));  // Default color
-}
-
-// Change circle color method
-void CircleItem::changeColor(const QColor& color) {
-    setBrush(QBrush(color));
-}
-
-// LadderWidget constructor
-LadderWidget::LadderWidget(QWidget *parent) : QWidget(parent) {
-    QVBoxLayout *layout = new QVBoxLayout(this);
-
-    int diameter = 40;
-    int x_start = 25;
-    int x_end = x_start + 50;
-    int y_seperation = 40;
-
-    // Create Graphics View and Scene
-    view = new QGraphicsView(this);
-    scene = new QGraphicsScene(0, 0, 200, 500, this);
-    view->setScene(scene);
-    layout->addWidget(view);
 
 
+ValveTree::ValveTree(QWidget* parent, WIFI *wifiInstance) : QWidget(parent) {
+    // Init wifi
+    wifi = wifiInstance;
 
-    // Create circles in a ladder pattern
-    for (int i = 0; i < 5; ++i) {
-        int y_offset = y_seperation * i;  // Adjust spacing
+    // Init layout
+    g_layout = new QGridLayout(this);
+    setStyleSheet("QCheckBox {color:yellow;}"
+                  "QCheckBox::indicator {"
+                  "background-color: red;"
+                  "border-radius: 5px; margin: 0px; padding: 10px;}");
 
-        // Left side
-        CircleItem* leftCircle = new CircleItem(x_start, y_offset, diameter);
-        scene->addItem(leftCircle);
-        leftCircles.append(leftCircle);
+    // Store checkboxes in a QMap for easy lookup
+    valveCheckBoxMap = QMap<QString, QCheckBox*>();
+    QList<QString> valveNames {"HP1", "HP2", "LOXT1", "LOXT2", "FUELT1",
+        "FUELT2", "LDREG", "FDREG", "LOXIN", "FUELIN", "CHAMB1", "CHAMB2"};
+    // Create checkboxes and add them to the map
+    for (int i = 1; i <= valveNames.size(); ++i) {
+        QString valveName = valveNames[i-1];
+        QCheckBox *checkBox = new QCheckBox(valveName, this);
+        checkBox->setCheckable(false);
+        checkBox->setFixedSize(30, 30);
 
-        // Right side
-        CircleItem* rightCircle = new CircleItem(x_end, y_offset, diameter);
-        scene->addItem(rightCircle);
-        rightCircles.append(rightCircle);
+        // Align text differently for left & right columns
+        if (i <= valveNames.size() / 2) {
+            checkBox->setLayoutDirection(Qt::RightToLeft);
+        } else {
+            checkBox->setLayoutDirection(Qt::LeftToRight);
+        }
+
+        // Store in QMap
+        valveCheckBoxMap[valveName] = checkBox;
     }
-}
-/*
-    // Example: Add a button to change the color of a specific circle
-    QPushButton *changeColorBtn = new QPushButton("Change Left 1 Color", this);
-    layout->addWidget(changeColorBtn);
-    connect(changeColorBtn, &QPushButton::clicked, this, &LadderWidget::changeCircleColor);
-}*/
 
-// Slot function to change color
-void LadderWidget::changeCircleColor(int valveNumber, QString status) {
-    QString colorString = QString("Qt::%1").arg(status);
-    if (!leftCircles.isEmpty() && valveNumber <= 5) {
-        leftCircles[0]->changeColor(colorString);  // Change first left circle to red
+    // Add checkboxes to the grid layout
+    int row, col;
+    for (int i = 1; i <= valveNames.size(); ++i) {
+        row = (i - 1) % 6;
+        col = ((i - 1) / 6) * 2;  // Assign to columns 0 and 2
+        g_layout->addWidget(valveCheckBoxMap[valveNames[i-1]], row, col);
     }
-    if (!rightCircles.isEmpty() && valveNumber > 5) {
-        rightCircles[valveNumber-5]->changeColor(colorString);
+
+    g_layout->setColumnMinimumWidth(1, 25);
+    setLayout(g_layout);
+
+    if (wifi) {
+        connect(wifiInstance, &WIFI::valveUpdated, this, &ValveTree::changeValveColor);
     }
 }
 
-// Destructor (optional)
-LadderWidget::~LadderWidget() {
-    qDebug() << "LadderWidget destroyed.";
+
+void ValveTree::changeValveColor(QJsonObject jsonObj) {
+    // Changes the color of a specific valve
+
+    // Check if sensors in list
+    if (!jsonObj.contains("VALVES") || !jsonObj["VALVES"].isObject()) {
+        return;
+    }
+
+    // Extract valves
+    QJsonObject valves = jsonObj["VALVES"].toObject();
+
+    for (QString valveName : valves.keys()) {
+        int valveValue = valves[valveName].toInt();
+
+        QString color;
+        if (valveValue == 0) {
+            color = "red";
+        }
+        else if (valveValue == 1) {
+            color = "green";
+        }
+
+        if (valveCheckBoxMap.contains(valveName)) {
+            QCheckBox *checkBox = valveCheckBoxMap[valveName];
+
+            // Apply color
+            checkBox->setStyleSheet(QString(
+                "QCheckBox::indicator {"
+                  "background-color: %1;"
+                  "border-radius: "
+                  "5px; margin: 0px; "
+                  "padding: 10px;}").arg(color));
+        }
+    }
 }

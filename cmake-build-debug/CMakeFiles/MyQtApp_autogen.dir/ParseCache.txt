@@ -6,7 +6,10 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/ESP_WIFI/wifi.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/QJsonDocument
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/QJsonObject
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/QObject
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/QRandomGenerator
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/QTimer
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/q20functional.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/q20iterator.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/q20memory.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/q20type_traits.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/q23utility.h
@@ -19,6 +22,7 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/ESP_WIFI/wifi.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qatomic.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qatomic_cxx11.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qbasicatomic.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qbasictimer.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qbindingstorage.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qbytearray.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qbytearrayalgorithms.h
@@ -62,11 +66,13 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/ESP_WIFI/wifi.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qjsonobject.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qjsonvalue.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qlatin1stringview.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qline.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qlist.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qlocale.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qlogging.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qmalloc.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qmap.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qmargins.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qmath.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qmetacontainer.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qmetatype.h
@@ -79,7 +85,10 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/ESP_WIFI/wifi.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qobjectdefs_impl.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qoverload.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qpair.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qpoint.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qprocessordetection.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qrandom.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qrect.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qrefcount.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qregularexpression.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qscopedpointer.h
@@ -89,6 +98,8 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/ESP_WIFI/wifi.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qshareddata_impl.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qsharedpointer.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qsharedpointer_impl.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qsize.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qspan.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qstring.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qstringalgorithms.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qstringbuilder.h
@@ -113,6 +124,7 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/ESP_WIFI/wifi.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qtdeprecationmarkers.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qtenvironmentvariables.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qtextstream.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qtimer.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qtmetamacros.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qtnoop.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qtpreprocessorsupport.h
@@ -131,6 +143,31 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/ESP_WIFI/wifi.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qversiontagging.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qxptype_traits.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qyieldcpu.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qaction.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qbitmap.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qbrush.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qcolor.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qcursor.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qfont.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qfontinfo.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qfontmetrics.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qicon.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qimage.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qkeysequence.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qpaintdevice.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qpalette.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qpixelformat.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qpixmap.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qpolygon.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qregion.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qrgb.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qrgba64.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qtgui-config.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qtguiexports.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qtguiglobal.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qtransform.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qwindowdefs.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qwindowdefs_win.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtNetwork/QTcpSocket
  mdp:C:/Qt/6.8.2/mingw_64/include/QtNetwork/qabstractsocket.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtNetwork/qhostaddress.h
@@ -138,6 +175,15 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/ESP_WIFI/wifi.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtNetwork/qtnetwork-config.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtNetwork/qtnetworkexports.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtNetwork/qtnetworkglobal.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/QMessageBox
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qdialog.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qdialogbuttonbox.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qmessagebox.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qsizepolicy.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qtwidgets-config.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qtwidgetsexports.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qtwidgetsglobal.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qwidget.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/algorithm
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/array
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/atomic
@@ -202,6 +248,8 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/ESP_WIFI/wifi.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/predefined_ops.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ptr_traits.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/quoted_string.h
+ mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/random.h
+ mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/random.tcc
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/range_access.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ranges_algo.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ranges_algobase.h
@@ -251,6 +299,7 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/ESP_WIFI/wifi.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/uses_allocator_args.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/utility.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/vector.tcc
+ mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cassert
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cctype
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cerrno
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/charconv
@@ -300,6 +349,7 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/ESP_WIFI/wifi.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/glue_algorithm_defs.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/glue_memory_defs.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/glue_numeric_defs.h
+ mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/random
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ratio
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/span
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/sstream
@@ -339,14 +389,21 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/ESP_WIFI/wifi.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/gthr-default.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/gthr.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/messages_members.h
+ mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/opt_random.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/os_defines.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/time_members.h
+ mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/emmintrin.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/limits.h
+ mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/mm_malloc.h
+ mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/mmintrin.h
+ mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/mwaitintrin.h
+ mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/pmmintrin.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdarg.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdbool.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stddef.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdint.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/syslimits.h
+ mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/xmmintrin.h
  mdp:C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/_mingw.h
  mdp:C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/_mingw_mac.h
  mdp:C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/_mingw_off_t.h
@@ -391,6 +448,8 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/tests/headers/leakTest.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/QJsonDocument
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/QJsonObject
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/QObject
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/QRandomGenerator
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/QTimer
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/q20functional.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/q20iterator.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/q20memory.h
@@ -405,6 +464,7 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/tests/headers/leakTest.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qatomic.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qatomic_cxx11.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qbasicatomic.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qbasictimer.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qbindingstorage.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qbytearray.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qbytearrayalgorithms.h
@@ -469,6 +529,7 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/tests/headers/leakTest.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qpair.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qpoint.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qprocessordetection.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qrandom.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qrect.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qrefcount.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qregularexpression.h
@@ -505,6 +566,7 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/tests/headers/leakTest.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qtdeprecationmarkers.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qtenvironmentvariables.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qtextstream.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qtimer.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qtmetamacros.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qtnoop.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qtpreprocessorsupport.h
@@ -556,11 +618,15 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/tests/headers/leakTest.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtNetwork/qtnetworkexports.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtNetwork/qtnetworkglobal.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/QGridLayout
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/QMessageBox
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/QWidget
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qboxlayout.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qdialog.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qdialogbuttonbox.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qgridlayout.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qlayout.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qlayoutitem.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qmessagebox.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qsizepolicy.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qtwidgets-config.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qtwidgetsexports.h
@@ -630,6 +696,8 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/tests/headers/leakTest.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/predefined_ops.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ptr_traits.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/quoted_string.h
+ mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/random.h
+ mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/random.tcc
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/range_access.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ranges_algo.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ranges_algobase.h
@@ -729,6 +797,7 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/tests/headers/leakTest.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/glue_algorithm_defs.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/glue_memory_defs.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/glue_numeric_defs.h
+ mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/random
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ratio
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/span
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/sstream
@@ -768,14 +837,21 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/tests/headers/leakTest.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/gthr-default.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/gthr.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/messages_members.h
+ mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/opt_random.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/os_defines.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/time_members.h
+ mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/emmintrin.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/limits.h
+ mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/mm_malloc.h
+ mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/mmintrin.h
+ mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/mwaitintrin.h
+ mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/pmmintrin.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdarg.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdbool.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stddef.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdint.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/syslimits.h
+ mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/xmmintrin.h
  mdp:C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/_mingw.h
  mdp:C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/_mingw_mac.h
  mdp:C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/_mingw_off_t.h
@@ -820,12 +896,16 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/headers/mainPanel.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/QDebug
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/QJsonDocument
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/QJsonObject
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/QMap
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/QObject
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/QRandomGenerator
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/QTimer
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/q20functional.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/q20iterator.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/q20memory.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/q20type_traits.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/q23utility.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qabstractitemmodel.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qalgorithms.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qanystringview.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qarraydata.h
@@ -835,6 +915,7 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/headers/mainPanel.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qatomic.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qatomic_cxx11.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qbasicatomic.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qbasictimer.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qbindingstorage.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qbytearray.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qbytearrayalgorithms.h
@@ -899,6 +980,7 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/headers/mainPanel.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qpair.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qpoint.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qprocessordetection.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qrandom.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qrect.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qrefcount.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qregularexpression.h
@@ -935,6 +1017,7 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/headers/mainPanel.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qtdeprecationmarkers.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qtenvironmentvariables.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qtextstream.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qtimer.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qtmetamacros.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qtnoop.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qtpreprocessorsupport.h
@@ -966,10 +1049,7 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/headers/mainPanel.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qimage.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qkeysequence.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qpaintdevice.h
- mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qpainter.h
- mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qpainterpath.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qpalette.h
- mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qpen.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qpicture.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qpixelformat.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qpixmap.h
@@ -978,11 +1058,11 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/headers/mainPanel.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qrgb.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qrgba64.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qtextdocument.h
- mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qtextoption.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qtgui-config.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qtguiexports.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qtguiglobal.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qtransform.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qvalidator.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qwindowdefs.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qwindowdefs_win.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtNetwork/QTcpSocket
@@ -993,31 +1073,38 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/headers/mainPanel.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtNetwork/qtnetworkexports.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtNetwork/qtnetworkglobal.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/QCheckBox
- mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/QGraphicsEllipseItem
- mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/QGraphicsScene
- mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/QGraphicsView
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/QComboBox
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/QGridLayout
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/QLabel
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/QMessageBox
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/QPushButton
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/QStackedWidget
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/QVBoxLayout
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/QWidget
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qabstractbutton.h
- mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qabstractscrollarea.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qabstractitemdelegate.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qabstractslider.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qabstractspinbox.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qboxlayout.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qcheckbox.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qcombobox.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qdialog.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qdialogbuttonbox.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qframe.h
- mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qgraphicsitem.h
- mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qgraphicsscene.h
- mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qgraphicsview.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qgridlayout.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qlabel.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qlayout.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qlayoutitem.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qmessagebox.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qpushbutton.h
- mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qscrollarea.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qrubberband.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qsizepolicy.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qslider.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qstackedwidget.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qstyle.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qstyleoption.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qtabbar.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qtabwidget.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qtwidgets-config.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qtwidgetsexports.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qtwidgetsglobal.h
@@ -1086,6 +1173,8 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/headers/mainPanel.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/predefined_ops.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ptr_traits.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/quoted_string.h
+ mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/random.h
+ mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/random.tcc
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/range_access.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ranges_algo.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ranges_algobase.h
@@ -1185,6 +1274,7 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/headers/mainPanel.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/glue_algorithm_defs.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/glue_memory_defs.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/glue_numeric_defs.h
+ mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/random
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ratio
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/span
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/sstream
@@ -1224,14 +1314,21 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/headers/mainPanel.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/gthr-default.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/gthr.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/messages_members.h
+ mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/opt_random.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/os_defines.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/time_members.h
+ mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/emmintrin.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/limits.h
+ mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/mm_malloc.h
+ mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/mmintrin.h
+ mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/mwaitintrin.h
+ mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/pmmintrin.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdarg.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdbool.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stddef.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdint.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/syslimits.h
+ mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/xmmintrin.h
  mdp:C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/_mingw.h
  mdp:C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/_mingw_mac.h
  mdp:C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/_mingw_off_t.h
@@ -1698,12 +1795,16 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/headers/mainUI.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/QDebug
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/QJsonDocument
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/QJsonObject
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/QMap
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/QObject
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/QRandomGenerator
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/QTimer
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/q20functional.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/q20iterator.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/q20memory.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/q20type_traits.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/q23utility.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qabstractitemmodel.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qalgorithms.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qanystringview.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qarraydata.h
@@ -1713,6 +1814,7 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/headers/mainUI.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qatomic.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qatomic_cxx11.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qbasicatomic.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qbasictimer.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qbindingstorage.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qbytearray.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qbytearrayalgorithms.h
@@ -1777,6 +1879,7 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/headers/mainUI.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qpair.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qpoint.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qprocessordetection.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qrandom.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qrect.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qrefcount.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qregularexpression.h
@@ -1813,6 +1916,7 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/headers/mainUI.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qtdeprecationmarkers.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qtenvironmentvariables.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qtextstream.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qtimer.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qtmetamacros.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qtnoop.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qtpreprocessorsupport.h
@@ -1844,10 +1948,7 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/headers/mainUI.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qimage.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qkeysequence.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qpaintdevice.h
- mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qpainter.h
- mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qpainterpath.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qpalette.h
- mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qpen.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qpicture.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qpixelformat.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qpixmap.h
@@ -1856,11 +1957,11 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/headers/mainUI.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qrgb.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qrgba64.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qtextdocument.h
- mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qtextoption.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qtgui-config.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qtguiexports.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qtguiglobal.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qtransform.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qvalidator.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qwindowdefs.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qwindowdefs_win.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtNetwork/QTcpSocket
@@ -1871,33 +1972,40 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/headers/mainUI.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtNetwork/qtnetworkexports.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtNetwork/qtnetworkglobal.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/QCheckBox
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/QComboBox
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/QGraphicsDropShadowEffect
- mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/QGraphicsEllipseItem
- mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/QGraphicsScene
- mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/QGraphicsView
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/QGridLayout
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/QLabel
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/QMessageBox
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/QPushButton
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/QStackedWidget
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/QVBoxLayout
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/QWidget
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qabstractbutton.h
- mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qabstractscrollarea.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qabstractitemdelegate.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qabstractslider.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qabstractspinbox.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qboxlayout.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qcheckbox.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qcombobox.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qdialog.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qdialogbuttonbox.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qframe.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qgraphicseffect.h
- mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qgraphicsitem.h
- mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qgraphicsscene.h
- mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qgraphicsview.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qgridlayout.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qlabel.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qlayout.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qlayoutitem.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qmessagebox.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qpushbutton.h
- mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qscrollarea.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qrubberband.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qsizepolicy.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qslider.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qstackedwidget.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qstyle.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qstyleoption.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qtabbar.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qtabwidget.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qtwidgets-config.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qtwidgetsexports.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qtwidgetsglobal.h
@@ -1966,6 +2074,8 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/headers/mainUI.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/predefined_ops.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ptr_traits.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/quoted_string.h
+ mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/random.h
+ mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/random.tcc
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/range_access.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ranges_algo.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ranges_algobase.h
@@ -2065,6 +2175,7 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/headers/mainUI.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/glue_algorithm_defs.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/glue_memory_defs.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/glue_numeric_defs.h
+ mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/random
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ratio
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/span
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/sstream
@@ -2104,14 +2215,21 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/headers/mainUI.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/gthr-default.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/gthr.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/messages_members.h
+ mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/opt_random.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/os_defines.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/time_members.h
+ mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/emmintrin.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/limits.h
+ mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/mm_malloc.h
+ mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/mmintrin.h
+ mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/mwaitintrin.h
+ mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/pmmintrin.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdarg.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdbool.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stddef.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdint.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/syslimits.h
+ mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/xmmintrin.h
  mdp:C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/_mingw.h
  mdp:C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/_mingw_mac.h
  mdp:C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/_mingw_off_t.h
@@ -2165,7 +2283,10 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/headers/testTab.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/QDebug
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/QJsonDocument
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/QJsonObject
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/QMap
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/QObject
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/QRandomGenerator
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/QTimer
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/q20functional.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/q20iterator.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/q20memory.h
@@ -2180,6 +2301,7 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/headers/testTab.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qatomic.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qatomic_cxx11.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qbasicatomic.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qbasictimer.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qbindingstorage.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qbytearray.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qbytearrayalgorithms.h
@@ -2244,6 +2366,7 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/headers/testTab.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qpair.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qpoint.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qprocessordetection.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qrandom.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qrect.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qrefcount.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qregularexpression.h
@@ -2280,6 +2403,7 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/headers/testTab.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qtdeprecationmarkers.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qtenvironmentvariables.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qtextstream.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qtimer.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qtmetamacros.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qtnoop.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qtpreprocessorsupport.h
@@ -2311,10 +2435,7 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/headers/testTab.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qimage.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qkeysequence.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qpaintdevice.h
- mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qpainter.h
- mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qpainterpath.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qpalette.h
- mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qpen.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qpicture.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qpixelformat.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qpixmap.h
@@ -2323,7 +2444,6 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/headers/testTab.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qrgb.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qrgba64.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qtextdocument.h
- mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qtextoption.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qtgui-config.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qtguiexports.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qtguiglobal.h
@@ -2338,29 +2458,24 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/headers/testTab.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtNetwork/qtnetworkexports.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtNetwork/qtnetworkglobal.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/QCheckBox
- mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/QGraphicsEllipseItem
- mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/QGraphicsScene
- mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/QGraphicsView
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/QGridLayout
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/QLabel
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/QMessageBox
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/QPushButton
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/QStackedWidget
- mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/QVBoxLayout
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/QWidget
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qabstractbutton.h
- mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qabstractscrollarea.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qboxlayout.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qcheckbox.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qdialog.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qdialogbuttonbox.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qframe.h
- mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qgraphicsitem.h
- mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qgraphicsscene.h
- mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qgraphicsview.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qgridlayout.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qlabel.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qlayout.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qlayoutitem.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qmessagebox.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qpushbutton.h
- mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qscrollarea.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qsizepolicy.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qstackedwidget.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qtwidgets-config.h
@@ -2431,6 +2546,8 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/headers/testTab.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/predefined_ops.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ptr_traits.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/quoted_string.h
+ mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/random.h
+ mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/random.tcc
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/range_access.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ranges_algo.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ranges_algobase.h
@@ -2530,6 +2647,7 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/headers/testTab.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/glue_algorithm_defs.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/glue_memory_defs.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/glue_numeric_defs.h
+ mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/random
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ratio
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/span
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/sstream
@@ -2569,14 +2687,21 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/headers/testTab.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/gthr-default.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/gthr.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/messages_members.h
+ mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/opt_random.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/os_defines.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/time_members.h
+ mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/emmintrin.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/limits.h
+ mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/mm_malloc.h
+ mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/mmintrin.h
+ mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/mwaitintrin.h
+ mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/pmmintrin.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdarg.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdbool.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stddef.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdint.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/syslimits.h
+ mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/xmmintrin.h
  mdp:C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/_mingw.h
  mdp:C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/_mingw_mac.h
  mdp:C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/_mingw_off_t.h
@@ -2624,12 +2749,16 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/headers/optTab.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/QDebug
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/QJsonDocument
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/QJsonObject
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/QMap
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/QObject
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/QRandomGenerator
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/QTimer
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/q20functional.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/q20iterator.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/q20memory.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/q20type_traits.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/q23utility.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qabstractitemmodel.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qalgorithms.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qanystringview.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qarraydata.h
@@ -2639,6 +2768,7 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/headers/optTab.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qatomic.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qatomic_cxx11.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qbasicatomic.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qbasictimer.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qbindingstorage.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qbytearray.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qbytearrayalgorithms.h
@@ -2703,6 +2833,7 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/headers/optTab.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qpair.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qpoint.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qprocessordetection.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qrandom.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qrect.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qrefcount.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qregularexpression.h
@@ -2739,6 +2870,7 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/headers/optTab.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qtdeprecationmarkers.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qtenvironmentvariables.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qtextstream.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qtimer.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qtmetamacros.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qtnoop.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qtpreprocessorsupport.h
@@ -2770,10 +2902,7 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/headers/optTab.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qimage.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qkeysequence.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qpaintdevice.h
- mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qpainter.h
- mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qpainterpath.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qpalette.h
- mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qpen.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qpicture.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qpixelformat.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qpixmap.h
@@ -2782,11 +2911,11 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/headers/optTab.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qrgb.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qrgba64.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qtextdocument.h
- mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qtextoption.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qtgui-config.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qtguiexports.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qtguiglobal.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qtransform.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qvalidator.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qwindowdefs.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qwindowdefs_win.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtNetwork/QTcpSocket
@@ -2797,31 +2926,38 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/headers/optTab.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtNetwork/qtnetworkexports.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtNetwork/qtnetworkglobal.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/QCheckBox
- mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/QGraphicsEllipseItem
- mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/QGraphicsScene
- mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/QGraphicsView
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/QComboBox
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/QGridLayout
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/QLabel
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/QMessageBox
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/QPushButton
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/QStackedWidget
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/QVBoxLayout
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/QWidget
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qabstractbutton.h
- mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qabstractscrollarea.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qabstractitemdelegate.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qabstractslider.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qabstractspinbox.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qboxlayout.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qcheckbox.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qcombobox.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qdialog.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qdialogbuttonbox.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qframe.h
- mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qgraphicsitem.h
- mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qgraphicsscene.h
- mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qgraphicsview.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qgridlayout.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qlabel.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qlayout.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qlayoutitem.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qmessagebox.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qpushbutton.h
- mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qscrollarea.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qrubberband.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qsizepolicy.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qslider.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qstackedwidget.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qstyle.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qstyleoption.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qtabbar.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qtabwidget.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qtwidgets-config.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qtwidgetsexports.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qtwidgetsglobal.h
@@ -2890,6 +3026,8 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/headers/optTab.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/predefined_ops.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ptr_traits.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/quoted_string.h
+ mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/random.h
+ mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/random.tcc
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/range_access.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ranges_algo.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ranges_algobase.h
@@ -2989,6 +3127,7 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/headers/optTab.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/glue_algorithm_defs.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/glue_memory_defs.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/glue_numeric_defs.h
+ mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/random
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ratio
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/span
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/sstream
@@ -3028,14 +3167,21 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/headers/optTab.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/gthr-default.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/gthr.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/messages_members.h
+ mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/opt_random.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/os_defines.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/time_members.h
+ mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/emmintrin.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/limits.h
+ mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/mm_malloc.h
+ mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/mmintrin.h
+ mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/mwaitintrin.h
+ mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/pmmintrin.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdarg.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdbool.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stddef.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdint.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/syslimits.h
+ mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/xmmintrin.h
  mdp:C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/_mingw.h
  mdp:C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/_mingw_mac.h
  mdp:C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/_mingw_off_t.h
@@ -3088,11 +3234,14 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/headers/setTab.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/QJsonDocument
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/QJsonObject
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/QObject
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/QRandomGenerator
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/QTimer
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/q20functional.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/q20iterator.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/q20memory.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/q20type_traits.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/q23utility.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qabstractitemmodel.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qalgorithms.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qanystringview.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qarraydata.h
@@ -3102,6 +3251,7 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/headers/setTab.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qatomic.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qatomic_cxx11.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qbasicatomic.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qbasictimer.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qbindingstorage.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qbytearray.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qbytearrayalgorithms.h
@@ -3166,6 +3316,7 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/headers/setTab.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qpair.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qpoint.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qprocessordetection.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qrandom.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qrect.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qrefcount.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qregularexpression.h
@@ -3202,6 +3353,7 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/headers/setTab.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qtdeprecationmarkers.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qtenvironmentvariables.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qtextstream.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qtimer.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qtmetamacros.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qtnoop.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qtpreprocessorsupport.h
@@ -3245,6 +3397,7 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/headers/setTab.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qtguiexports.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qtguiglobal.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qtransform.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qvalidator.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qwindowdefs.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qwindowdefs_win.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtNetwork/QTcpSocket
@@ -3254,19 +3407,34 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/headers/setTab.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtNetwork/qtnetwork-config.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtNetwork/qtnetworkexports.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtNetwork/qtnetworkglobal.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/QComboBox
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/QGridLayout
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/QLabel
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/QMessageBox
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/QPushButton
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/QWidget
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qabstractbutton.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qabstractitemdelegate.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qabstractslider.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qabstractspinbox.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qboxlayout.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qcombobox.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qdialog.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qdialogbuttonbox.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qframe.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qgridlayout.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qlabel.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qlayout.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qlayoutitem.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qmessagebox.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qpushbutton.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qrubberband.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qsizepolicy.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qslider.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qstyle.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qstyleoption.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qtabbar.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qtabwidget.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qtwidgets-config.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qtwidgetsexports.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qtwidgetsglobal.h
@@ -3335,6 +3503,8 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/headers/setTab.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/predefined_ops.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ptr_traits.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/quoted_string.h
+ mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/random.h
+ mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/random.tcc
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/range_access.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ranges_algo.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ranges_algobase.h
@@ -3434,6 +3604,7 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/headers/setTab.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/glue_algorithm_defs.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/glue_memory_defs.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/glue_numeric_defs.h
+ mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/random
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ratio
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/span
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/sstream
@@ -3473,14 +3644,21 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/headers/setTab.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/gthr-default.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/gthr.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/messages_members.h
+ mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/opt_random.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/os_defines.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/time_members.h
+ mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/emmintrin.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/limits.h
+ mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/mm_malloc.h
+ mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/mmintrin.h
+ mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/mwaitintrin.h
+ mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/pmmintrin.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdarg.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdbool.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stddef.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdint.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/syslimits.h
+ mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/xmmintrin.h
  mdp:C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/_mingw.h
  mdp:C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/_mingw_mac.h
  mdp:C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/_mingw_off_t.h
@@ -3526,6 +3704,8 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/tests/headers/clickTest.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/QJsonDocument
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/QJsonObject
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/QObject
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/QRandomGenerator
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/QTimer
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/q20functional.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/q20iterator.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/q20memory.h
@@ -3540,6 +3720,7 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/tests/headers/clickTest.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qatomic.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qatomic_cxx11.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qbasicatomic.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qbasictimer.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qbindingstorage.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qbytearray.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qbytearrayalgorithms.h
@@ -3604,6 +3785,7 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/tests/headers/clickTest.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qpair.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qpoint.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qprocessordetection.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qrandom.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qrect.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qrefcount.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qregularexpression.h
@@ -3640,6 +3822,7 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/tests/headers/clickTest.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qtdeprecationmarkers.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qtenvironmentvariables.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qtextstream.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qtimer.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qtmetamacros.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qtnoop.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qtpreprocessorsupport.h
@@ -3696,15 +3879,19 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/tests/headers/clickTest.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/QCheckBox
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/QGridLayout
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/QLabel
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/QMessageBox
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/QPushButton
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qabstractbutton.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qboxlayout.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qcheckbox.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qdialog.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qdialogbuttonbox.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qframe.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qgridlayout.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qlabel.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qlayout.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qlayoutitem.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qmessagebox.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qpushbutton.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qsizepolicy.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qtwidgets-config.h
@@ -3775,6 +3962,8 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/tests/headers/clickTest.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/predefined_ops.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ptr_traits.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/quoted_string.h
+ mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/random.h
+ mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/random.tcc
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/range_access.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ranges_algo.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ranges_algobase.h
@@ -3874,6 +4063,7 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/tests/headers/clickTest.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/glue_algorithm_defs.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/glue_memory_defs.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/glue_numeric_defs.h
+ mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/random
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ratio
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/span
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/sstream
@@ -3913,14 +4103,21 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/tests/headers/clickTest.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/gthr-default.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/gthr.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/messages_members.h
+ mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/opt_random.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/os_defines.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/time_members.h
+ mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/emmintrin.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/limits.h
+ mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/mm_malloc.h
+ mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/mmintrin.h
+ mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/mwaitintrin.h
+ mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/pmmintrin.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdarg.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdbool.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stddef.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdint.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/syslimits.h
+ mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/xmmintrin.h
  mdp:C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/_mingw.h
  mdp:C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/_mingw_mac.h
  mdp:C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/_mingw_off_t.h
@@ -3963,6 +4160,13 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/tests/headers/clickTest.h
 C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/source/optTab.cpp
 C:/Users/emcof/CLionProjects/RocketGUI_cpp/logic/headers/valveDisplay.h
  mmc:Q_OBJECT
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/QDebug
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/QJsonDocument
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/QJsonObject
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/QMap
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/QObject
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/QRandomGenerator
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/QTimer
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/q20functional.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/q20iterator.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/q20memory.h
@@ -3977,11 +4181,15 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/logic/headers/valveDisplay.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qatomic.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qatomic_cxx11.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qbasicatomic.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qbasictimer.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qbindingstorage.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qbytearray.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qbytearrayalgorithms.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qbytearraylist.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qbytearrayview.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qcalendar.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qcborcommon.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qcborvalue.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qchar.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qcompare.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qcompare_impl.h
@@ -3995,6 +4203,7 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/logic/headers/valveDisplay.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qcontiguouscache.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qdarwinhelpers.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qdatastream.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qdatetime.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qdebug.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qendian.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qexceptionhandling.h
@@ -4008,12 +4217,17 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/logic/headers/valveDisplay.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qglobalstatic.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qhash.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qhashfunctions.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qiodevice.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qiodevicebase.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qiterable.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qiterator.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qjsondocument.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qjsonobject.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qjsonvalue.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qlatin1stringview.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qline.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qlist.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qlocale.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qlogging.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qmalloc.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qmap.h
@@ -4032,8 +4246,10 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/logic/headers/valveDisplay.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qpair.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qpoint.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qprocessordetection.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qrandom.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qrect.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qrefcount.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qregularexpression.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qscopedpointer.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qscopeguard.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qset.h
@@ -4067,6 +4283,7 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/logic/headers/valveDisplay.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qtdeprecationmarkers.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qtenvironmentvariables.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qtextstream.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qtimer.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qtmetamacros.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qtnoop.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qtpreprocessorsupport.h
@@ -4077,7 +4294,9 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/logic/headers/valveDisplay.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qtversionchecks.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qtypeinfo.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qtypes.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qurl.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qutf8stringview.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/quuid.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qvariant.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qvarlengtharray.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtCore/qversiontagging.h
@@ -4095,41 +4314,39 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/logic/headers/valveDisplay.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qimage.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qkeysequence.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qpaintdevice.h
- mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qpainter.h
- mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qpainterpath.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qpalette.h
- mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qpen.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qpixelformat.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qpixmap.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qpolygon.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qregion.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qrgb.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qrgba64.h
- mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qtextoption.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qtgui-config.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qtguiexports.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qtguiglobal.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qtransform.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qwindowdefs.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qwindowdefs_win.h
- mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/QGraphicsEllipseItem
- mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/QGraphicsScene
- mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/QGraphicsView
- mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/QPushButton
- mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/QVBoxLayout
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtNetwork/QTcpSocket
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtNetwork/qabstractsocket.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtNetwork/qhostaddress.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtNetwork/qtcpsocket.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtNetwork/qtnetwork-config.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtNetwork/qtnetworkexports.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtNetwork/qtnetworkglobal.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/QCheckBox
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/QGridLayout
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/QMessageBox
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/QWidget
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qabstractbutton.h
- mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qabstractscrollarea.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qboxlayout.h
- mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qframe.h
- mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qgraphicsitem.h
- mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qgraphicsscene.h
- mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qgraphicsview.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qcheckbox.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qdialog.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qdialogbuttonbox.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qgridlayout.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qlayout.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qlayoutitem.h
- mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qpushbutton.h
- mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qscrollarea.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qmessagebox.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qsizepolicy.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qtwidgets-config.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qtwidgetsexports.h
@@ -4199,6 +4416,8 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/logic/headers/valveDisplay.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/predefined_ops.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ptr_traits.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/quoted_string.h
+ mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/random.h
+ mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/random.tcc
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/range_access.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ranges_algo.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ranges_algobase.h
@@ -4298,6 +4517,7 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/logic/headers/valveDisplay.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/glue_algorithm_defs.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/glue_memory_defs.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/glue_numeric_defs.h
+ mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/random
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ratio
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/span
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/sstream
@@ -4337,14 +4557,21 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/logic/headers/valveDisplay.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/gthr-default.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/gthr.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/messages_members.h
+ mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/opt_random.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/os_defines.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/time_members.h
+ mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/emmintrin.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/limits.h
+ mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/mm_malloc.h
+ mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/mmintrin.h
+ mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/mwaitintrin.h
+ mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/pmmintrin.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdarg.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdbool.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stddef.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdint.h
  mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/syslimits.h
+ mdp:C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/xmmintrin.h
  mdp:C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/_mingw.h
  mdp:C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/_mingw_mac.h
  mdp:C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/_mingw_off_t.h
@@ -4381,6 +4608,7 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/logic/headers/valveDisplay.h
  mdp:C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/vadefs.h
  mdp:C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wchar.h
  mdp:C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wctype.h
+ mdp:C:/Users/emcof/CLionProjects/RocketGUI_cpp/ESP_WIFI/wifi.h
  mdp:C:/Users/emcof/CLionProjects/RocketGUI_cpp/cmake-build-debug/MyQtApp_autogen/moc_predefs.h
  mdp:C:/Users/emcof/CLionProjects/RocketGUI_cpp/logic/headers/valveDisplay.h
 C:/Users/emcof/CLionProjects/RocketGUI_cpp/ESP_WIFI/wifi.cpp

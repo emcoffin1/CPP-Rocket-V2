@@ -36,9 +36,10 @@ public:
     QPushButton *igniter_btn;
 
     QStackedWidget *stacked_widget;
+    QVBoxLayout *v_layout;
 
 
-    LadderWidget *valveDisplay;
+    ValveTree *valveDisplay;
 
 
     QPushButton* createButton(const QString &text, int fontSize = 14, QWidget *parent = nullptr, const QString &color = "black");

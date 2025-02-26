@@ -1,5 +1,6 @@
 #include "wifi.h"
 
+#include <iostream>
 #include <QJsonDocument>
 
 
@@ -20,16 +21,19 @@ WIFI::WIFI(QObject *parent) : QObject(parent) {
     socket = new QTcpSocket(this);
     dataProcessor = new DataProcessor(this);
 
-    // Connect wifi
+    // Connect Wi-Fi
     connect(socket, &QTcpSocket::readyRead, this, &WIFI::onDataReceived);
 
-    // Connect bt
+    // Init timer
+    dataTimer = new QTimer(this);
+    connect(dataTimer, &QTimer::timeout, this, &WIFI::sendRandomValues);
 
     // Forward update signals
     connect(dataProcessor, &DataProcessor::sensorUpdated, this, &WIFI::sensorUpdated);
     connect(dataProcessor, &DataProcessor::positionUpdated, this, &WIFI::positionUpdated);
     connect(dataProcessor, &DataProcessor::warningUpdated, this, &WIFI::warningUpdated);
     connect(dataProcessor, &DataProcessor::valveUpdated, this, &WIFI::valveUpdated);
+    connect(dataProcessor, &DataProcessor::rssiUpdated, this, &WIFI::rssiUpdated);
 
 }
 
@@ -48,10 +52,11 @@ void WIFI::connectToESP32(const QString &host, quint16 port) const {
     socket->abort();
     socket->connectToHost(host, port);
     if (socket->waitForConnected(3000)) {  // Wait up to 2 sec
-        qDebug() << "Connected to ESP";
         sendMessage("CPP: Connected");
     } else {
-        qDebug() << "Failed to connect to ESP" << socket->errorString();
+        QString error = QString("Can't connect to wifi: %1").arg(socket->errorString());
+        QMessageBox::warning(nullptr, "Connection Error", error);
+
     }
 }
 
@@ -72,9 +77,11 @@ void WIFI::sendMessage(const QString &message) const {
     if (socket->state() == QTcpSocket::ConnectedState) {
         socket->write(message.toUtf8());
         socket->flush();
+        qDebug() << "Sending message: " << message;
         socket->waitForBytesWritten(1000);
+        qDebug() << "Message sent: " << message;
     } else {
-        qDebug() << "Not connected, cannot send message.";
+        QMessageBox::warning(nullptr, "Error", "Cannot send message");
     }
 }
 
@@ -88,18 +95,46 @@ QString WIFI::receiveMessage() const {
 }
 
 void WIFI::onDataReceived() {
-    QByteArray data = socket->readAll();
+    if (dataRandom == false) {
+        // Stop timer if active
+        if (dataTimer->isActive()) {
+            dataTimer->stop();
+        }
 
-    QJsonDocument jsonDoc = QJsonDocument::fromJson(data);
-    if (!jsonDoc.isNull() && jsonDoc.isObject()) {
-        QJsonObject jsonObj = jsonDoc.object();
-        dataProcessor->processJSON(jsonObj);
-    } else {
-        qDebug() << "JSON object is null";
+        QByteArray data = socket->readAll();
+
+        QJsonDocument jsonDoc = QJsonDocument::fromJson(data);
+        if (!jsonDoc.isNull() && jsonDoc.isObject()) {
+            QJsonObject jsonObj = jsonDoc.object();
+            dataProcessor->processJSON(jsonObj);
+        }
+    }
+
+    if (dataRandom == true) {
+        // Use/send random values
+        // Start clock
+        if (!dataTimer->isActive()) {
+            dataTimer->start(1000);
+        }
     }
 }
 
+void WIFI::sendRandomValues() {
+    QJsonObject jsonObj, jsonValve;
+    int randomNum = QRandomGenerator::global() -> bounded(40);
 
+    jsonValve["HP1"] = QRandomGenerator::global() -> bounded(2);
+    jsonValve["HP2"] = QRandomGenerator::global() -> bounded(2);
+    jsonValve["CHAMB1"] = QRandomGenerator::global() -> bounded(2);
+    jsonValve["CHAMB2"] = QRandomGenerator::global() -> bounded(2);
+
+    jsonObj["VALVES"] = jsonValve;
+    jsonObj["SENSORS"] = randomNum;
+    jsonObj["POSITION"] = randomNum;
+    jsonObj["CONNECTION"] = rssinum;
+    dataProcessor->processJSON(jsonObj);
+
+}
 
 bool WIFI::isConnected() const {
     return socket->state() == QTcpSocket::ConnectedState;
@@ -116,13 +151,14 @@ void DataProcessor::processJSON(const QJsonObject &jsonData) {
 
 void DataProcessor::emitData(const QJsonObject &jsonObj) {
     QJsonObject valveData, sensorData, positionData, warningData, rssiData;
-    if (jsonObj.contains("RSSI")) {
-        rssiData["RSSI"] = jsonObj.value("RSSI");
+    if (jsonObj.contains("CONNECTION")) {
+        rssiData["CONNECTION"] = jsonObj.value("CONNECTION");
         emit rssiUpdated(rssiData);
     }
 
     if (jsonObj.contains("VALVES")) {
         valveData["VALVES"] = jsonObj.value("VALVES");
+        //qDebug() << "VALVES: " << valveData;
         emit valveUpdated(valveData);
     }
 
