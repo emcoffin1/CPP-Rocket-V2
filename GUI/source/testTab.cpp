@@ -54,10 +54,25 @@ TestTab::TestTab(QWidget *parent, WIFI *wifiInstance) : QWidget(parent) {
     //v_layout->setContentsMargins(0, 0, 0, 0);
 
 
-    // Create valve display
+    // Create vehicle display
+    // Valve tree
     valveDisplay = new ValveTree(this, wifiInstance);
     v_layout->addWidget(valveDisplay);
+    QString topdown = "rocket_top_profile.png";
+
+    // roll display
+    rollDisplay = new RollDisplay(this, wifiInstance, topdown, "ROLL",
+                                    0, 150, 150);
+    v_layout->addWidget(rollDisplay, Qt::AlignVCenter);
     v_layout->addStretch(1);
+
+    // pitch display
+    QString side = "rocket_side_profile_pointed.png";
+    pitchDisplay = new RollDisplay(this, wifiInstance, side, "PITCH",
+                                    90, 150, 400);
+
+    v_layout->addWidget(pitchDisplay, Qt::AlignVCenter);
+    v_layout->addStretch(5);
 
 
     // Add button layout to the main layout

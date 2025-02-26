@@ -8,4 +8,4 @@
 #include "GT4ZMTGFRD/moc_testTab.cpp"
 #include "DKWTGFM2PV/moc_clickTest.cpp"
 #include "DKWTGFM2PV/moc_leakTest.cpp"
-#include "22GOGG6FO6/moc_valveDisplay.cpp"
+#include "22GOGG6FO6/moc_vehicleDisplay.cpp"

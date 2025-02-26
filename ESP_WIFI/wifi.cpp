@@ -97,9 +97,8 @@ QString WIFI::receiveMessage() const {
 void WIFI::onDataReceived() {
     if (dataRandom == false) {
         // Stop timer if active
-        if (dataTimer->isActive()) {
-            dataTimer->stop();
-        }
+        setDataRandom(false);
+
 
         QByteArray data = socket->readAll();
 
@@ -111,16 +110,12 @@ void WIFI::onDataReceived() {
     }
 
     if (dataRandom == true) {
-        // Use/send random values
-        // Start clock
-        if (!dataTimer->isActive()) {
-            dataTimer->start(1000);
-        }
+        setDataRandom(true);
     }
 }
 
 void WIFI::sendRandomValues() {
-    QJsonObject jsonObj, jsonValve;
+    QJsonObject jsonObj, jsonValve, jsonPos;
     int randomNum = QRandomGenerator::global() -> bounded(40);
 
     jsonValve["HP1"] = QRandomGenerator::global() -> bounded(2);
@@ -128,9 +123,12 @@ void WIFI::sendRandomValues() {
     jsonValve["CHAMB1"] = QRandomGenerator::global() -> bounded(2);
     jsonValve["CHAMB2"] = QRandomGenerator::global() -> bounded(2);
 
+    jsonPos["ROLL"] = QRandomGenerator::global() -> bounded(31) - 15;
+    jsonPos["PITCH"] = QRandomGenerator::global() -> bounded(31) - 15;
+
     jsonObj["VALVES"] = jsonValve;
     jsonObj["SENSORS"] = randomNum;
-    jsonObj["POSITION"] = randomNum;
+    jsonObj["POSITION"] = jsonPos;
     jsonObj["CONNECTION"] = rssinum;
     dataProcessor->processJSON(jsonObj);
 
@@ -140,6 +138,21 @@ bool WIFI::isConnected() const {
     return socket->state() == QTcpSocket::ConnectedState;
 }
 
+void WIFI::setDataRandom(bool enabled) {
+    if (dataRandom == enabled) {
+        return;
+    }
+
+    dataRandom = enabled;
+
+    if (dataRandom) {
+        if (!dataTimer->isActive()) {
+            dataTimer->start(1000);
+        }
+    } else {
+        dataTimer->stop();
+    }
+}
 
 DataProcessor::DataProcessor(QObject *parent) : QObject(parent) {}
 
@@ -167,8 +180,9 @@ void DataProcessor::emitData(const QJsonObject &jsonObj) {
         emit sensorUpdated(sensorData);
     }
 
-    if (jsonObj.contains("POSITIONS")) {
-        positionData["POSITION"] = jsonObj.value("POSITION").toString();
+    if (jsonObj.contains("POSITION")) {
+        positionData["POSITION"] = jsonObj.value("POSITION");
+        //qDebug() << "POSITION: " << positionData;
         emit positionUpdated(positionData);
     }
 

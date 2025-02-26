@@ -42,8 +42,8 @@ add_executable(MyQtApp
         GUI/headers/setTab.h
         GUI/tests/headers/leakTest.h
         GUI/tests/source/leakTest.cpp
-        logic/headers/valveDisplay.h
-        logic/source/valveDisplay.cpp
+        logic/headers/vehicleDisplay.h
+        logic/source/vehicleDisplay.cpp
 )
 
 # ✅ Link Qt Libraries

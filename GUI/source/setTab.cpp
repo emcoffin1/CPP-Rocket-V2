@@ -119,22 +119,24 @@ void SetTab::changeDataType() const {
 
     if (dataPicker->currentIndex() == 2) {
         // Tell cpp to use fake data
-        wifiInstance->dataRandom = true;
-        wifiInstance->onDataReceived();
+        wifiInstance->setDataRandom(true) ;
         if (wifiInstance->isConnected()) {
             wifiInstance->disconnectFromESP32();
         }
     }
 
-    if (wifiInstance->isConnected()) {
-        if (dataPicker->currentIndex() == 0) {
-            // Tell esp to send real data
-            wifiInstance->dataRandom = false;
+
+    if (dataPicker->currentIndex() == 0) {
+        // Tell esp to send real data
+        wifiInstance->setDataRandom(false);
+            if (wifiInstance->isConnected()){
             wifiInstance->sendMessage("TEST: 0");
         }
-        if (dataPicker->currentIndex() == 1) {
-            // Tell esp to send fake data
-            wifiInstance->dataRandom = false;
+    }
+    if (dataPicker->currentIndex() == 1) {
+        // Tell esp to send fake data
+        wifiInstance->setDataRandom(false);
+        if (wifiInstance->isConnected()){
             wifiInstance->sendMessage("TEST: 1");
         }
     }

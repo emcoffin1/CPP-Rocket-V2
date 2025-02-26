@@ -51,6 +51,9 @@ public:
     // disconnect
     void disconnectFromESP32() const;
 
+    // Change data type
+    void setDataRandom(bool enabled);
+
     // send + receive
     void sendMessage(const QString &message) const;
     QString receiveMessage() const;

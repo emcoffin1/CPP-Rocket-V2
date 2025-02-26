@@ -8,7 +8,7 @@
 #include <QStackedWidget>
 #include "../tests/headers/clickTest.h"
 #include "../tests/headers/leakTest.h"
-#include "../../logic/headers/valveDisplay.h"
+#include "../../logic/headers/vehicleDisplay.h"
 #include "../../ESP_WIFI/wifi.h"
 
 
@@ -40,6 +40,8 @@ public:
 
 
     ValveTree *valveDisplay;
+    RollDisplay *rollDisplay, *pitchDisplay;
+
 
 
     QPushButton* createButton(const QString &text, int fontSize = 14, QWidget *parent = nullptr, const QString &color = "black");
