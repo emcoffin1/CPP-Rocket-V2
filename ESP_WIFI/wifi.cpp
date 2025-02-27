@@ -115,19 +115,25 @@ void WIFI::onDataReceived() {
 }
 
 void WIFI::sendRandomValues() {
-    QJsonObject jsonObj, jsonValve, jsonPos;
+    QJsonObject jsonObj, jsonValve, jsonPos, jsonSens;
     int randomNum = QRandomGenerator::global() -> bounded(40);
 
-    jsonValve["HP1"] = QRandomGenerator::global() -> bounded(2);
-    jsonValve["HP2"] = QRandomGenerator::global() -> bounded(2);
-    jsonValve["CHAMB1"] = QRandomGenerator::global() -> bounded(2);
-    jsonValve["CHAMB2"] = QRandomGenerator::global() -> bounded(2);
+    jsonValve["HighPress1"] = QRandomGenerator::global() -> bounded(2);
+    jsonValve["HighPress2"] = QRandomGenerator::global() -> bounded(2);
+    jsonValve["Chamber1"] = QRandomGenerator::global() -> bounded(2);
+    jsonValve["Chamber2"] = QRandomGenerator::global() -> bounded(2);
 
     jsonPos["ROLL"] = QRandomGenerator::global() -> bounded(31) - 15;
     jsonPos["PITCH"] = QRandomGenerator::global() -> bounded(31) - 15;
 
+    jsonSens["FuelTank"] = QRandomGenerator::global() -> bounded(31);
+    jsonSens["LOXTank"] = QRandomGenerator::global() -> bounded(31);
+    jsonSens["Pneumatics"] = QRandomGenerator::global() -> bounded(31);
+    jsonSens["HighPress"] = QRandomGenerator::global() -> bounded(31);
+
+
     jsonObj["VALVES"] = jsonValve;
-    jsonObj["SENSORS"] = randomNum;
+    jsonObj["SENSORS"] = jsonSens;
     jsonObj["POSITION"] = jsonPos;
     jsonObj["CONNECTION"] = rssinum;
     dataProcessor->processJSON(jsonObj);

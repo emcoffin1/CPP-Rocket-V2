@@ -67,6 +67,7 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/cmake-build-debug/MyQtApp_autogen/GT4
   C:/Qt/6.8.2/mingw_64/include/QtCore/qhashfunctions.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qiodevice.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qiodevicebase.h \
+  C:/Qt/6.8.2/mingw_64/include/QtCore/qitemselectionmodel.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qiterable.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qiterator.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qjsondocument.h \
@@ -196,14 +197,18 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/cmake-build-debug/MyQtApp_autogen/GT4
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/QComboBox \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/QGraphicsDropShadowEffect \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/QGridLayout \
+  C:/Qt/6.8.2/mingw_64/include/QtWidgets/QHeaderView \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/QLabel \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/QMessageBox \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/QPushButton \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/QStackedWidget \
+  C:/Qt/6.8.2/mingw_64/include/QtWidgets/QTableWidget \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/QVBoxLayout \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/QWidget \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qabstractbutton.h \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qabstractitemdelegate.h \
+  C:/Qt/6.8.2/mingw_64/include/QtWidgets/qabstractitemview.h \
+  C:/Qt/6.8.2/mingw_64/include/QtWidgets/qabstractscrollarea.h \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qabstractslider.h \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qabstractspinbox.h \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qboxlayout.h \
@@ -214,6 +219,7 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/cmake-build-debug/MyQtApp_autogen/GT4
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qframe.h \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qgraphicseffect.h \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qgridlayout.h \
+  C:/Qt/6.8.2/mingw_64/include/QtWidgets/qheaderview.h \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qlabel.h \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qlayout.h \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qlayoutitem.h \
@@ -226,6 +232,8 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/cmake-build-debug/MyQtApp_autogen/GT4
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qstyle.h \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qstyleoption.h \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qtabbar.h \
+  C:/Qt/6.8.2/mingw_64/include/QtWidgets/qtableview.h \
+  C:/Qt/6.8.2/mingw_64/include/QtWidgets/qtablewidget.h \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qtabwidget.h \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qtwidgets-config.h \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qtwidgetsexports.h \

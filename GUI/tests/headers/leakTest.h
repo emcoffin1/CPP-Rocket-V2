@@ -1,29 +1,53 @@
 #ifndef LEAKTEST_H
 #define LEAKTEST_H
-#include <QGridLayout>
+
 #include <QWidget>
-#include "../../../ESP_WIFI/wifi.h"
+#include <QLabel>
+#include <QVBoxLayout>
+#include <QTableWidget>
+#include <QPushButton>
+#include <QHeaderView>
+#include <QJsonObject>
+#include <QTimer>
+#include <unordered_map>
+#include <vector>
+
+#include "../../../ESP_WIFI//wifi.h"
 
 class LeakTest : public QWidget {
     Q_OBJECT
-private:
-    WIFI *wifi;
-
-public slots:
-    static void updateListener(QJsonObject data);
-
-
 public:
     explicit LeakTest(QWidget *parent = nullptr, WIFI *wifiInstance = nullptr);
 
-    static void startTest();
+private slots:
+    void startOrCancelTest();
+    void startTest();
+    void captureSensorData(QJsonObject data);
+    void updateAverages();
+    void recordLatestValues();
+    void updateTimerDisplay();
 
-    // Things
+    QPushButton* createButton(const QString &text, int fontSize = 14, QWidget *parent = nullptr, const QString &color = "black");
+private:
     QGridLayout *g_layout;
+    QTableWidget *sensorTable;
+    QPushButton *start_b;
+    QTimer *dataTimer, *countUpTimer;
+    QLabel *timerLabel;
 
+    QMap<QString, double> latestSensorValues;
 
+    WIFI *wifi;
+    bool recordingActive = false;
+    int currentTimeIndex = 0;  // Tracks which row to update (0-4)
+    int elapsedTime = 0;
 
+    std::unordered_map<std::string, std::vector<double>> sensorDict;
+    std::vector<std::vector<double>> sensorValues;  // Stores values per time index
+
+    void updateTable(int timeIndex, const QString &sensor, double value);
+    void resetTest();
 
 };
 
-#endif //LEAKTEST_H
+#endif // LEAKTEST_H

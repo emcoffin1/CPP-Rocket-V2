@@ -7,15 +7,14 @@ ValveTree::ValveTree(QWidget* parent, WIFI *wifiInstance) : QWidget(parent) {
 
     // Init layout
     g_layout = new QGridLayout(this);
-    setStyleSheet("QCheckBox {color:yellow;}"
-                  "QCheckBox::indicator {"
+    setStyleSheet("QCheckBox::indicator {"
                   "background-color: red;"
                   "border-radius: 5px; margin: 0px; padding: 10px;}");
 
     // Store checkboxes in a QMap for easy lookup
     valveCheckBoxMap = QMap<QString, QCheckBox*>();
-    QList<QString> valveNames {"HP1", "HP2", "LOXT1", "LOXT2", "FUELT1",
-        "FUELT2", "LDREG", "FDREG", "LOXIN", "FUELIN", "CHAMB1", "CHAMB2"};
+    QList<QString> valveNames {"HighPress1", "HighPress2", "LOXTank1", "LOXTank2", "FuelTank1",
+        "FuelTank2", "LOXDomeReg", "FuelDomeReg", "LIXInlet", "FuelInlet", "Chamber1", "Chamber2"};
     // Create checkboxes and add them to the map
     for (int i = 1; i <= valveNames.size(); ++i) {
         QString valveName = valveNames[i-1];
