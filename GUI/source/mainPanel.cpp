@@ -8,6 +8,7 @@ MainPanel::MainPanel(QWidget *parent, WIFI *wifiInstance) : QWidget(parent) {
     if (!wifiInstance) {
         qDebug() << "wifiInstance is null";
     }
+
     // Create a single QVBoxLayout for MainPanel.
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->setContentsMargins(0, 0, 0, 0);
@@ -16,10 +17,9 @@ MainPanel::MainPanel(QWidget *parent, WIFI *wifiInstance) : QWidget(parent) {
     // WIFI Init
     wifi = wifiInstance;
 
-    // Connection layout
+
+    // Top layout
     con_Layout = new QHBoxLayout();
-
-
 
 
     // Status Checker
@@ -35,15 +35,29 @@ MainPanel::MainPanel(QWidget *parent, WIFI *wifiInstance) : QWidget(parent) {
     statusCheck->setCheckable(false);
 
 
+    // Time Display
+    QString timeVal = ConstantUses::instance()->currentTime();
+    timeLabel = new QLabel(timeVal, this);
+    timeLabel->setStyleSheet("QLabel{"
+                             "font-size: 12px;"
+                             "color: white}");
+
+
+    con_Layout->addWidget(timeLabel, Qt::AlignCenter);
+    con_Layout->addWidget(statusCheck, Qt::AlignRight);
+
+
+
+
     // Create the QStackedWidget.
     stackedWidget = new QStackedWidget(this);
     stackedWidget->setContentsMargins(0, 0, 0, 0);
-    //stackedWidget->setStyleSheet("QStackedWidget { border: 2px solid green; }");
+
 
     // Sample widgets.
-    mainTab = new MainTab(this);
+    mainTab = new MainTab(this, wifi);
     testTab = new TestTab(this, wifi);
-    setTab = new SetTab(wifi);
+    setTab = new SetTab(this, wifi);
 
     stackedWidget->addWidget(mainTab);
     stackedWidget->addWidget(testTab);
@@ -51,15 +65,19 @@ MainPanel::MainPanel(QWidget *parent, WIFI *wifiInstance) : QWidget(parent) {
 
     // Add the label and stacked widget to the main layout.
 
-    mainLayout->addWidget(statusCheck);
+    mainLayout->addLayout(con_Layout);
     mainLayout->addWidget(stackedWidget);
 
     // This layout will now control the entire MainPanel with no extra margins.
     setLayout(mainLayout);
 
+    connect(ConstantUses::instance(), &ConstantUses::timeUpdated, this, &MainPanel::updateTime);
     connect(wifiInstance, &WIFI::rssiUpdated, this, &MainPanel::changeConnectionStatus);
 }
 
+void MainPanel::updateTime(const QString timeVal) const {
+    timeLabel->setText(timeVal);
+}
 
 void MainPanel::switchPanel(int index) const {
     if (index >= 0 && index < stackedWidget->count()) {

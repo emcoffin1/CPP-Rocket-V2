@@ -23,30 +23,39 @@ TestTab::TestTab(QWidget *parent, WIFI *wifiInstance) : QWidget(parent) {
     test->setAlignment(Qt::AlignCenter);
 
     // Create buttons
-    click_btn = createButton("Click", 20, this);
-    leak_btn = createButton("Leak", 20, this);
-    decay_btn = createButton("Decay", 20, this);
-    igniter_btn = createButton("Igniter", 20, this);
+    click_btn = ConstantUses::buttonMaker("Click", 20);
+    leak_btn = ConstantUses::buttonMaker("Leak", 20);
+    response_btn = ConstantUses::buttonMaker("Response", 20);
+    igniter_btn = ConstantUses::buttonMaker("Igniter", 20);
+    surface_btn = ConstantUses::buttonMaker("Control Surfaces", 20);
 
     // Button connects
     connect(click_btn, &QPushButton::clicked, [this]() { switchTests(0); });
     connect(leak_btn, &QPushButton::clicked, [this]() { switchTests(1); });
-    connect(decay_btn, &QPushButton::clicked, [this]() { switchTests(2); });
+    connect(response_btn, &QPushButton::clicked, [this]() { switchTests(2); });
     connect(igniter_btn, &QPushButton::clicked, [this]() { switchTests(3); });
+    connect(surface_btn, &QPushButton::clicked, [this]() { switchTests(4); });
 
 
     // Add buttons to the button grid
     button_grid->addWidget(click_btn, 0, 0);
     button_grid->addWidget(leak_btn, 0, 1);
-    button_grid->addWidget(decay_btn, 0, 2);
+    button_grid->addWidget(response_btn, 0, 2);
     button_grid->addWidget(igniter_btn, 0, 3);
+    button_grid->addWidget(surface_btn, 0, 4);
 
     // Create stacked widgets
     stacked_widget = new QStackedWidget(this);
     clickTest = new ClickTest(this, wifiInstance);
     leakTest = new LeakTest(this, wifiInstance);
+    responseTest = new ResponseTest(this, wifiInstance);
+    surfaceTest = new SurfaceTest(this, wifiInstance);
+    igniterTest = new IgniterTest(this, wifiInstance);
     stacked_widget->addWidget(clickTest);
     stacked_widget->addWidget(leakTest);
+    stacked_widget->addWidget(responseTest);
+    stacked_widget->addWidget(igniterTest);
+    stacked_widget->addWidget(surfaceTest);
     stacked_widget->setContentsMargins(0,0,0,0);
 
     // Create v layout for random data
@@ -87,7 +96,7 @@ TestTab::TestTab(QWidget *parent, WIFI *wifiInstance) : QWidget(parent) {
 }
 
 
-
+/*
 QPushButton* TestTab::createButton(const QString &text, int fontSize, QWidget *parent, const QString &color) {
     if (!parent) {
         parent = this;
@@ -130,7 +139,7 @@ QPushButton* TestTab::createButton(const QString &text, int fontSize, QWidget *p
       .arg("#1E1E1E", "#2A2A2A")); // Pressed color
 
     return btn;
-}
+}*/
 
 
 void TestTab::switchTests(int index) const {

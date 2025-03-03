@@ -11,6 +11,7 @@ MainUI::MainUI (WIFI *wifiInstance, QWidget *parent) : QWidget (parent) {
 
     // WIFI Inst
     wifi = wifiInstance;
+    graphController = new GraphController();
 
     // Main window layout
     g_layout = new QGridLayout();

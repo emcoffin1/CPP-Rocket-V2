@@ -8,6 +8,7 @@
 
 #include "../../../GUI/headers/mainPanel.h"
 #include <QtGui/qtextcursor.h>
+#include <QtGui/qscreen.h>
 #include <QtCore/qmetatype.h>
 
 #include <QtCore/qtmochelpers.h>
@@ -41,7 +42,9 @@ static constexpr auto qt_meta_stringdata_ZN9MainPanelE = QtMocHelpers::stringDat
     "MainPanel",
     "changeConnectionStatus",
     "",
-    "value"
+    "value",
+    "updateTime",
+    "timeVal"
 );
 #else  // !QT_MOC_HAS_STRINGDATA
 #error "qtmochelpers.h not found or too old."
@@ -53,7 +56,7 @@ Q_CONSTINIT static const uint qt_meta_data_ZN9MainPanelE[] = {
       12,       // revision
        0,       // classname
        0,    0, // classinfo
-       1,   14, // methods
+       2,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -61,10 +64,12 @@ Q_CONSTINIT static const uint qt_meta_data_ZN9MainPanelE[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    1,   20,    2, 0x08,    1 /* Private */,
+       1,    1,   26,    2, 0x08,    1 /* Private */,
+       4,    1,   29,    2, 0x108,    3 /* Private | MethodIsConst  */,
 
  // slots: parameters
     QMetaType::Void, QMetaType::QJsonObject,    3,
+    QMetaType::Void, QMetaType::QString,    5,
 
        0        // eod
 };
@@ -80,7 +85,10 @@ Q_CONSTINIT const QMetaObject MainPanel::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<MainPanel, std::true_type>,
         // method 'changeConnectionStatus'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<QJsonObject, std::false_type>
+        QtPrivate::TypeAndForceComplete<QJsonObject, std::false_type>,
+        // method 'updateTime'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<const QString, std::false_type>
     >,
     nullptr
 } };
@@ -91,6 +99,7 @@ void MainPanel::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, v
     if (_c == QMetaObject::InvokeMetaMethod) {
         switch (_id) {
         case 0: _t->changeConnectionStatus((*reinterpret_cast< std::add_pointer_t<QJsonObject>>(_a[1]))); break;
+        case 1: _t->updateTime((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
         default: ;
         }
     }
@@ -115,14 +124,14 @@ int MainPanel::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 1)
+        if (_id < 2)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 1;
+        _id -= 2;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 1)
+        if (_id < 2)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 1;
+        _id -= 2;
     }
     return _id;
 }

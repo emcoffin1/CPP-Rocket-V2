@@ -8,6 +8,8 @@
 #include <QRandomGenerator>
 #include <QTimer>
 #include <QMessageBox>
+#include <QPushButton>
+#include <QScopedPointer>
 
 class DataProcessor : public QObject {
     Q_OBJECT
@@ -24,6 +26,7 @@ signals:
     void positionUpdated(QJsonObject jsonData);
     void warningUpdated(QJsonObject jsonData);
     void rssiUpdated(QJsonObject jsonData);
+    void testUpdated(QJsonObject jsonData);
 
 private:
 
@@ -35,32 +38,29 @@ class WIFI : public QObject {
 public:
     // get single instance
     static WIFI* getInstance();
-    QTimer *dataTimer;
-    bool dataRandom = false;
-
-    // delete copies
-    WIFI(const WIFI&) = delete;
-    WIFI& operator=(const WIFI&) = delete;
 
     // connect to esp
     void connectToESP32(const QString &host, quint16 port) const;
 
-    // send random
-    void sendRandomValues();
-
     // disconnect
     void disconnectFromESP32() const;
+    bool isConnected() const;
+
 
     // Change data type
     void setDataRandom(bool enabled);
+    // send random
+    void sendRandomValues();
+
 
     // send + receive
     void sendMessage(const QString &message) const;
     QString receiveMessage() const;
 
+
     // check connection
-    bool isConnected() const;
-    int rssinum = -100;
+    int rssinum = -90;
+
 
 
 signals:
@@ -70,6 +70,7 @@ signals:
     void positionUpdated(QJsonObject jsonData);
     void warningUpdated(QJsonObject jsonData);
     void rssiUpdated(QJsonObject jsonData);
+    void testUpdated(QJsonObject jsonData);
     //void connectionTypeChanged(QJsonObject jsonData);
 
 public slots:
@@ -77,14 +78,47 @@ public slots:
 
 private:
     explicit WIFI(QObject *parent = nullptr);
-    ~WIFI();
-
-    static WIFI* instance;
+    static QScopedPointer<WIFI> instance;
     QTcpSocket *socket;
-
+    QTimer *dataTimer;
+    bool dataRandom = false;
     DataProcessor *dataProcessor;
 };
 
+
+class ConstantUses : public QObject {
+    Q_OBJECT
+
+public:
+    static ConstantUses* instance();
+
+    static QPushButton* buttonMaker(const QString &text, int fontSize = 14, const QString &color = "black");
+    QString currentTime() const;
+    void startCountdown();
+
+    static QStringList getConfig(const QString &key);
+
+signals:
+    void timeUpdated(QString newTime);
+    void countdownUpdated(QString countdownTime);
+
+private:
+    explicit ConstantUses(QObject *parent = nullptr);
+    static QScopedPointer<ConstantUses> _instance;
+
+
+    QTimer *timer;
+    QTimer *countdownTimer;
+    QString lastTime;
+    QString formattedTime;
+    int countdownValue;
+    bool countDirection;
+
+private slots:
+    void updateTime();
+    void updateCountdown();
+    friend class QScopedPointer<ConstantUses>;
+};
 
 
 #endif //WIFI_H

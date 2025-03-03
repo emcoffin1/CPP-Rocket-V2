@@ -31,7 +31,7 @@ private slots:
     void startTest();
 
 
-    QPushButton* createButton(const QString &text, int fontSize = 14, QWidget *parent = nullptr, const QString &color = "black");
+
 };
 
 #endif //CLICKTEST_H

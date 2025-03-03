@@ -1,0 +1,8 @@
+{
+  "VALVES": ["HighPress", "HighVent", "LOXDomeReg", "LOXDomeVent", "FuelDomeReg",
+    "FuelDomeVent", "LOXVent", "FuelVent", "LOXMV", "FuelMV"],
+
+  "PLOT1": ["HighPress1", "HighPress1"],
+  "PLOT2": ["LOXTank1", "LOXTank2"],
+  "PLOT3": ["FuelTank1", "FuelTank2"]
+}

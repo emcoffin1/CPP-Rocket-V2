@@ -8,6 +8,8 @@
 #include <QMap>
 #include <QPainter>
 #include <QPixmap>
+#include <qcoreapplication.h>
+#include <qjsonarray.h>
 #include "../../ESP_WIFI/wifi.h"
 
 class ValveTree : public QWidget {
@@ -19,6 +21,9 @@ public:
     QMap<QString, QCheckBox*> valveCheckBoxMap;
     QList<QString> valveNames;
     WIFI *wifi;
+
+    QList<QString> loadValveNamesFromConfig(const QString &fileName);
+
 public slots:
     void changeValveColor(QJsonObject jsonObj);
 

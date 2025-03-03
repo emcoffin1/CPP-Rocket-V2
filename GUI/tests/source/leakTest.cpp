@@ -9,7 +9,7 @@ LeakTest::LeakTest(QWidget *parent, WIFI *wifiInstance) : QWidget(parent) {
 
 
 
-    sensorTable->setHorizontalHeaderLabels({"Time", "FuelTank", "LOXTank", "Pneumatics", "HighPress"});
+    sensorTable->setHorizontalHeaderLabels({"Time", "FuelTank1", "LOXTank1", "Pneumatics", "HighPress1"});
     //sensorTable->setVerticalHeaderLabels({"1:00", "2:00", "3:00", "4:00", "5:00", "Average"});
     sensorTable->horizontalHeader()->setVisible(true);
     sensorTable->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
@@ -179,10 +179,10 @@ void LeakTest::updateTable(int timeIndex, const QString &sensor, double value) {
     if (timeIndex < 0 || timeIndex >= 5) return;
 
     int sensorCol = -1;
-    if (sensor == "FuelTank") sensorCol = 1;
-    else if (sensor == "LOXTank") sensorCol = 2;
+    if (sensor == "FuelTank1") sensorCol = 1;
+    else if (sensor == "LOXTank1") sensorCol = 2;
     else if (sensor == "Pneumatics") sensorCol = 3;
-    else if (sensor == "HighPress") sensorCol = 4;
+    else if (sensor == "HighPress1") sensorCol = 4;
 
     if (sensorCol != -1) {
         // Store value in sensorValues

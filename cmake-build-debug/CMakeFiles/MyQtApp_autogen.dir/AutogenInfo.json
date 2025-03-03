@@ -309,7 +309,17 @@
 		"C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6Bluetooth/Qt6BluetoothTargets.cmake",
 		"C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6Bluetooth/Qt6BluetoothTargets-relwithdebinfo.cmake",
 		"C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6Bluetooth/Qt6BluetoothAdditionalTargetInfo.cmake",
-		"C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6Bluetooth/Qt6BluetoothVersionlessAliasTargets.cmake"
+		"C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6Bluetooth/Qt6BluetoothVersionlessAliasTargets.cmake",
+		"C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6PrintSupport/Qt6PrintSupportConfigVersion.cmake",
+		"C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6PrintSupport/Qt6PrintSupportConfigVersionImpl.cmake",
+		"C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6PrintSupport/Qt6PrintSupportConfig.cmake",
+		"C:/Program Files/JetBrains/CLion 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeFindDependencyMacro.cmake",
+		"C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6PrintSupport/Qt6PrintSupportDependencies.cmake",
+		"C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6PrintSupport/Qt6PrintSupportTargets.cmake",
+		"C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6PrintSupport/Qt6PrintSupportTargets-relwithdebinfo.cmake",
+		"C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6PrintSupport/Qt6PrintSupportAdditionalTargetInfo.cmake",
+		"C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6PrintSupport/Qt6PrintSupportPlugins.cmake",
+		"C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6PrintSupport/Qt6PrintSupportVersionlessAliasTargets.cmake"
 	],
 	"CMAKE_SOURCE_DIR" : "C:/Users/emcof/CLionProjects/RocketGUI_cpp",
 	"CROSS_CONFIG" : false,
@@ -366,9 +376,33 @@
 			null
 		],
 		[
+			"C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/tests/headers/igniterTest.h",
+			"MU",
+			"DKWTGFM2PV/moc_igniterTest.cpp",
+			null
+		],
+		[
 			"C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/tests/headers/leakTest.h",
 			"MU",
 			"DKWTGFM2PV/moc_leakTest.cpp",
+			null
+		],
+		[
+			"C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/tests/headers/responseTest.h",
+			"MU",
+			"DKWTGFM2PV/moc_responseTest.cpp",
+			null
+		],
+		[
+			"C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/tests/headers/surfaceTest.h",
+			"MU",
+			"DKWTGFM2PV/moc_surfaceTest.cpp",
+			null
+		],
+		[
+			"C:/Users/emcof/CLionProjects/RocketGUI_cpp/logic/headers/graphController.h",
+			"MU",
+			"22GOGG6FO6/moc_graphController.cpp",
 			null
 		],
 		[
@@ -388,6 +422,7 @@
 		"QT_CORE_LIB",
 		"QT_GUI_LIB",
 		"QT_NETWORK_LIB",
+		"QT_PRINTSUPPORT_LIB",
 		"QT_SERIALPORT_LIB",
 		"QT_WIDGETS_LIB",
 		"UNICODE",
@@ -406,14 +441,16 @@
 	],
 	"MOC_INCLUDES" : 
 	[
+		"C:/Users/emcof/CLionProjects/RocketGUI_cpp/libs/qcustomplot/qcustomplot",
 		"C:/Qt/6.8.2/mingw_64/include/QtCore",
 		"C:/Qt/6.8.2/mingw_64/include",
-		"C:/Qt/6.8.2/mingw_64/mkspecs/win32-g++",
-		"C:/Qt/6.8.2/mingw_64/include/QtGui",
 		"C:/Qt/6.8.2/mingw_64/include/QtWidgets",
+		"C:/Qt/6.8.2/mingw_64/include/QtGui",
+		"C:/Qt/6.8.2/mingw_64/mkspecs/win32-g++",
 		"C:/Qt/6.8.2/mingw_64/include/QtNetwork",
 		"C:/Qt/6.8.2/mingw_64/include/QtSerialPort",
 		"C:/Qt/6.8.2/mingw_64/include/QtBluetooth",
+		"C:/Qt/6.8.2/mingw_64/include/QtPrintSupport",
 		"C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++",
 		"C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32",
 		"C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward",
@@ -495,7 +532,27 @@
 			null
 		],
 		[
+			"C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/tests/source/igniterTest.cpp",
+			"MU",
+			null
+		],
+		[
 			"C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/tests/source/leakTest.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/tests/source/responseTest.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/tests/source/surfaceTest.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/emcof/CLionProjects/RocketGUI_cpp/logic/source/graphController.cpp",
 			"MU",
 			null
 		],

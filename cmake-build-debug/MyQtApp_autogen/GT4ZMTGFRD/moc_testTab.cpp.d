@@ -8,6 +8,7 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/cmake-build-debug/MyQtApp_autogen/GT4
   C:/Qt/6.8.2/mingw_64/include/QtCore/QMap \
   C:/Qt/6.8.2/mingw_64/include/QtCore/QObject \
   C:/Qt/6.8.2/mingw_64/include/QtCore/QRandomGenerator \
+  C:/Qt/6.8.2/mingw_64/include/QtCore/QScopedPointer \
   C:/Qt/6.8.2/mingw_64/include/QtCore/QTimer \
   C:/Qt/6.8.2/mingw_64/include/QtCore/q20functional.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/q20iterator.h \
@@ -44,13 +45,19 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/cmake-build-debug/MyQtApp_autogen/GT4
   C:/Qt/6.8.2/mingw_64/include/QtCore/qcontainerinfo.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qcontainertools_impl.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qcontiguouscache.h \
+  C:/Qt/6.8.2/mingw_64/include/QtCore/qcoreapplication.h \
+  C:/Qt/6.8.2/mingw_64/include/QtCore/qcoreapplication_platform.h \
+  C:/Qt/6.8.2/mingw_64/include/QtCore/qcoreevent.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qdarwinhelpers.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qdatastream.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qdatetime.h \
+  C:/Qt/6.8.2/mingw_64/include/QtCore/qdeadlinetimer.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qdebug.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qdir.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qdirlisting.h \
+  C:/Qt/6.8.2/mingw_64/include/QtCore/qelapsedtimer.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qendian.h \
+  C:/Qt/6.8.2/mingw_64/include/QtCore/qeventloop.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qexceptionhandling.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qfile.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qfiledevice.h \
@@ -70,6 +77,7 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/cmake-build-debug/MyQtApp_autogen/GT4
   C:/Qt/6.8.2/mingw_64/include/QtCore/qitemselectionmodel.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qiterable.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qiterator.h \
+  C:/Qt/6.8.2/mingw_64/include/QtCore/qjsonarray.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qjsondocument.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qjsonobject.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qjsonvalue.h \
@@ -86,6 +94,7 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/cmake-build-debug/MyQtApp_autogen/GT4
   C:/Qt/6.8.2/mingw_64/include/QtCore/qmetatype.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qminmax.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qnamespace.h \
+  C:/Qt/6.8.2/mingw_64/include/QtCore/qnativeinterface.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qnumeric.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qobject.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qobject_impl.h \
@@ -197,6 +206,7 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/cmake-build-debug/MyQtApp_autogen/GT4
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/QGridLayout \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/QHeaderView \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/QLabel \
+  C:/Qt/6.8.2/mingw_64/include/QtWidgets/QLayout \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/QMessageBox \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/QPushButton \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/QStackedWidget \
@@ -213,6 +223,7 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/cmake-build-debug/MyQtApp_autogen/GT4
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qcheckbox.h \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qdialog.h \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qdialogbuttonbox.h \
+  C:/Qt/6.8.2/mingw_64/include/QtWidgets/qformlayout.h \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qframe.h \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qgridlayout.h \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qheaderview.h \
@@ -499,5 +510,8 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/cmake-build-debug/MyQtApp_autogen/GT4
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wctype.h \
   C:/Users/emcof/CLionProjects/RocketGUI_cpp/ESP_WIFI/wifi.h \
   C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/tests/headers/clickTest.h \
+  C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/tests/headers/igniterTest.h \
   C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/tests/headers/leakTest.h \
+  C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/tests/headers/responseTest.h \
+  C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/tests/headers/surfaceTest.h \
   C:/Users/emcof/CLionProjects/RocketGUI_cpp/logic/headers/vehicleDisplay.h

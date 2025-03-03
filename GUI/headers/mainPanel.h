@@ -7,6 +7,7 @@
 #include "../headers/testTab.h"
 #include "../headers/setTab.h"
 #include "../../ESP_WIFI/wifi.h"
+#include "../../logic/headers/graphController.h"
 
 
 class MainPanel : public QWidget {
@@ -22,6 +23,8 @@ public:
     TestTab *testTab;
     SetTab *setTab;
     WIFI *wifi;
+    GraphController *graphController;
+    ConstantUses *constantUses;
 
     //QVBoxLayout *v_layout;
     QStackedWidget *stackedWidget;
@@ -29,9 +32,11 @@ public:
     QLabel *status;
     QPushButton *statusInd;
     QCheckBox *statusCheck;
+    QLabel *timeLabel;
 
 private slots:
     void changeConnectionStatus(QJsonObject value);
+    void updateTime(const QString timeVal) const;
 
 };
 

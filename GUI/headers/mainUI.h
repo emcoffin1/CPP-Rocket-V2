@@ -29,6 +29,7 @@ public:
     QWidget *optionPanel;
 
     WIFI *wifi;
+    GraphController *graphController;
 
 
 

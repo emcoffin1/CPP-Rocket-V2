@@ -1,0 +1,35 @@
+// Sensors //
+
+HighPress1
+HighPress2
+LOXTank1
+LOXTank2
+FuelTank1
+FuelTank2
+LOXDomeReg
+FuelDomeReg
+LOXInlet
+FuelInlet
+Chamber1
+Chamber2
+
+
+// Valves //
+
+HighPress
+HighVent
+LOXDomeReg
+LOXDomeVent
+FuelDomeReg
+FuelDomeVent
+LOXVent
+FuelVent
+LOXMV
+FuelMV
+
+
+// Position //
+
+ROLL
+PITCH
+YAW

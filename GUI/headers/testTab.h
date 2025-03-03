@@ -8,6 +8,9 @@
 #include <QStackedWidget>
 #include "../tests/headers/clickTest.h"
 #include "../tests/headers/leakTest.h"
+#include "../tests/headers/responseTest.h"
+#include "../tests/headers/surfaceTest.h"
+#include "../tests/headers/igniterTest.h"
 #include "../../logic/headers/vehicleDisplay.h"
 #include "../../ESP_WIFI/wifi.h"
 
@@ -19,9 +22,9 @@ private:
 
     ClickTest *clickTest;
     LeakTest *leakTest;
-    //DecayTest *decayTest;
-    //IgniterTest *igniterTest;
-
+    ResponseTest *responseTest;
+    IgniterTest *igniterTest;
+    SurfaceTest *surfaceTest;
 
 public:
 
@@ -32,8 +35,9 @@ public:
 
     QPushButton *click_btn;
     QPushButton *leak_btn;
-    QPushButton *decay_btn;
+    QPushButton *response_btn;
     QPushButton *igniter_btn;
+    QPushButton *surface_btn;
 
     QStackedWidget *stacked_widget;
     QVBoxLayout *v_layout;
@@ -44,7 +48,6 @@ public:
 
 
 
-    QPushButton* createButton(const QString &text, int fontSize = 14, QWidget *parent = nullptr, const QString &color = "black");
 
     QLabel *test;
     QGridLayout *g_layout;

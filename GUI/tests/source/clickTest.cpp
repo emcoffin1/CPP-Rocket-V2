@@ -30,7 +30,7 @@ ClickTest::ClickTest(QWidget *parent, WIFI *wifiInstance) :QWidget(parent) {
     wifi = wifiInstance;
 
     // Start Button
-    start_button = createButton("START", 25, this, "#bc2626");
+    start_button = ConstantUses::buttonMaker("START", 25, "#bc2626");
     connect(start_button, &QPushButton::clicked, this, &ClickTest::startTest);
 
     // Timer
@@ -85,54 +85,8 @@ ClickTest::ClickTest(QWidget *parent, WIFI *wifiInstance) :QWidget(parent) {
 
 
 
-
-
-
 }
 
-QPushButton* ClickTest::createButton(const QString &text, int fontSize, QWidget *parent, const QString &color) {
-    if (!parent) {
-        parent = this;
-    }
-
-    auto *btn = new QPushButton(text, parent);  // Ensure it has `this` as parent
-
-    // Set font
-    QFont font;
-    font.setPointSize(fontSize);
-    font.setBold(false);
-    btn->setFont(font);
-
-    // Apply button styling
-    btn->setStyleSheet(QString(R"(
-        QPushButton {
-            background-color: %1;
-            color: white;
-            border-radius: 10%;
-            padding: 0px;
-            margin: 0px;
-            border: none;
-            font-size: %2px;
-            font-weight: normal;
-        }
-
-        QPushButton:hover {
-            background-color: %3;
-        }
-
-        QPushButton:pressed {
-            background-color: %4;
-        }
-
-        QPushButton:focus {
-            outline: none;
-        }
-    )").arg(color)
-      .arg(fontSize)
-      .arg("#1E1E1E", "#2A2A2A")); // Pressed color
-
-    return btn;
-}
 
 void ClickTest::startTest() {
     wifi->sendMessage("TEST: CLICK");

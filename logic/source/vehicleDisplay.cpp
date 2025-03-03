@@ -1,6 +1,7 @@
 #include "../headers/vehicleDisplay.h"
 
 
+
 ValveTree::ValveTree(QWidget* parent, WIFI *wifiInstance) : QWidget(parent) {
     // Init wifi
     wifi = wifiInstance;
@@ -13,8 +14,12 @@ ValveTree::ValveTree(QWidget* parent, WIFI *wifiInstance) : QWidget(parent) {
 
     // Store checkboxes in a QMap for easy lookup
     valveCheckBoxMap = QMap<QString, QCheckBox*>();
-    QList<QString> valveNames {"HighPress1", "HighPress2", "LOXTank1", "LOXTank2", "FuelTank1",
-        "FuelTank2", "LOXDomeReg", "FuelDomeReg", "LIXInlet", "FuelInlet", "Chamber1", "Chamber2"};
+    //QList<QString> valveNames {"HighPress", "HighVent", "LOXDomeReg", "LOXDomeVent", "FuelDomeReg",
+     //                                       "FuelDomeVent", "LOXVent", "FuelVent", "LOXMV", "FuelMV"};
+    QString configFilePath = QDir(QCoreApplication::applicationDirPath()).filePath("../data/config.json");
+
+    valveNames = loadValveNamesFromConfig(configFilePath);
+
     // Create checkboxes and add them to the map
     for (int i = 1; i <= valveNames.size(); ++i) {
         QString valveName = valveNames[i-1];
@@ -36,8 +41,8 @@ ValveTree::ValveTree(QWidget* parent, WIFI *wifiInstance) : QWidget(parent) {
     // Add checkboxes to the grid layout
     int row, col;
     for (int i = 1; i <= valveNames.size(); ++i) {
-        row = (i - 1) % 6;
-        col = ((i - 1) / 6) * 2;  // Assign to columns 0 and 2
+        row = (i - 1) % 5;
+        col = ((i - 1) / 5) * 2;  // Assign to columns 0 and 2
         g_layout->addWidget(valveCheckBoxMap[valveNames[i-1]], row, col);
     }
 
@@ -49,6 +54,41 @@ ValveTree::ValveTree(QWidget* parent, WIFI *wifiInstance) : QWidget(parent) {
     }
 }
 
+QList<QString> ValveTree::loadValveNamesFromConfig(const QString &fileName) {
+    QList<QString> valveList;
+
+    QFile file(fileName);
+
+    if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+        qDebug() << "Error opening file";
+        return valveList; // Empty list if can't be found
+    }
+
+    // Read content
+    QByteArray jsonData = file.readAll();
+    file.close();
+
+    // Parse data
+    QJsonDocument doc = QJsonDocument::fromJson(jsonData);
+    if (!doc.isObject()) {
+        qDebug() << "JSON document is not an object";
+        return valveList;
+    }
+
+    // Extract valves from data
+    QJsonObject jsonObj = doc.object();
+    if (jsonObj.contains("VALVES") && jsonObj["VALVES"].isArray()) {
+        QJsonArray valveArray = jsonObj["VALVES"].toArray();
+        for (const QJsonValue &value : valveArray) {
+            valveList.append(value.toString());
+        }
+    } else {
+        qDebug() << "VALVES not found";
+    }
+    return valveList;
+
+
+}
 
 void ValveTree::changeValveColor(QJsonObject jsonObj) {
     // Changes the color of a specific valve
@@ -103,7 +143,8 @@ RollDisplay::RollDisplay(QWidget* parent, WIFI *wifiInstance, const QString &ima
 }
 
 void RollDisplay::loadImage(const QString &imageName) {
-    QString imagePath = basePath + imageName;
+    QString imagePath = QDir(QCoreApplication::applicationDirPath()).filePath("../data/images/" + imageName);
+    //qDebug() << "Loading image: " << imagePath;
 
     if (!QFile::exists(imagePath)) {
         return;

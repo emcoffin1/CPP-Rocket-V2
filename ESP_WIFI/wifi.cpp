@@ -1,19 +1,22 @@
 #include "wifi.h"
 
 #include <iostream>
+#include <qcoreapplication.h>
+#include <QDir>
+#include <qjsonarray.h>
 #include <QJsonDocument>
 
 
 
 
-WIFI* WIFI::instance = nullptr; // Init instance as null
+QScopedPointer<WIFI> WIFI::instance; // Init instance as null
 
 // Singleton instance getter
 WIFI* WIFI::getInstance() {
-    if (instance == nullptr) {
-        instance = new WIFI();
+    if (instance.isNull()) {
+        instance.reset(new WIFI());
     }
-    return instance;
+    return instance.data();
 }
 
 // Private constructor
@@ -34,15 +37,11 @@ WIFI::WIFI(QObject *parent) : QObject(parent) {
     connect(dataProcessor, &DataProcessor::warningUpdated, this, &WIFI::warningUpdated);
     connect(dataProcessor, &DataProcessor::valveUpdated, this, &WIFI::valveUpdated);
     connect(dataProcessor, &DataProcessor::rssiUpdated, this, &WIFI::rssiUpdated);
+    connect(dataProcessor, &DataProcessor::testUpdated, this, &WIFI::testUpdated);
 
 }
 
-// Destructor
-WIFI::~WIFI() {
-    socket->close();
-    delete socket;
-    delete dataProcessor;
-}
+
 
 
 void WIFI::connectToESP32(const QString &host, quint16 port) const {
@@ -116,20 +115,38 @@ void WIFI::onDataReceived() {
 
 void WIFI::sendRandomValues() {
     QJsonObject jsonObj, jsonValve, jsonPos, jsonSens;
-    int randomNum = QRandomGenerator::global() -> bounded(40);
 
-    jsonValve["HighPress1"] = QRandomGenerator::global() -> bounded(2);
-    jsonValve["HighPress2"] = QRandomGenerator::global() -> bounded(2);
-    jsonValve["Chamber1"] = QRandomGenerator::global() -> bounded(2);
-    jsonValve["Chamber2"] = QRandomGenerator::global() -> bounded(2);
+    QString timeStamp = QDateTime::currentDateTimeUtc().toString("mm:ss");
 
+    jsonValve["time"] = timeStamp;
+    jsonValve["HighPress"] = QRandomGenerator::global() -> bounded(2);
+    jsonValve["HighVent"] = QRandomGenerator::global() -> bounded(2);
+    jsonValve["LOXDomeReg"] = QRandomGenerator::global() -> bounded(2);
+    jsonValve["LOXDomeVent"] = QRandomGenerator::global() -> bounded(2);
+    jsonValve["FuelDomeReg"] = QRandomGenerator::global() -> bounded(2);
+    jsonValve["FuelDomeVent"] = QRandomGenerator::global() -> bounded(2);
+    jsonValve["LOXVent"] = QRandomGenerator::global() -> bounded(2);
+    jsonValve["FuelVent"] = QRandomGenerator::global() -> bounded(2);
+    jsonValve["LOXMV"] = QRandomGenerator::global() -> bounded(2);
+    jsonValve["FuelMV"] = QRandomGenerator::global() -> bounded(2);
+
+    jsonPos["time"] = timeStamp;
     jsonPos["ROLL"] = QRandomGenerator::global() -> bounded(31) - 15;
     jsonPos["PITCH"] = QRandomGenerator::global() -> bounded(31) - 15;
 
-    jsonSens["FuelTank"] = QRandomGenerator::global() -> bounded(31);
-    jsonSens["LOXTank"] = QRandomGenerator::global() -> bounded(31);
-    jsonSens["Pneumatics"] = QRandomGenerator::global() -> bounded(31);
-    jsonSens["HighPress"] = QRandomGenerator::global() -> bounded(31);
+    jsonSens["time"] = timeStamp;
+    jsonSens["HighPress1"] = QRandomGenerator::global() -> bounded(31);
+    jsonSens["HighPress2"] = QRandomGenerator::global() -> bounded(31);
+    jsonSens["LOXTank1"] = QRandomGenerator::global() -> bounded(31);
+    jsonSens["LOXTank2"] = QRandomGenerator::global() -> bounded(31);
+    jsonSens["FuelTank1"] = QRandomGenerator::global() -> bounded(31);
+    jsonSens["FuelTank2"] = QRandomGenerator::global() -> bounded(31);
+    jsonSens["LOXDomeReg"] = QRandomGenerator::global() -> bounded(31);
+    jsonSens["FuelDomeReg"] = QRandomGenerator::global() -> bounded(31);
+    jsonSens["LOXInlet"] = QRandomGenerator::global() -> bounded(31);
+    jsonSens["FuelInlet"] = QRandomGenerator::global() -> bounded(31);
+    jsonSens["Chamber1"] = QRandomGenerator::global() -> bounded(31);
+    jsonSens["Chamber2"] = QRandomGenerator::global() -> bounded(31);
 
 
     jsonObj["VALVES"] = jsonValve;
@@ -169,9 +186,10 @@ void DataProcessor::processJSON(const QJsonObject &jsonData) {
 }
 
 void DataProcessor::emitData(const QJsonObject &jsonObj) {
-    QJsonObject valveData, sensorData, positionData, warningData, rssiData;
+    QJsonObject valveData, sensorData, positionData, warningData, rssiData, testData;
     if (jsonObj.contains("CONNECTION")) {
         rssiData["CONNECTION"] = jsonObj.value("CONNECTION");
+        //qDebug()<< "RSSI" << rssiData;
         emit rssiUpdated(rssiData);
     }
 
@@ -196,4 +214,140 @@ void DataProcessor::emitData(const QJsonObject &jsonObj) {
         warningData["WARNING"] = jsonObj.value("WARNING").toString();
         emit warningUpdated(warningData);
     }
+
+    if (jsonObj.contains("TEST")) {
+        testData[""] = jsonObj.value("TEST").toString();
+        emit testUpdated(testData);
+    }
+}
+
+
+QScopedPointer<ConstantUses> ConstantUses::_instance;
+
+// Singleton implementation
+ConstantUses* ConstantUses::instance() {
+    if (_instance.isNull()) {
+        _instance.reset(new ConstantUses());
+    }
+    return _instance.data();
+}
+
+// Constructor - Starts the Timer for continuous updates
+ConstantUses::ConstantUses(QObject *parent) :
+        QObject(parent), timer(new QTimer(this)), countdownTimer(new QTimer(this)), countdownValue(5) {
+
+    connect(timer, &QTimer::timeout, this, &ConstantUses::updateTime);
+    timer->start(1000); // Update every second
+
+    connect(countdownTimer, &QTimer::timeout, this, &ConstantUses::updateCountdown);
+    lastTime = QDateTime::currentDateTime().toString("hh:mm:ss"); // Set initial time
+}
+
+// Function to update time every second for the world clock
+void ConstantUses::updateTime() {
+    lastTime = QDateTime::currentDateTime().toString("hh:mm:ss");
+    emit timeUpdated(lastTime); // Emit updated time to all connected slots
+}
+
+void ConstantUses::updateCountdown() {
+    if (countdownValue < 0) { // Count down mode
+        formattedTime = QString("T-%1:%2")
+                        .arg(abs(countdownValue) / 60, 2, 10, QChar('0'))
+                        .arg(abs(countdownValue) % 60, 2, 10, QChar('0'));
+
+    } else { // Count up mode
+        formattedTime = QString("T+%1:%2")
+                        .arg(countdownValue / 60, 2, 10, QChar('0'))
+                        .arg(countdownValue % 60, 2, 10, QChar('0'));
+    }
+    countdownValue++;
+
+    emit countdownUpdated(formattedTime);
+}
+
+
+void ConstantUses::startCountdown() {
+    countdownValue = -5;
+    countDirection = false;
+    countdownTimer->start(1000);
+}
+
+// Returns the latest updated time
+QString ConstantUses::currentTime() const {
+    return lastTime; // Uses the cached time instead of calling QDateTime multiple times
+}
+
+QStringList ConstantUses::getConfig(const QString &key) {
+    QString configFilePath = QDir(QCoreApplication::applicationDirPath()).filePath("../data/config.json");
+    QFile file(configFilePath);
+    QStringList config;
+
+    if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+        qDebug() << "Failed to open config file";
+        return {};
+    }
+
+    QByteArray data = file.readAll();
+    file.close();
+    QJsonDocument doc = QJsonDocument::fromJson(data);
+    if (!doc.isObject()) {
+        qDebug() << "Failed to parse config file";
+        return {};
+    }
+
+    QJsonObject obj = doc.object();
+
+    // Check if key exists
+    if (obj.contains(key) && obj[key].isArray()) {
+        QJsonArray jsonArray = obj[key].toArray();
+        for (const QJsonValue &value : jsonArray) {
+            config.append(value.toString());
+        }
+    } else {
+        qDebug() << "Key not found";
+        return {};
+    }
+    return config;
+}
+
+// Your existing buttonMaker function remains unchanged
+QPushButton* ConstantUses::buttonMaker(const QString &text, int fontSize, const QString &color) {
+    auto *btn = new QPushButton(text);  // No explicit parent
+
+    // Set font
+    QFont font;
+    font.setPointSize(fontSize);
+    font.setBold(false);
+    btn->setFont(font);
+
+    // Apply button styling
+    btn->setStyleSheet(QString(R"(
+        QPushButton {
+            background-color: %1;
+            color: white;
+            border-radius: 5px;
+            padding: 5px;
+            margin: 0px;
+            border: none;
+            font-size: %2px;
+            font-weight: normal;
+        }
+
+        QPushButton:hover {
+            background-color: %3;
+        }
+
+        QPushButton:pressed {
+            background-color: %4;
+        }
+
+        QPushButton:focus {
+            outline: none;
+        }
+    )").arg(color)
+        .arg(fontSize)
+        .arg("#1E1E1E")  // Hover color
+        .arg("#2A2A2A")); // Pressed color
+
+    return btn;
 }

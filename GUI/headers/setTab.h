@@ -6,6 +6,7 @@
 #include <QWidget>
 #include "../../ESP_WIFI/wifi.h"
 #include <QComboBox>
+#include "../../logic/headers/graphController.h"
 
 class SetTab : public QWidget {
     Q_OBJECT
@@ -16,14 +17,21 @@ public slots:
     void changeDataType() const;
 
 public:
-    explicit SetTab(WIFI *wifiInstance, QWidget *parent = nullptr);
+    explicit SetTab(QWidget *parent = nullptr, WIFI *wifiInstance = nullptr);
 
-    WIFI *wifiInstance;
+    GraphController *graph_controller;
     QGridLayout *g_layout;
     QLabel *title;
     QComboBox *dataPicker;
     QPushButton *connect_btn;
-    QPushButton* createButton(const QString &text, int fontSize = 14, QWidget *parent = nullptr, const QString &color = "black");
+    QPushButton *record_btn;
+    QPushButton *open_data;
+    QSlider *live_slider;
+
+private:
+    WIFI* wifi;
+    ConstantUses* constants;
+
 };
 
 

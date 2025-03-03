@@ -19,7 +19,14 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
 
 # ✅ Find Required Qt Components
-find_package(Qt6 REQUIRED COMPONENTS Core Gui Widgets Network SerialPort Bluetooth)
+find_package(Qt6 REQUIRED COMPONENTS Core Gui Widgets Network SerialPort Bluetooth PrintSupport)
+
+# Include QCustomPlot
+include_directories(
+        ${CMAKE_SOURCE_DIR}/libs/qcustomplot/qcustomplot
+        ${Qt6Core_INCLUDE_DIRS}
+        ${QtGui_INCLUDE_DIRS}
+        ${Qt6Widgets_INCLUDE_DIRS})
 
 # ✅ Add Executable
 add_executable(MyQtApp
@@ -44,16 +51,30 @@ add_executable(MyQtApp
         GUI/tests/source/leakTest.cpp
         logic/headers/vehicleDisplay.h
         logic/source/vehicleDisplay.cpp
+        GUI/tests/headers/responseTest.h
+        GUI/tests/source/responseTest.cpp
+        logic/headers/graphController.h
+        logic/source/graphController.cpp
+        GUI/tests/headers/surfaceTest.h
+        GUI/tests/source/surfaceTest.cpp
+        GUI/tests/headers/igniterTest.h
+        GUI/tests/source/igniterTest.cpp
 )
+
+# Add QCustomPlot Library
+add_library(qcustomplot STATIC libs/qcustomplot/qcustomplot/qcustomplot.cpp)
+target_link_libraries(qcustomplot PRIVATE Qt6::Core Qt6::Gui Qt6::Widgets)
 
 # ✅ Link Qt Libraries
 target_link_libraries(MyQtApp
+        PRIVATE qcustomplot
         Qt6::Core
         Qt6::Gui
         Qt6::Widgets
         Qt6::Network
         Qt6::SerialPort
         Qt6::Bluetooth
+        Qt6::PrintSupport
 )
 
 
