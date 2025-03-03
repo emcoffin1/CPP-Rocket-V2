@@ -23,6 +23,7 @@ ResponseTest::ResponseTest(QWidget *parent, WIFI *wifiInstance) : QWidget(parent
     startTest = ConstantUses::buttonMaker("Start Test", 25, "#bc2626");
     startTest->setFixedSize(200,50);
 
+
     // Test Data
     send_label = new QLabel("Send time: ");
     send_label->setAlignment(Qt::AlignLeft);
@@ -49,22 +50,24 @@ ResponseTest::ResponseTest(QWidget *parent, WIFI *wifiInstance) : QWidget(parent
     g_layout->addStretch(1);
     setLayout(g_layout);
 
+    connect(startTest, &QPushButton::clicked, this, &ResponseTest::runTest);
 
 };
 
 // Perform actions to run test
-void ResponseTest::runTest() {
+void ResponseTest::runTest() const {
     // Figure out logic to determine send time and receive time
+    wifi->sendMessage("TEST: ResponseTest");
 }
 
 // Update the values
 void ResponseTest::updateValues(QJsonObject jsonObj) {
     jsonObj = jsonObj["TEST"].toObject();
 
-    if (jsonObj.contains("ResponseTime")) {
-        int sendTime = jsonObj["SendTime"].toInt();
-        int recvTime = jsonObj["RecvTime"].toInt();
-        send_time->setText(QString::number(sendTime));
-        recv_time->setText(QString::number(recvTime));
+    if (jsonObj.contains("RoundTripTime")) {
+        int roundTrip = jsonObj["RoundTripTime"].toInt();
+        int oneWay = jsonObj["OneWayTime"].toInt();
+        send_time->setText(QString::number(roundTrip));
+        recv_time->setText(QString::number(oneWay));
     }
 }

@@ -11,13 +11,16 @@
 #include <QPushButton>
 #include <QScopedPointer>
 
+class WIFI;
+
 class DataProcessor : public QObject {
     Q_OBJECT
 
 public:
-    explicit DataProcessor(QObject *parent = nullptr); // constructor
+    explicit DataProcessor(QObject *parent = nullptr, WIFI *wifiInstance = nullptr); // constructor
     void processJSON(const QJsonObject &jsonData); // process recieved json
     void emitData(const QJsonObject &jsonObj);
+    WIFI* wifi;
 
 signals:
     void jsonDataReceived(QJsonDocument json);
@@ -27,6 +30,7 @@ signals:
     void warningUpdated(QJsonObject jsonData);
     void rssiUpdated(QJsonObject jsonData);
     void testUpdated(QJsonObject jsonData);
+
 
 private:
 
@@ -40,7 +44,7 @@ public:
     static WIFI* getInstance();
 
     // connect to esp
-    void connectToESP32(const QString &host, quint16 port) const;
+    void connectToESP32(const QString &host, quint16 port);
 
     // disconnect
     void disconnectFromESP32() const;
@@ -54,12 +58,15 @@ public:
 
 
     // send + receive
-    void sendMessage(const QString &message) const;
+    void sendMessage(const QString &message);
     QString receiveMessage() const;
 
 
     // check connection
     int rssinum = -90;
+
+
+
 
 
 

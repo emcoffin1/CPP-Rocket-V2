@@ -44,7 +44,7 @@ WIFI::WIFI(QObject *parent) : QObject(parent) {
 
 
 
-void WIFI::connectToESP32(const QString &host, quint16 port) const {
+void WIFI::connectToESP32(const QString &host, quint16 port) {
     qDebug() << "Checking if ESP32 is reachable at " << host << ":" << port;
 
     // Create a temporary socket for checking the connection
@@ -72,13 +72,25 @@ void WIFI::disconnectFromESP32() const {
 
 
 
-void WIFI::sendMessage(const QString &message) const {
+void WIFI::sendMessage(const QString &message) {
     if (socket->state() == QTcpSocket::ConnectedState) {
-        socket->write(message.toUtf8());
-        socket->flush();
-        qDebug() << "Sending message: " << message;
-        socket->waitForBytesWritten(1000);
-        qDebug() << "Message sent: " << message;
+
+         if (message.trimmed() == "ResponseTest") {
+            qint64 sendTime = QDateTime::currentMSecsSinceEpoch();
+            QJsonObject jsonRequest;
+            jsonRequest["TEST"] = QJsonObject({{"ResponseTest", sendTime}});
+            QJsonDocument jsonDoc(jsonRequest);
+            socket->write(jsonDoc.toJson(QJsonDocument::Compact));
+            socket->flush();
+            socket->waitForBytesWritten(1000);
+
+        } else  {
+            socket->write(message.toUtf8());
+            socket->flush();
+            socket->waitForBytesWritten(100);
+
+        }
+
     } else {
         QMessageBox::warning(nullptr, "Error", "Cannot send message");
     }
@@ -177,10 +189,13 @@ void WIFI::setDataRandom(bool enabled) {
     }
 }
 
-DataProcessor::DataProcessor(QObject *parent) : QObject(parent) {}
+
+DataProcessor::DataProcessor(QObject *parent, WIFI *wifiInstance) : QObject(parent) {
+    wifi = wifiInstance;
+}
 
 void DataProcessor::processJSON(const QJsonObject &jsonData) {
-    QJsonDocument doc(jsonData); // converts to readable string
+    //QJsonDocument doc(jsonData); // converts to readable string
     emitData(jsonData);
     //emit dataUpdated(displayText); // emit signal with processed text
 }
@@ -216,7 +231,22 @@ void DataProcessor::emitData(const QJsonObject &jsonObj) {
     }
 
     if (jsonObj.contains("TEST")) {
-        testData[""] = jsonObj.value("TEST").toString();
+        qDebug() << "TEST info: " << jsonObj;
+        QJsonObject testObj = jsonObj["TEST"].toObject();
+        if (testObj.contains("ResponseTest")) {
+            qDebug() << "ResponseTest info: " << testObj;
+            qint64 recvTime = QDateTime::currentMSecsSinceEpoch();
+            qint64 sendTime = testObj["ResponseTest"].toVariant().toLongLong();
+            qDebug() << "Send Time 2: " << sendTime;
+            qint64 roundTripTime = recvTime - sendTime;
+            qint64 oneWayTime = (roundTripTime) / 2; // Approximate one way
+            qDebug() << roundTripTime << oneWayTime;
+
+            testData["RoundTripTime"] = roundTripTime;
+            testData["OneWayTime"] = oneWayTime;
+            qDebug() << "Sent and computed: " << testData;
+        }
+
         emit testUpdated(testData);
     }
 }

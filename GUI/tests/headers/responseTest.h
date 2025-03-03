@@ -29,7 +29,7 @@ private:
     QLabel *recv_time;
 
 private slots:
-    void runTest();
+    void runTest() const;
     void updateValues(QJsonObject jsonObj);
 
 };
