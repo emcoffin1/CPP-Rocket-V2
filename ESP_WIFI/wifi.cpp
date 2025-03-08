@@ -38,6 +38,7 @@ WIFI::WIFI(QObject *parent) : QObject(parent) {
     connect(dataProcessor, &DataProcessor::valveUpdated, this, &WIFI::valveUpdated);
     connect(dataProcessor, &DataProcessor::rssiUpdated, this, &WIFI::rssiUpdated);
     connect(dataProcessor, &DataProcessor::testUpdated, this, &WIFI::testUpdated);
+    connect(dataProcessor, &DataProcessor::padArmed, this, &WIFI::padArmed);
 
 }
 
@@ -74,32 +75,34 @@ void WIFI::disconnectFromESP32() const {
 
 void WIFI::sendMessage(const QString &message) {
     if (socket->state() == QTcpSocket::ConnectedState) {
+        QElapsedTimer timer;
+        timer.start();  // Start timing the send operation
 
-         if (message.trimmed() == "ResponseTest") {
+        QByteArray dataToSend;
+        if (message.trimmed() == "ResponseTest") {
             qint64 sendTime = QDateTime::currentMSecsSinceEpoch();
             QJsonObject jsonRequest;
             jsonRequest["TEST"] = QJsonObject({{"ResponseTest", sendTime}});
             QJsonDocument jsonDoc(jsonRequest);
-            socket->write(jsonDoc.toJson(QJsonDocument::Compact));
-            socket->flush();
-            socket->waitForBytesWritten(1000);
+            dataToSend = jsonDoc.toJson(QJsonDocument::Compact);
+        } else {
+            dataToSend = message.toUtf8();
+        }
 
-        } else  {
-            socket->write(message.toUtf8());
-            socket->flush();
-            socket->waitForBytesWritten(100);
+        qint64 bytesWritten = socket->write(dataToSend);
+        socket->flush();
+
+        if (bytesWritten == -1 || !socket->waitForBytesWritten(10)) {  // Reduce wait time
 
         }
 
     } else {
-        QMessageBox::warning(nullptr, "Error", "Cannot send message");
+        QMessageBox::warning(nullptr, "Error", "Cannot send message - Socket Disconnected");
     }
 }
 
-
-
 QString WIFI::receiveMessage() const {
-    if (socket->waitForReadyRead(3000)) {  // Wait up to 3 seconds
+    if (socket->waitForReadyRead(20)) {  // Wait up to 3 seconds
         return socket->readAll();
     }
     return "";
@@ -201,7 +204,7 @@ void DataProcessor::processJSON(const QJsonObject &jsonData) {
 }
 
 void DataProcessor::emitData(const QJsonObject &jsonObj) {
-    QJsonObject valveData, sensorData, positionData, warningData, rssiData, testData;
+    QJsonObject valveData, sensorData, positionData, warningData, rssiData, testData, padData;
     if (jsonObj.contains("CONNECTION")) {
         rssiData["CONNECTION"] = jsonObj.value("CONNECTION");
         //qDebug()<< "RSSI" << rssiData;
@@ -231,23 +234,42 @@ void DataProcessor::emitData(const QJsonObject &jsonObj) {
     }
 
     if (jsonObj.contains("TEST")) {
-        qDebug() << "TEST info: " << jsonObj;
         QJsonObject testObj = jsonObj["TEST"].toObject();
+
+        // Filter by test type
         if (testObj.contains("ResponseTest")) {
-            qDebug() << "ResponseTest info: " << testObj;
+            QJsonObject responseTestObj = testObj["ResponseTest"].toObject();
+            // Trip time
             qint64 recvTime = QDateTime::currentMSecsSinceEpoch();
-            qint64 sendTime = testObj["ResponseTest"].toVariant().toLongLong();
-            qDebug() << "Send Time 2: " << sendTime;
+            qint64 sendTime = responseTestObj["Time"].toVariant().toLongLong();
             qint64 roundTripTime = recvTime - sendTime;
-            qint64 oneWayTime = (roundTripTime) / 2; // Approximate one way
-            qDebug() << roundTripTime << oneWayTime;
+
+
+            // CAN Status
+            bool can1 = responseTestObj["Can1"].toBool();
+            bool can2 = responseTestObj["Can2"].toBool();
+
+
 
             testData["RoundTripTime"] = roundTripTime;
-            testData["OneWayTime"] = oneWayTime;
-            qDebug() << "Sent and computed: " << testData;
+            testData["CANBus1"] = can1;
+            testData["CANBus2"] = can2;
+
         }
 
         emit testUpdated(testData);
+    }
+
+    if (jsonObj.contains("PADSTATUS")) {
+        // Save pad state
+        bool value = jsonObj["PADSTATUS"].toBool();
+
+        // Update and emit value if it's been changed
+        if (value != padArmState) {
+            padArmState = value;
+
+            emit padArmed(padArmState);
+        }
     }
 }
 

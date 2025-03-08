@@ -28,6 +28,7 @@ private:
     GraphController *testPlot;
     GraphController *testPlot1;
     GraphController *testPlot2;
+    GraphController *testPlot3;
     RollDisplay *rollDisplay, *pitchDisplay;
     ValveTree *valveTree;
 
@@ -38,14 +39,30 @@ private:
     QPushButton *arm1;
     QPushButton *arm2;
 
+    QVBoxLayout *data_layout;
+
+    // Velocity
+    QLabel *velocity_label;
+    QLabel *velocity;
+    QHBoxLayout *vel_layout;
+
+    // Altitude
+    QLabel *altitude_label;
+    QLabel *altitude;
+    QHBoxLayout *alt_layout;
+
+
     bool armed = false;
+    bool pad_armed = false;
 
 private slots:
     void updateTables(QJsonObject jsonDoc) const;
     void updateTime(QString countdownTime) const;
+    void updateValues(QJsonObject jsonDoc) const;
 
-    static void startFire();
+    void startFire();
     void armButton();
+    void padArm();
 
 };
 

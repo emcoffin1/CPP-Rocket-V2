@@ -959,6 +959,7 @@ C:/Users/emcof/CLionProjects/RocketGUI_cpp/cmake-build-debug/MyQtApp_autogen/GT4
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wchar.h \
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wctype.h \
   C:/Users/emcof/CLionProjects/RocketGUI_cpp/ESP_WIFI/wifi.h \
+  C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/headers/debugTab.h \
   C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/headers/mainTab.h \
   C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/headers/setTab.h \
   C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/headers/testTab.h \

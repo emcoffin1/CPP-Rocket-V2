@@ -10,7 +10,7 @@ SetTab::SetTab(QWidget *parent, WIFI *wifiInstance) : QWidget (parent) {
     setContentsMargins(0,0,0,0);
 
     // Add label
-    title = new QLabel("TESTS", this);
+    title = new QLabel("OPTIONS", this);
     QFont font("Verdana", 40, QFont::Bold);
     title->setFont(font);
     title->setStyleSheet("color: white; padding-bottom: 50px;");
@@ -87,30 +87,36 @@ void SetTab::connectWIFI() const {
 }
 
 void SetTab::changeDataType() const {
+    QJsonObject testMessage;
     // Changes type of data that system will receive
     if (!wifi) return;
 
-    if (dataPicker->currentIndex() == 2) {
+    int index = dataPicker->currentIndex();
+
+    if (index == 2) {
         // Tell cpp to use fake data
         wifi->setDataRandom(true) ;
         if (wifi->isConnected()) {
             wifi->disconnectFromESP32();
         }
-    }
+    } else {
+        wifi->setDataRandom(false) ;
 
+        if (wifi->isConnected()) {
+            testMessage["TEST"] = QJsonObject();
+            QJsonObject testSubObject = testMessage["TEST"].toObject();
 
-    if (dataPicker->currentIndex() == 0) {
-        // Tell esp to send real data
-        wifi->setDataRandom(false);
-            if (wifi->isConnected()){
-            wifi->sendMessage("TEST: 0");
-        }
-    }
-    if (dataPicker->currentIndex() == 1) {
-        // Tell esp to send fake data
-        wifi->setDataRandom(false);
-        if (wifi->isConnected()){
-            wifi->sendMessage("TEST: 1");
+            if (index == 0) {
+                // Request real data from esp
+                testSubObject["RANDOM"] = 0;
+            } else if (index == 1) {
+                testSubObject["RANDOM"] = 1;
+            }
+
+            testMessage["TEST"] = testSubObject;
+            QJsonDocument jsonDoc(testMessage);
+            QString jsonString = jsonDoc.toJson(QJsonDocument::Compact);
+            wifi->sendMessage(jsonString);
         }
     }
 }

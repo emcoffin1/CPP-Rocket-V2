@@ -30,9 +30,11 @@ signals:
     void warningUpdated(QJsonObject jsonData);
     void rssiUpdated(QJsonObject jsonData);
     void testUpdated(QJsonObject jsonData);
+    void padArmed(bool state);
 
 
 private:
+    bool padArmState = false;
 
 };
 
@@ -78,6 +80,7 @@ signals:
     void warningUpdated(QJsonObject jsonData);
     void rssiUpdated(QJsonObject jsonData);
     void testUpdated(QJsonObject jsonData);
+    void padArmed(bool enabled);
     //void connectionTypeChanged(QJsonObject jsonData);
 
 public slots:

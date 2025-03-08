@@ -1195,12 +1195,14 @@ MyQtApp_autogen/timestamp: \
 	C:/Users/emcof/CLionProjects/RocketGUI_cpp/CMakeLists.txt \
 	C:/Users/emcof/CLionProjects/RocketGUI_cpp/ESP_WIFI/wifi.cpp \
 	C:/Users/emcof/CLionProjects/RocketGUI_cpp/ESP_WIFI/wifi.h \
+	C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/headers/debugTab.h \
 	C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/headers/mainPanel.h \
 	C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/headers/mainTab.h \
 	C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/headers/mainUI.h \
 	C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/headers/optTab.h \
 	C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/headers/setTab.h \
 	C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/headers/testTab.h \
+	C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/source/debugTab.cpp \
 	C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/source/mainPanel.cpp \
 	C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/source/mainTab.cpp \
 	C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/source/mainUI.cpp \

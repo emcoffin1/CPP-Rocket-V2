@@ -23,10 +23,14 @@ private:
     QWidget *formwidget;
     QVBoxLayout *formLayoutWrapper;
 
-    QLabel *send_label;
-    QLabel *send_time;
     QLabel *recv_label;
     QLabel *recv_time;
+
+    // CAN Bus data
+    QLabel *CANBus1;
+    QLabel *CAN1Val;
+    QLabel *CANBus2;
+    QLabel *CAN2Val;
 
 private slots:
     void runTest() const;

@@ -43,9 +43,28 @@ MainPanel::MainPanel(QWidget *parent, WIFI *wifiInstance) : QWidget(parent) {
                              "color: white}");
 
 
-    con_Layout->addWidget(timeLabel, Qt::AlignCenter);
-    con_Layout->addWidget(statusCheck, Qt::AlignRight);
 
+
+
+    // Battery state
+    battery_layout = new QHBoxLayout();
+    battery_label = new QLabel("Battery: ", this);
+    battery_percentage = new QLabel("0%", this);
+    battery_label->setStyleSheet("QLabel{"
+                         "font-size: 12px;"
+                         "color: white}");
+    battery_percentage->setStyleSheet("QLabel{"
+                             "font-size: 12px;"
+                             "color: white}");
+    battery_layout->addWidget(battery_label);
+    battery_layout->addWidget(battery_percentage);
+    battery_layout->addStretch(1);
+
+    con_Layout->addLayout(battery_layout);
+    con_Layout->addStretch(1);
+    con_Layout->addWidget(timeLabel);
+    con_Layout->addStretch(1);
+    con_Layout->addWidget(statusCheck);
 
 
 
@@ -58,10 +77,12 @@ MainPanel::MainPanel(QWidget *parent, WIFI *wifiInstance) : QWidget(parent) {
     mainTab = new MainTab(this, wifi);
     testTab = new TestTab(this, wifi);
     setTab = new SetTab(this, wifi);
+    debugTab = new DebugTab(this, wifi);
 
     stackedWidget->addWidget(mainTab);
     stackedWidget->addWidget(testTab);
     stackedWidget->addWidget(setTab);
+    stackedWidget->addWidget(debugTab);
 
     // Add the label and stacked widget to the main layout.
 
@@ -73,6 +94,7 @@ MainPanel::MainPanel(QWidget *parent, WIFI *wifiInstance) : QWidget(parent) {
 
     connect(ConstantUses::instance(), &ConstantUses::timeUpdated, this, &MainPanel::updateTime);
     connect(wifiInstance, &WIFI::rssiUpdated, this, &MainPanel::changeConnectionStatus);
+    connect(wifiInstance, &WIFI::sensorUpdated, this, &MainPanel::updateBatteryPercentage);
 }
 
 void MainPanel::updateTime(const QString timeVal) const {
@@ -82,6 +104,14 @@ void MainPanel::updateTime(const QString timeVal) const {
 void MainPanel::switchPanel(int index) const {
     if (index >= 0 && index < stackedWidget->count()) {
         stackedWidget->setCurrentIndex(index);
+    }
+}
+
+void MainPanel::updateBatteryPercentage(QJsonObject jsonObj) const {
+    if (jsonObj.contains("BATTERY")) {
+        // Display Battery info
+        int percent = jsonObj["BATTERY"].toInt();
+        battery_percentage->setText(QString("%1%").arg(percent));
     }
 }
 

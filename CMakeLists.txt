@@ -59,6 +59,8 @@ add_executable(MyQtApp
         GUI/tests/source/surfaceTest.cpp
         GUI/tests/headers/igniterTest.h
         GUI/tests/source/igniterTest.cpp
+        GUI/headers/debugTab.h
+        GUI/source/debugTab.cpp
 )
 
 # Add QCustomPlot Library
