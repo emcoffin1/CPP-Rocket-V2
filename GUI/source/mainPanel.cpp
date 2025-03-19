@@ -78,11 +78,13 @@ MainPanel::MainPanel(QWidget *parent, WIFI *wifiInstance) : QWidget(parent) {
     testTab = new TestTab(this, wifi);
     setTab = new SetTab(this, wifi);
     debugTab = new DebugTab(this, wifi);
+    dataTab = new DataDisplay(this, wifi);
 
     stackedWidget->addWidget(mainTab);
     stackedWidget->addWidget(testTab);
     stackedWidget->addWidget(setTab);
     stackedWidget->addWidget(debugTab);
+    stackedWidget->addWidget(dataTab);
 
     // Add the label and stacked widget to the main layout.
 
@@ -94,7 +96,7 @@ MainPanel::MainPanel(QWidget *parent, WIFI *wifiInstance) : QWidget(parent) {
 
     connect(ConstantUses::instance(), &ConstantUses::timeUpdated, this, &MainPanel::updateTime);
     connect(wifiInstance, &WIFI::rssiUpdated, this, &MainPanel::changeConnectionStatus);
-    connect(wifiInstance, &WIFI::sensorUpdated, this, &MainPanel::updateBatteryPercentage);
+
 }
 
 void MainPanel::updateTime(const QString timeVal) const {
@@ -107,13 +109,7 @@ void MainPanel::switchPanel(int index) const {
     }
 }
 
-void MainPanel::updateBatteryPercentage(QJsonObject jsonObj) const {
-    if (jsonObj.contains("BATTERY")) {
-        // Display Battery info
-        int percent = jsonObj["BATTERY"].toInt();
-        battery_percentage->setText(QString("%1%").arg(percent));
-    }
-}
+
 
 MainPanel::~MainPanel() {
     delete mainTab;
@@ -122,76 +118,38 @@ MainPanel::~MainPanel() {
 }
 
 void MainPanel::changeConnectionStatus(QJsonObject value) {
-    int val = value["CONNECTION"].toInt();
+    QJsonObject connection = value["CONNECTION"].toObject();
 
-    if (val <= -100) {
-        // No connection, set to grey
-        statusCheck->setStyleSheet("QCheckBox {"
-                               "color:white; "
-                               "padding: 0px;}"
-                               "QCheckBox::indicator {"
-                               "background-color: #808080;"
-                               "border-radius: 5px;}");
+    if (connection.contains("wifi")) {
+        int val = connection["wifi"].toInt();
+        QString color;
 
+        if (val <= -100) {color = "#808080";}               // grey
+
+        if (val <= -90 && val >= -99) {color = "#8B0000";}  // dark red
+
+        if (val <= -80 && val >= -89) {color = "#FF4500";}  // orange red
+
+        if (val <= -70 && val >= -79) {color = "#FFA500";}  // orange
+
+        if (val <= -60 && val >= -69) { color = "#FFFF00";} // yellow
+
+        if (val <= -50 && val >= -59) { color = "#7FFF00";} // chartreuse
+
+        if (val <= 0 && val >= -49) {color = "#00FF00";}    // green
+
+        // Update color code
+        statusCheck->setStyleSheet(QString("QCheckBox {"
+                                   "color:white; "
+                                   "padding: 0px;}"
+                                   "QCheckBox::indicator {"
+                                   "background-color: %1;"
+                                   "border-radius: 5px;}").arg(color));
     }
-    if (val <= -90 && val >= -99) {
-        // Terrible connection set to red
-        statusCheck->setStyleSheet("QCheckBox {"
-                       "color:white; "
-                       "padding: 0px;}"
-                       "QCheckBox::indicator {"
-                       "background-color: #8B0000;"
-                       "border-radius: 5px;}");
 
-    }
-    if (val <= -80 && val >= -89) {
-        // Terrible connection set to red
-        statusCheck->setStyleSheet("QCheckBox {"
-                               "color:white; "
-                               "padding: 0px;}"
-                               "QCheckBox::indicator {"
-                               "background-color: #FF4500;"
-                               "border-radius: 5px;}");
-
-    }
-    if (val <= -70 && val >= -79) {
-        // Terrible connection set to red
-        statusCheck->setStyleSheet("QCheckBox {"
-                               "color:white; "
-                               "padding: 0px;}"
-                               "QCheckBox::indicator {"
-                               "background-color: #FFA500;"
-                               "border-radius: 5px;}");
-
-    }
-    if (val <= -60 && val >= -69) {
-        // Terrible connection set to red
-        statusCheck->setStyleSheet("QCheckBox {"
-                               "color:white; "
-                               "padding: 0px;}"
-                               "QCheckBox::indicator {"
-                               "background-color: #FFFF00;"
-                               "border-radius: 5px;}");
-
-    }
-    if (val <= -50 && val >= -59) {
-        // Terrible connection set to red
-        statusCheck->setStyleSheet("QCheckBox {"
-                               "color:white; "
-                               "padding: 0px;}"
-                               "QCheckBox::indicator {"
-                               "background-color: #7FFF00;"
-                               "border-radius: 5px;}");
-
-    }
-    if (val <= 0 && val >= -49) {
-        // Terrible connection set to red
-        statusCheck->setStyleSheet("QCheckBox {"
-                               "color:white; "
-                               "padding: 0px;}"
-                               "QCheckBox::indicator {"
-                               "background-color: #00FF00;"
-                               "border-radius: 5px;}");
-
+    if (connection.contains("Battery")) {
+        // If battery in json, change battery status
+        int percent = connection["Battery"].toInt();
+        battery_percentage->setText(QString("%1%").arg(percent));
     }
 }

@@ -70,14 +70,14 @@ TestTab::TestTab(QWidget *parent, WIFI *wifiInstance) : QWidget(parent) {
     QString topdown = "rocket_top_profile.png";
 
     // roll display
-    rollDisplay = new RollDisplay(this, wifiInstance, topdown, "ROLL",
+    rollDisplay = new RollDisplay(this, wifiInstance, topdown, "Roll",
                                     0, 150, 150);
     v_layout->addWidget(rollDisplay, Qt::AlignVCenter);
     v_layout->addStretch(1);
 
     // pitch display
     QString side = "rocket_side_profile_pointed.png";
-    pitchDisplay = new RollDisplay(this, wifiInstance, side, "PITCH",
+    pitchDisplay = new RollDisplay(this, wifiInstance, side, "Pitch",
                                     90, 150, 400);
 
     v_layout->addWidget(pitchDisplay, Qt::AlignVCenter);
@@ -94,52 +94,6 @@ TestTab::TestTab(QWidget *parent, WIFI *wifiInstance) : QWidget(parent) {
     // Connect listener for ladder updates
     connect(wifi, &WIFI::valveUpdated, this, updateValves);
 }
-
-
-/*
-QPushButton* TestTab::createButton(const QString &text, int fontSize, QWidget *parent, const QString &color) {
-    if (!parent) {
-        parent = this;
-    }
-
-    auto *btn = new QPushButton(text, parent);  // Ensure it has `this` as parent
-
-    // Set font
-    QFont font;
-    font.setPointSize(fontSize);
-    font.setBold(false);
-    btn->setFont(font);
-
-    // Apply button styling
-    btn->setStyleSheet(QString(R"(
-        QPushButton {
-            background-color: %1;
-            color: white;
-            border-radius: 0px;
-            padding: 0px;
-            margin: 0px;
-            border: none;
-            font-size: %2px;
-            font-weight: normal;
-        }
-
-        QPushButton:hover {
-            background-color: %3;
-        }
-
-        QPushButton:pressed {
-            background-color: %4;
-        }
-
-        QPushButton:focus {
-            outline: none;
-        }
-    )").arg(color)
-      .arg(fontSize)
-      .arg("#1E1E1E", "#2A2A2A")); // Pressed color
-
-    return btn;
-}*/
 
 
 void TestTab::switchTests(int index) const {

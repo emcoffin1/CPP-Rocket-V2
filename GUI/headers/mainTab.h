@@ -25,10 +25,11 @@ private:
     QLabel *test;
     QGridLayout *g_layout;
     QPushButton *btn;
-    GraphController *testPlot;
-    GraphController *testPlot1;
-    GraphController *testPlot2;
-    GraphController *testPlot3;
+
+    QWidget *plotWidget1, *plotWidget2, *plotWidget3, *plotWidget4;
+    QVBoxLayout *plotLayout1, *plotLayout2, *plotLayout3, *plotLayout4;
+    GraphController *testPlot1, *testPlot2, *testPlot3, *testPlot4;
+
     RollDisplay *rollDisplay, *pitchDisplay;
     ValveTree *valveTree;
 

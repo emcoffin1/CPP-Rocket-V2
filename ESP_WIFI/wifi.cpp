@@ -39,6 +39,7 @@ WIFI::WIFI(QObject *parent) : QObject(parent) {
     connect(dataProcessor, &DataProcessor::rssiUpdated, this, &WIFI::rssiUpdated);
     connect(dataProcessor, &DataProcessor::testUpdated, this, &WIFI::testUpdated);
     connect(dataProcessor, &DataProcessor::padArmed, this, &WIFI::padArmed);
+    connect(dataProcessor, &DataProcessor::dataUpdated, this, &WIFI::dataUpdated);
 
 }
 
@@ -47,14 +48,14 @@ WIFI::WIFI(QObject *parent) : QObject(parent) {
 
 void WIFI::connectToESP32(const QString &host, quint16 port) {
     qDebug() << "Checking if ESP32 is reachable at " << host << ":" << port;
-
     // Create a temporary socket for checking the connection
     socket->abort();
     socket->connectToHost(host, port);
-    if (socket->waitForConnected(3000)) {  // Wait up to 2 sec
+    if (socket->waitForConnected(2000)) {  // Wait up to 2 sec
         sendMessage("CPP: Connected");
     } else {
         QString error = QString("Can't connect to wifi: %1").arg(socket->errorString());
+        ConstantUses::instance()->errorCode(error);
         QMessageBox::warning(nullptr, "Connection Error", error);
 
     }
@@ -97,12 +98,13 @@ void WIFI::sendMessage(const QString &message) {
         }
 
     } else {
+        ConstantUses::instance()->errorCode("Unable to send: " + message);
         QMessageBox::warning(nullptr, "Error", "Cannot send message - Socket Disconnected");
     }
 }
 
 QString WIFI::receiveMessage() const {
-    if (socket->waitForReadyRead(20)) {  // Wait up to 3 seconds
+    if (socket->waitForReadyRead(20)) {  // Wait up to 20 milliseconds
         return socket->readAll();
     }
     return "";
@@ -129,7 +131,7 @@ void WIFI::onDataReceived() {
 }
 
 void WIFI::sendRandomValues() {
-    QJsonObject jsonObj, jsonValve, jsonPos, jsonSens;
+    QJsonObject jsonObj, jsonValve, jsonPos, jsonSens, jsonCon;
 
     QString timeStamp = QDateTime::currentDateTimeUtc().toString("mm:ss");
 
@@ -146,8 +148,8 @@ void WIFI::sendRandomValues() {
     jsonValve["FuelMV"] = QRandomGenerator::global() -> bounded(2);
 
     jsonPos["time"] = timeStamp;
-    jsonPos["ROLL"] = QRandomGenerator::global() -> bounded(31) - 15;
-    jsonPos["PITCH"] = QRandomGenerator::global() -> bounded(31) - 15;
+    jsonPos["Roll"] = QRandomGenerator::global() -> bounded(31) - 15;
+    jsonPos["Pitch"] = QRandomGenerator::global() -> bounded(31) - 15;
 
     jsonSens["time"] = timeStamp;
     jsonSens["HighPress1"] = QRandomGenerator::global() -> bounded(31);
@@ -163,11 +165,13 @@ void WIFI::sendRandomValues() {
     jsonSens["Chamber1"] = QRandomGenerator::global() -> bounded(31);
     jsonSens["Chamber2"] = QRandomGenerator::global() -> bounded(31);
 
+    jsonCon["wifi"] = rssinum;
+    jsonCon["Battery"] = QRandomGenerator::global() -> bounded(101);
 
     jsonObj["VALVES"] = jsonValve;
     jsonObj["SENSORS"] = jsonSens;
     jsonObj["POSITION"] = jsonPos;
-    jsonObj["CONNECTION"] = rssinum;
+    jsonObj["CONNECTION"] = jsonCon;
     dataProcessor->processJSON(jsonObj);
 
 }
@@ -205,6 +209,7 @@ void DataProcessor::processJSON(const QJsonObject &jsonData) {
 
 void DataProcessor::emitData(const QJsonObject &jsonObj) {
     QJsonObject valveData, sensorData, positionData, warningData, rssiData, testData, padData;
+    emit dataUpdated(jsonObj);
     if (jsonObj.contains("CONNECTION")) {
         rssiData["CONNECTION"] = jsonObj.value("CONNECTION");
         //qDebug()<< "RSSI" << rssiData;
@@ -230,7 +235,11 @@ void DataProcessor::emitData(const QJsonObject &jsonObj) {
 
     if (jsonObj.contains("WARNINGS")) {
         warningData["WARNING"] = jsonObj.value("WARNING").toString();
+
+        QString jsonString = QJsonDocument(warningData).toJson(QJsonDocument::Compact);
+        ConstantUses::instance()->errorCode(jsonString);
         emit warningUpdated(warningData);
+
     }
 
     if (jsonObj.contains("TEST")) {
@@ -324,6 +333,24 @@ void ConstantUses::startCountdown() {
     countdownTimer->start(1000);
 }
 
+void ConstantUses::errorCode(const QString &error) {
+    // Print the error message
+    if (!error.isEmpty()) {
+        QString timeStamp = QDateTime::currentDateTimeUtc().toString("hh:mm:ss");
+        QString message = timeStamp + ": " + error;
+        emit errorEmit(message);
+    }
+}
+
+void ConstantUses::logEvent(const QString &message) {
+    // Print Event
+    if (!message.isEmpty()) {
+        QString timeStamp = QDateTime::currentDateTimeUtc().toString("hh:mm:ss");
+        QString sendMessage = timeStamp + ": " + message;
+        emit logEmit(sendMessage);
+    }
+}
+
 // Returns the latest updated time
 QString ConstantUses::currentTime() const {
     return lastTime; // Uses the cached time instead of calling QDateTime multiple times
@@ -343,7 +370,7 @@ QStringList ConstantUses::getConfig(const QString &key) {
     file.close();
     QJsonDocument doc = QJsonDocument::fromJson(data);
     if (!doc.isObject()) {
-        qDebug() << "Failed to parse config file";
+        ConstantUses::instance()->errorCode("Failed to read config file");
         return {};
     }
 
@@ -361,6 +388,8 @@ QStringList ConstantUses::getConfig(const QString &key) {
     }
     return config;
 }
+
+
 
 // Your existing buttonMaker function remains unchanged
 QPushButton* ConstantUses::buttonMaker(const QString &text, int fontSize, const QString &color) {

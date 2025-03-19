@@ -13,6 +13,7 @@ OptTab::OptTab(QWidget *parent, MainPanel *mainPanelREF) : QWidget(parent), main
     testBtn = createButton("Test", 25);
     setBtn = createButton("Settings", 25);
     debugBtn = createButton("Debug", 25);
+    dataBtn = createButton("Data", 25);
     exitBtn = createButton("Exit", 25);
 
     // Connect buttons to panel switcher
@@ -20,12 +21,14 @@ OptTab::OptTab(QWidget *parent, MainPanel *mainPanelREF) : QWidget(parent), main
     connect(testBtn, &QPushButton::clicked, this, &OptTab::showTestPanel);
     connect(setBtn, &QPushButton::clicked, this, &OptTab::showSetPanel);
     connect(debugBtn, &QPushButton::clicked, this, &OptTab::showDebugPanel);
+    connect(dataBtn, &QPushButton::clicked, this, &OptTab::showDataPanel);
 
     // Add widgets to layout
     mainLayout->addWidget(mainBtn);
     mainLayout->addWidget(testBtn);
     mainLayout->addWidget(setBtn);
     mainLayout->addWidget(debugBtn);
+    mainLayout->addWidget(dataBtn);
     mainLayout->addStretch(1);
     mainLayout->addWidget(exitBtn);
     mainLayout->setContentsMargins(0,0,0,0);
@@ -93,4 +96,8 @@ void OptTab::showSetPanel() const {
 
 void OptTab::showDebugPanel() const {
     if (mainPanel) mainPanel->switchPanel(3);
+}
+
+void OptTab::showDataPanel() const {
+    if (mainPanel) mainPanel->switchPanel(4);
 }

@@ -334,6 +334,12 @@
 			null
 		],
 		[
+			"C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/headers/dataDisplay.h",
+			"MU",
+			"GT4ZMTGFRD/moc_dataDisplay.cpp",
+			null
+		],
+		[
 			"C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/headers/debugTab.h",
 			"MU",
 			"GT4ZMTGFRD/moc_debugTab.cpp",
@@ -499,6 +505,11 @@
 	[
 		[
 			"C:/Users/emcof/CLionProjects/RocketGUI_cpp/ESP_WIFI/wifi.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/emcof/CLionProjects/RocketGUI_cpp/GUI/source/dataDisplay.cpp",
 			"MU",
 			null
 		],

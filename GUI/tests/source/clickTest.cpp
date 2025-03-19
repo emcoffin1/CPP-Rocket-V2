@@ -89,5 +89,6 @@ ClickTest::ClickTest(QWidget *parent, WIFI *wifiInstance) :QWidget(parent) {
 
 
 void ClickTest::startTest() {
-    wifi->sendMessage("TEST: CLICK");
+    ConstantUses::instance()->logEvent("Click Test initiated");
+    wifi->sendMessage("TEST: ClickTest");
 }

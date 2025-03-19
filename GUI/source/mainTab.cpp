@@ -6,10 +6,10 @@
 MainTab::MainTab(QWidget *parent, WIFI *wifiInstance) : QWidget(parent) {
     // Init
     wifi = wifiInstance;
-    testPlot = new GraphController(this);
     testPlot1 = new GraphController(this);
     testPlot2 = new GraphController(this);
     testPlot3 = new GraphController(this);
+    testPlot4 = new GraphController(this);
 
 
     // Create layout
@@ -35,30 +35,48 @@ MainTab::MainTab(QWidget *parent, WIFI *wifiInstance) : QWidget(parent) {
     btn->setFixedHeight(75);
 
     // Plot
+    plotLayout1 = new QVBoxLayout();
+    plotWidget1 = new QWidget();
     QStringList plot1List = ConstantUses::instance()->getConfig("PLOT1");
-    testPlot->createPlot("Test", "time", "", plot1List, QColor("black"));
-    //testPlot->setFixedSize(200,100);
+    testPlot1->createPlot("Test", "time", "", plot1List, QColor("black"));
+    plotLayout1->addWidget(testPlot1);
+    plotWidget1->setLayout(plotLayout1);
+    plotWidget1->setStyleSheet("border: 1px solid gray");
 
+    plotWidget2 = new QWidget();
+    plotLayout2 = new QVBoxLayout();
     QStringList plot2List = ConstantUses::instance()->getConfig("PLOT2");
-    testPlot1->createPlot("Test", "time", "", plot2List, QColor("black"));
+    testPlot2->createPlot("Test", "time", "", plot2List, QColor("black"));
+    plotLayout2->addWidget(testPlot2);
+    plotWidget2->setLayout(plotLayout2);
+    plotWidget2->setStyleSheet("border: 1px solid gray");
 
+    plotWidget3 = new QWidget();
+    plotLayout3 = new QVBoxLayout();
     QStringList plot3List = ConstantUses::instance()->getConfig("PLOT3");
-    testPlot2->createPlot("Test", "time", "", plot3List, QColor("black"));
+    testPlot3->createPlot("Test", "time", "", plot3List, QColor("black"));
+    plotLayout3->addWidget(testPlot3);
+    plotWidget3->setLayout(plotLayout3);
+    plotWidget3->setStyleSheet("border: 1px solid gray");
 
+    plotWidget4 = new QWidget();
+    plotLayout4 = new QVBoxLayout();
     QStringList plot4List = ConstantUses::instance()->getConfig("PLOT4");
-    testPlot3->createPlot("Test", "time", "", plot4List, QColor("black"));
-
+    testPlot4->createPlot("Test", "time", "", plot4List, QColor("black"));
+    plotLayout4->addWidget(testPlot4);
+    plotWidget4->setLayout(plotLayout4);
+    plotWidget4->setStyleSheet("border: 1px solid gray");
 
     // Valve Display
     valveTree = new ValveTree(this, wifiInstance);
 
     // Vehicle Displays
     QString topdown = "rocket_top_profile.png";
-    rollDisplay = new RollDisplay(this, wifiInstance, topdown, "ROLL",
+    rollDisplay = new RollDisplay(this, wifiInstance, topdown, "Roll",
                                     0, 150, 150);
 
     QString side = "rocket_side_profile_pointed.png";
-    pitchDisplay = new RollDisplay(this, wifiInstance, side, "PITCH",
+    pitchDisplay = new RollDisplay(this, wifiInstance, side, "Pitch",
                                     90, 150, 400);
 
 
@@ -102,10 +120,10 @@ MainTab::MainTab(QWidget *parent, WIFI *wifiInstance) : QWidget(parent) {
     g_layout->addWidget(valveTree, 0,4,1,1);
     g_layout->addWidget(pitchDisplay, 1 , 4,2,1);
     g_layout->addWidget(rollDisplay, 3 , 4,1,1);
-    g_layout->addWidget(testPlot, 0, 0, 2, 2);
-    g_layout->addWidget(testPlot1, 0, 2, 2, 2);
-    g_layout->addWidget(testPlot2, 2, 0, 2, 2);
-    g_layout->addWidget(testPlot3, 2, 2, 2, 2);
+    g_layout->addWidget(plotWidget1, 0, 0, 2, 2);
+    g_layout->addWidget(plotWidget2, 0, 2, 2, 2);
+    g_layout->addWidget(plotWidget3, 2, 0, 2, 2);
+    g_layout->addWidget(plotWidget4, 2, 2, 2, 2);
     g_layout->addLayout(armLayout, 4, 0, 1, 1, Qt::AlignRight);
     g_layout->addWidget(btn, 4, 1, 1,1);
     g_layout->addWidget(clockLabel, 4, 2, 1, 1, Qt::AlignCenter);
@@ -136,18 +154,18 @@ MainTab::MainTab(QWidget *parent, WIFI *wifiInstance) : QWidget(parent) {
 }
 
 void MainTab::updateTables(QJsonObject jsonDoc) const {
-    testPlot->addDataPoint(jsonDoc);
     testPlot1->addDataPoint(jsonDoc);
     testPlot2->addDataPoint(jsonDoc);
     testPlot3->addDataPoint(jsonDoc);
+    testPlot4->addDataPoint(jsonDoc);
 }
 
 void MainTab::updateValues(QJsonObject jsonDoc) const {
-    if (jsonDoc.contains("VELOCITY")) {
-        velocity_label->setText(jsonDoc["VELOCITY"].toString());
+    if (jsonDoc.contains("Velocity")) {
+        velocity_label->setText(jsonDoc["Velocity"].toString());
     }
-    if (jsonDoc.contains("ALTITUDE")) {
-        altitude_label->setText(jsonDoc["ALTITUDE"].toString());
+    if (jsonDoc.contains("Altitude")) {
+        altitude_label->setText(jsonDoc["Altitude"].toString());
     }
 }
 
@@ -159,8 +177,10 @@ void MainTab::updateTime(QString countdownTime) const {
 void MainTab::startFire() {
     // Only trigger if both armed
     if (armed && pad_armed) {
+        ConstantUses::instance()->logEvent("Fire Initiated");
         ConstantUses::instance()->startCountdown();
     }
+
 }
 
 // Pad arm
@@ -170,11 +190,13 @@ void MainTab::padArm() {
         pad_armed = false;
         arm2->setStyleSheet("background-color: #bc2626; font-size: 15px; color: white;");
         arm2->setFixedSize(50,37.5);
+        ConstantUses::instance()->logEvent("Pad Disarmed");
 
     } else {
         pad_armed = true;
         arm2->setStyleSheet("background-color: green; font-size: 15px; color: white");
         arm2->setFixedSize(50,37.5);
+        ConstantUses::instance()->logEvent("Pad Armed");
     }
 }
 
@@ -184,12 +206,14 @@ void MainTab::armButton() {
         arm1->setStyleSheet("background-color: #bc2626; font-size: 15px; color: white;");
         arm1->setFixedSize(50,37.5);
         armed = false;
+        ConstantUses::instance()->logEvent("Controller Disarmed");
         // Send message to switch to test mode
 
     } else {
         arm1->setStyleSheet("background-color: green; font-size: 15px; color: white");
         arm1->setFixedSize(50,37.5);
         armed = true;
+        ConstantUses::instance()->logEvent("Controller Armed");
         // Send message to switch to fire mode
 
     }

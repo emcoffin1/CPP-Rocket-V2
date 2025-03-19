@@ -4,27 +4,34 @@
 #include <QJsonDocument>
 #include "GUI/headers/mainUI.h"
 #include "ESP_WIFI/wifi.h"
+#include "GUI/headers/debugTab.h"
 
-QJsonObject loadConfig(const QString &filePath) {
-    QFile file(filePath);
-    if (!file.open(QIODevice::ReadOnly)) {
-        qWarning("Failed to open file %s", filePath.toStdString().c_str());
-        return QJsonObject();
+DebugTab *globalDebugTab = nullptr;
+
+void crashHandler(int signal) {
+    if (globalDebugTab) {
+        QString error = "PROGRAM CRASHED";
+        globalDebugTab->updateError(error);
+        globalDebugTab->updateEvent(error);
+        globalDebugTab->saveError();
+        globalDebugTab->saveEvent();
     }
 
-    QByteArray data = file.readAll();
-    file.close();
-
-    QJsonDocument doc = QJsonDocument::fromJson(data);
-    return doc.object();
+    exit(signal);
 }
-
 
 int main(int argc, char *argv[]) {
     QApplication app(argc, argv);
 
+    // Regist Crash handler
+    signal(SIGSEGV, crashHandler);
+    signal(SIGABRT, crashHandler);
+    signal(SIGFPE, crashHandler);
+
     WIFI *wifiInstance = WIFI::getInstance();
-    //wifiInstance->connectToESP32("192.168.4.1", 80);
+    DebugTab *debug_tab = new DebugTab(nullptr, wifiInstance);
+
+    globalDebugTab = debug_tab;
 
     MainUI window(wifiInstance);
     window.show();

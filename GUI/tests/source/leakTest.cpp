@@ -36,7 +36,7 @@ LeakTest::LeakTest(QWidget *parent, WIFI *wifiInstance) : QWidget(parent) {
     sensorValues.resize(5, std::vector<double>(4, 0.0));
 
     // Start Button
-    start_b = createButton("START", 25, this, "#bc2626");
+    start_b = ConstantUses::buttonMaker("START", 25, "#bc2626");
 
     // Timer label
     QFont font("Verdana", 25);
@@ -83,6 +83,7 @@ void LeakTest::startOrCancelTest() {
 
 // **Start Test: Reset Values and Start Timer**
 void LeakTest::startTest() {
+    ConstantUses::instance()->logEvent("Leak Test started");
     // Reset state
     recordingActive = false;
     currentTimeIndex = 0;
@@ -114,6 +115,7 @@ void LeakTest::startTest() {
 }
 
 void LeakTest::resetTest() {
+    ConstantUses::instance()->logEvent("Leak Test reset");
     recordingActive = false;
     dataTimer->stop();
     countUpTimer->stop();
@@ -122,6 +124,7 @@ void LeakTest::resetTest() {
     // Reset GUI
     timerLabel->setText("0:00");
     start_b->setText("Start Test");
+
 }
 
 // **Capture Sensor Data if Recording is Active**
@@ -144,7 +147,6 @@ void LeakTest::captureSensorData(QJsonObject data) {
 void LeakTest::recordLatestValues() {
     if (!recordingActive) return;
 
-    qDebug() << "Recording data at time index:" << currentTimeIndex;
 
     // Write latest buffered values to the table
     for (auto it = latestSensorValues.begin(); it != latestSensorValues.end(); ++it) {
@@ -210,50 +212,5 @@ void LeakTest::updateAverages() {
         sensorTable->setItem(5, sensorCol, new QTableWidgetItem(QString::number(avg, 'f', 2)));
     }
 
-    qDebug() << "Averages calculated and displayed.";
-}
 
-
-QPushButton* LeakTest::createButton(const QString &text, int fontSize, QWidget *parent, const QString &color) {
-    if (!parent) {
-        parent = this;
-    }
-
-    auto *btn = new QPushButton(text, parent);  // Ensure it has `this` as parent
-
-    // Set font
-    QFont font;
-    font.setPointSize(fontSize);
-    font.setBold(false);
-    btn->setFont(font);
-
-    // Apply button styling
-    btn->setStyleSheet(QString(R"(
-        QPushButton {
-            background-color: %1;
-            color: white;
-            border-radius: 10%;
-            padding: 0px;
-            margin: 0px;
-            border: none;
-            font-size: %2px;
-            font-weight: normal;
-        }
-
-        QPushButton:hover {
-            background-color: %3;
-        }
-
-        QPushButton:pressed {
-            background-color: %4;
-        }
-
-        QPushButton:focus {
-            outline: none;
-        }
-    )").arg(color)
-      .arg(fontSize)
-      .arg("#1E1E1E", "#2A2A2A")); // Pressed color
-
-    return btn;
 }

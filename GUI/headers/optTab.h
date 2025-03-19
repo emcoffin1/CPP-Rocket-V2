@@ -18,6 +18,7 @@ private slots:
     void showTestPanel() const;
     void showSetPanel() const;
     void showDebugPanel() const;
+    void showDataPanel() const;
 
 private:
     // Layout
@@ -28,6 +29,7 @@ private:
     QPushButton *testBtn;
     QPushButton *setBtn;
     QPushButton *debugBtn;
+    QPushButton *dataBtn;
     QPushButton *exitBtn;
 
 

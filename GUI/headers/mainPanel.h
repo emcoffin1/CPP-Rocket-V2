@@ -7,6 +7,7 @@
 #include "../headers/testTab.h"
 #include "../headers/setTab.h"
 #include "../headers/debugTab.h"
+#include "../headers/dataDisplay.h"
 #include "../../ESP_WIFI/wifi.h"
 #include "../../logic/headers/graphController.h"
 
@@ -24,6 +25,7 @@ public:
     TestTab *testTab;
     SetTab *setTab;
     DebugTab *debugTab;
+    DataDisplay *dataTab;
     WIFI *wifi;
     GraphController *graphController;
     ConstantUses *constantUses;
@@ -42,7 +44,6 @@ public:
 private slots:
     void changeConnectionStatus(QJsonObject value);
     void updateTime(const QString timeVal) const;
-    void updateBatteryPercentage(QJsonObject jsonObj) const;
 
 };
 

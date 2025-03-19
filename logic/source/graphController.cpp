@@ -43,7 +43,7 @@ QCustomPlot* GraphController::createPlot(const QString& title, const QString& x_
   customPlot->axisRect()->setMinimumMargins(QMargins(0, 0, 0, 0));
   customPlot->xAxis->grid()->setVisible(false);
   customPlot->yAxis->grid()->setVisible(false);
-
+  /*
   // Add a custom border
   QCPItemRect *border = new QCPItemRect(customPlot);
   border->topLeft->setType(QCPItemPosition::ptPlotCoords);
@@ -55,6 +55,7 @@ QCustomPlot* GraphController::createPlot(const QString& title, const QString& x_
 
   // Set border pen (color & thickness)
   border->setPen(QPen(Qt::gray, 3));  // Black border with 2px thickness
+  */
 
   // **Adding Margins to Ensure Visibility**
   customPlot->axisRect()->setMargins(QMargins(0, 0, 0, 0)); // Add a 50px margin around

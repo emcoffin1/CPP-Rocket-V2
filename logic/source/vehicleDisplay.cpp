@@ -194,18 +194,18 @@ void RollDisplay::roll(QJsonObject jsonObj) {
     QJsonObject positions = jsonObj["POSITION"].toObject();
 
     for (QString posit : positions.keys()) {
-        if (typePos == "ROLL" && posit == "ROLL") {
-            angle = positions["ROLL"].toInt() + initAngle;
+        if (typePos == "Roll" && posit == "Roll") {
+            angle = positions["Roll"].toInt() + initAngle;
             update();
         }
 
-        if (typePos == "PITCH" && posit == "PITCH") {
-            angle = positions["PITCH"].toInt() + initAngle;
+        if (typePos == "Pitch" && posit == "Pitch") {
+            angle = positions["Pitch"].toInt() + initAngle;
             update();
         }
 
-        if (typePos == "YAW" && posit == "YAW") {
-            angle = positions["YAW"].toInt() + initAngle;
+        if (typePos == "Yaw" && posit == "Yaw") {
+            angle = positions["Yaw"].toInt() + initAngle;
             update();
         }
     }

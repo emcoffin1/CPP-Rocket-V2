@@ -65,6 +65,7 @@ ResponseTest::ResponseTest(QWidget *parent, WIFI *wifiInstance) : QWidget(parent
 // Perform actions to run test
 void ResponseTest::runTest() const {
     // Figure out logic to determine send time and receive time
+    ConstantUses::instance()->logEvent("Response Test initiated");
     wifi->sendMessage("ResponseTest");
 }
 
@@ -84,6 +85,7 @@ void ResponseTest::updateValues(QJsonObject jsonObj) {
             bool can2 = jsonObj["CANBus2"].toBool();
             CAN2Val->setText(QString::number(can2));
         } else {
+
             CAN1Val->setText("Error");
             CAN2Val->setText("Error");
         }

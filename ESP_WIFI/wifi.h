@@ -12,6 +12,7 @@
 #include <QScopedPointer>
 
 class WIFI;
+class ConstantUses;
 
 class DataProcessor : public QObject {
     Q_OBJECT
@@ -31,6 +32,7 @@ signals:
     void rssiUpdated(QJsonObject jsonData);
     void testUpdated(QJsonObject jsonData);
     void padArmed(bool state);
+    void dataUpdated(QJsonObject jsonData);
 
 
 private:
@@ -81,6 +83,7 @@ signals:
     void rssiUpdated(QJsonObject jsonData);
     void testUpdated(QJsonObject jsonData);
     void padArmed(bool enabled);
+    void dataUpdated(QJsonObject jsonData);
     //void connectionTypeChanged(QJsonObject jsonData);
 
 public slots:
@@ -105,12 +108,16 @@ public:
     static QPushButton* buttonMaker(const QString &text, int fontSize = 14, const QString &color = "black");
     QString currentTime() const;
     void startCountdown();
+    void errorCode(const QString &error);
+    void logEvent(const QString &message);
 
     static QStringList getConfig(const QString &key);
 
 signals:
     void timeUpdated(QString newTime);
     void countdownUpdated(QString countdownTime);
+    void errorEmit(QString error);
+    void logEmit(QString event);
 
 private:
     explicit ConstantUses(QObject *parent = nullptr);

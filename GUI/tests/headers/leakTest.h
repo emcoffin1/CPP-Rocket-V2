@@ -27,7 +27,7 @@ private slots:
     void recordLatestValues();
     void updateTimerDisplay();
 
-    QPushButton* createButton(const QString &text, int fontSize = 14, QWidget *parent = nullptr, const QString &color = "black");
+
 private:
     QGridLayout *g_layout;
     QTableWidget *sensorTable;
